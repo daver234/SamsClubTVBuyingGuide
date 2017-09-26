@@ -24,29 +24,48 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="samsclublogo2" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-Ue-eEh">
-                    <rect key="frame" x="56" y="586" width="274" height="61"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="samsclublogo2" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-Ue-eEh">
+                    <rect key="frame" x="51" y="586" width="274" height="61"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C5-nE-lr5" customClass="RoundedButton" customModule="SamsClubTV" customModuleProvider="target">
-                    <rect key="frame" x="45" y="184" width="285" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.29411764709999999" green="0.46274509800000002" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
-                    <state key="normal" title="Settings">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It appears you do not have a network connection.  Please make sure WiFi and/or Cellular is enabled in Settings." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdh-U1-mwK">
-                    <rect key="frame" x="37" y="48" width="301" height="61"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It appears you do not have a network connection.  Please make sure WiFi and/or Cellular is enabled in Settings." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdh-U1-mwK">
+                    <rect key="frame" x="33" y="36" width="313" height="102"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="102" id="Fcm-6Z-Yv6"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C5-nE-lr5" customClass="RoundedButton" customModule="SamsClubTV" customModuleProvider="target">
+                    <rect key="frame" x="45" y="176" width="285" height="40"/>
+                    <color key="backgroundColor" red="0.29411764709999999" green="0.46274509800000002" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="285" id="IZP-dN-E8h"/>
+                        <constraint firstAttribute="height" constant="40" id="Zav-8h-ttQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
+                    <state key="normal" title="Settings">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Fdh-U1-mwK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="71f-SD-GyV"/>
+                <constraint firstItem="3C5-nE-lr5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8fE-00-fus"/>
+                <constraint firstItem="3C5-nE-lr5" firstAttribute="top" secondItem="Fdh-U1-mwK" secondAttribute="bottom" constant="38" id="Ad4-MQ-yS2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jJI-Ue-eEh" secondAttribute="bottom" constant="20" id="FcG-Rs-gGJ"/>
+                <constraint firstItem="jJI-Ue-eEh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Le1-wk-YHR"/>
+                <constraint firstItem="Fdh-U1-mwK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="PPj-37-rNw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fdh-U1-mwK" secondAttribute="trailing" constant="29" id="gUw-ld-N4z"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
     <resources>
