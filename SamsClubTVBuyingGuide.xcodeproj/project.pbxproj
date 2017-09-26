@@ -21,6 +21,7 @@
 		5557CF011F7B03FE00D943AB /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CF001F7B03FE00D943AB /* RoundedButton.swift */; };
 		5557CF031F7B042900D943AB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CF021F7B042900D943AB /* Colors.swift */; };
 		5557CF051F7B044D00D943AB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CF041F7B044D00D943AB /* Reachability.swift */; };
+		5557CF071F7B053A00D943AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CF061F7B053A00D943AB /* Constants.swift */; };
 		CE126A3D3E175D16B11CE3C9 /* Pods_SamsClubTVBuyingGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC30CD621634E7DEA242FF7C /* Pods_SamsClubTVBuyingGuideUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		5557CF001F7B03FE00D943AB /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		5557CF021F7B042900D943AB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5557CF041F7B044D00D943AB /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		5557CF061F7B053A00D943AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5FB7B9A5C6F441FCE27F3901 /* Pods-SamsClubTVBuyingGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuide/Pods-SamsClubTVBuyingGuide.debug.xcconfig"; sourceTree = "<group>"; };
 		860092C567E8B5A0D6539F72 /* Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideUITests/Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BDF81938B44B2BDAFC8C03B /* Pods-SamsClubTVBuyingGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideTests/Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				5557CF021F7B042900D943AB /* Colors.swift */,
 				5557CF041F7B044D00D943AB /* Reachability.swift */,
+				5557CF061F7B053A00D943AB /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				5557CF031F7B042900D943AB /* Colors.swift in Sources */,
 				5557CF051F7B044D00D943AB /* Reachability.swift in Sources */,
 				5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */,
+				5557CF071F7B053A00D943AB /* Constants.swift in Sources */,
 				5557CEFE1F7B035200D943AB /* NoConnectivityVC.swift in Sources */,
 				5557CF011F7B03FE00D943AB /* RoundedButton.swift in Sources */,
 			);
