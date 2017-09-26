@@ -10,7 +10,7 @@
 		3210483F9E07ABA26FF6A998 /* Pods_SamsClubTVBuyingGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF119468B25188E26F30EF49 /* Pods_SamsClubTVBuyingGuideTests.framework */; };
 		3921B8E7AA90A25FEB5B99DE /* Pods_SamsClubTVBuyingGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8683FFA56749B1437E3DA1 /* Pods_SamsClubTVBuyingGuide.framework */; };
 		5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC61F7AFF3000D943AB /* AppDelegate.swift */; };
-		5557CEC91F7AFF3000D943AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC81F7AFF3000D943AB /* ViewController.swift */; };
+		5557CEC91F7AFF3000D943AB /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC81F7AFF3000D943AB /* StartVC.swift */; };
 		5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECA1F7AFF3000D943AB /* Main.storyboard */; };
 		5557CECE1F7AFF3000D943AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECD1F7AFF3000D943AB /* Assets.xcassets */; };
 		5557CED11F7AFF3000D943AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECF1F7AFF3000D943AB /* LaunchScreen.storyboard */; };
@@ -51,7 +51,7 @@
 		3C442BD02AC0524BDE8EF9B2 /* Pods-SamsClubTVBuyingGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuide/Pods-SamsClubTVBuyingGuide.release.xcconfig"; sourceTree = "<group>"; };
 		5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsClubTVBuyingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5557CEC61F7AFF3000D943AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5557CEC81F7AFF3000D943AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5557CEC81F7AFF3000D943AB /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		5557CECB1F7AFF3000D943AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5557CECD1F7AFF3000D943AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5557CED01F7AFF3000D943AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				5557CEFC1F7B035200D943AB /* NoConnectivityVC.swift */,
-				5557CEC81F7AFF3000D943AB /* ViewController.swift */,
+				5557CEC81F7AFF3000D943AB /* StartVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -542,7 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5557CF091F7B05E000D943AB /* ProductViewTableViewCell.swift in Sources */,
-				5557CEC91F7AFF3000D943AB /* ViewController.swift in Sources */,
+				5557CEC91F7AFF3000D943AB /* StartVC.swift in Sources */,
 				5557CF0B1F7B061100D943AB /* Product.swift in Sources */,
 				5557CF031F7B042900D943AB /* Colors.swift in Sources */,
 				5557CF0F1F7B066000D943AB /* NetworkManager.swift in Sources */,
