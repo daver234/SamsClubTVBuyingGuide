@@ -13,13 +13,13 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
 
     let reachability = Reachability()!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         /// Connection available to get data from API
         /// By loading products here we have avoid a delay when the user goes to view the products
         NetworkManager.instance.getProductsForPage(pageNumber: 1, pageSize: 30) { (response) in
-            // print(response)
         }
     }
     
@@ -51,7 +51,6 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
     }
     
     @objc func reachabilityChanged(note: Notification) {
-        
         let reachability = note.object as! Reachability
         
         switch reachability.connection {
