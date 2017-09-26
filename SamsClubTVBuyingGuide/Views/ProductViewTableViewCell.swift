@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import Cosmos
 
 class ProductViewTableViewCell: UITableViewCell {
     
     // IBOutlets - For Product
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var productPriceDollarsLabel: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var shippingLabel: UILabel!
     @IBOutlet weak var inStockLabel: UILabel!
     @IBOutlet weak var reviewCountLabel: UILabel!
+    @IBOutlet weak var starView: CosmosView!
+    
     
     
     override func awakeFromNib() {
@@ -29,7 +32,9 @@ class ProductViewTableViewCell: UITableViewCell {
     
     func configureCell(product: Product)  {
         self.productNameLabel.text = product.productName ?? "N/A"
-        self.productPriceDollarsLabel.text = product.price ?? "N/A"
+        self.productPrice.text = product.price ?? "N/A"
+        self.starView.rating = product.reviewRating ?? 0
+        self.reviewCountLabel.text = "\(product.reviewCount ?? 0)"
         
         if let inStock = product.inStock, inStock {
             self.inStockLabel.text = IN_STOCK
@@ -40,7 +45,7 @@ class ProductViewTableViewCell: UITableViewCell {
             self.shippingLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
         
-        self.reviewCountLabel.text = String(describing: product.reviewCount ?? 0)
+        // self.reviewCountLabel.text = String(describing: product.reviewCount ?? 0)
         
         /// Getting the image to show
         /// Maybe implement image cache and pull from that?
