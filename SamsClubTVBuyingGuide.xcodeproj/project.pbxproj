@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3210483F9E07ABA26FF6A998 /* Pods_SamsClubTVBuyingGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF119468B25188E26F30EF49 /* Pods_SamsClubTVBuyingGuideTests.framework */; };
+		3921B8E7AA90A25FEB5B99DE /* Pods_SamsClubTVBuyingGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8683FFA56749B1437E3DA1 /* Pods_SamsClubTVBuyingGuide.framework */; };
 		5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC61F7AFF3000D943AB /* AppDelegate.swift */; };
 		5557CEC91F7AFF3000D943AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC81F7AFF3000D943AB /* ViewController.swift */; };
 		5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECA1F7AFF3000D943AB /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		5557CED11F7AFF3000D943AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECF1F7AFF3000D943AB /* LaunchScreen.storyboard */; };
 		5557CEDC1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEDB1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.swift */; };
 		5557CEE71F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEE61F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.swift */; };
+		CE126A3D3E175D16B11CE3C9 /* Pods_SamsClubTVBuyingGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC30CD621634E7DEA242FF7C /* Pods_SamsClubTVBuyingGuideUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E8683FFA56749B1437E3DA1 /* Pods_SamsClubTVBuyingGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SamsClubTVBuyingGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C442BD02AC0524BDE8EF9B2 /* Pods-SamsClubTVBuyingGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuide/Pods-SamsClubTVBuyingGuide.release.xcconfig"; sourceTree = "<group>"; };
 		5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsClubTVBuyingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5557CEC61F7AFF3000D943AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5557CEC81F7AFF3000D943AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		5557CEE21F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamsClubTVBuyingGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5557CEE61F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamsClubTVBuyingGuideUITests.swift; sourceTree = "<group>"; };
 		5557CEE81F7AFF3000D943AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FB7B9A5C6F441FCE27F3901 /* Pods-SamsClubTVBuyingGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuide/Pods-SamsClubTVBuyingGuide.debug.xcconfig"; sourceTree = "<group>"; };
+		860092C567E8B5A0D6539F72 /* Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideUITests/Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BDF81938B44B2BDAFC8C03B /* Pods-SamsClubTVBuyingGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideTests/Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC30CD621634E7DEA242FF7C /* Pods_SamsClubTVBuyingGuideUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SamsClubTVBuyingGuideUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFDB66C291E0872757FEB2A5 /* Pods-SamsClubTVBuyingGuideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideUITests/Pods-SamsClubTVBuyingGuideUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DF119468B25188E26F30EF49 /* Pods_SamsClubTVBuyingGuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SamsClubTVBuyingGuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC8F863832FDC761D8939608 /* Pods-SamsClubTVBuyingGuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideTests/Pods-SamsClubTVBuyingGuideTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3921B8E7AA90A25FEB5B99DE /* Pods_SamsClubTVBuyingGuide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3210483F9E07ABA26FF6A998 /* Pods_SamsClubTVBuyingGuideTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE126A3D3E175D16B11CE3C9 /* Pods_SamsClubTVBuyingGuideUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				5557CEDA1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests */,
 				5557CEE51F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests */,
 				5557CEC41F7AFF3000D943AB /* Products */,
+				971593E2E83157ECFD700A1D /* Pods */,
+				762CF8025E94FBEB849C06AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +206,29 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		762CF8025E94FBEB849C06AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E8683FFA56749B1437E3DA1 /* Pods_SamsClubTVBuyingGuide.framework */,
+				DF119468B25188E26F30EF49 /* Pods_SamsClubTVBuyingGuideTests.framework */,
+				CC30CD621634E7DEA242FF7C /* Pods_SamsClubTVBuyingGuideUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		971593E2E83157ECFD700A1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FB7B9A5C6F441FCE27F3901 /* Pods-SamsClubTVBuyingGuide.debug.xcconfig */,
+				3C442BD02AC0524BDE8EF9B2 /* Pods-SamsClubTVBuyingGuide.release.xcconfig */,
+				9BDF81938B44B2BDAFC8C03B /* Pods-SamsClubTVBuyingGuideTests.debug.xcconfig */,
+				FC8F863832FDC761D8939608 /* Pods-SamsClubTVBuyingGuideTests.release.xcconfig */,
+				860092C567E8B5A0D6539F72 /* Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig */,
+				CFDB66C291E0872757FEB2A5 /* Pods-SamsClubTVBuyingGuideUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5557CEEB1F7AFF3000D943AB /* Build configuration list for PBXNativeTarget "SamsClubTVBuyingGuide" */;
 			buildPhases = (
+				E73D8310D896780A347DD275 /* [CP] Check Pods Manifest.lock */,
 				5557CEBF1F7AFF3000D943AB /* Sources */,
 				5557CEC01F7AFF3000D943AB /* Frameworks */,
 				5557CEC11F7AFF3000D943AB /* Resources */,
+				5FEB466767D3B0A3A3352B8B /* [CP] Embed Pods Frameworks */,
+				031C7A7EE2320E9F29032EE6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5557CEEE1F7AFF3000D943AB /* Build configuration list for PBXNativeTarget "SamsClubTVBuyingGuideTests" */;
 			buildPhases = (
+				366775402B60707B76487643 /* [CP] Check Pods Manifest.lock */,
 				5557CED31F7AFF3000D943AB /* Sources */,
 				5557CED41F7AFF3000D943AB /* Frameworks */,
 				5557CED51F7AFF3000D943AB /* Resources */,
+				C0B27A9FBE1A7717B1F44FAA /* [CP] Embed Pods Frameworks */,
+				C6CAC7BF1304C3A4EB43176B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,9 +277,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5557CEF11F7AFF3000D943AB /* Build configuration list for PBXNativeTarget "SamsClubTVBuyingGuideUITests" */;
 			buildPhases = (
+				00685CE14EAD45AF562E94D3 /* [CP] Check Pods Manifest.lock */,
 				5557CEDE1F7AFF3000D943AB /* Sources */,
 				5557CEDF1F7AFF3000D943AB /* Frameworks */,
 				5557CEE01F7AFF3000D943AB /* Resources */,
+				B5C182CA14B94ACA3C5D911D /* [CP] Embed Pods Frameworks */,
+				4FC9B55C4F51BCAFA8B65760 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,6 +366,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00685CE14EAD45AF562E94D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		031C7A7EE2320E9F29032EE6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SamsClubTVBuyingGuide/Pods-SamsClubTVBuyingGuide-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		366775402B60707B76487643 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4FC9B55C4F51BCAFA8B65760 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SamsClubTVBuyingGuideUITests/Pods-SamsClubTVBuyingGuideUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FEB466767D3B0A3A3352B8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SamsClubTVBuyingGuide/Pods-SamsClubTVBuyingGuide-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5C182CA14B94ACA3C5D911D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SamsClubTVBuyingGuideUITests/Pods-SamsClubTVBuyingGuideUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0B27A9FBE1A7717B1F44FAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SamsClubTVBuyingGuideTests/Pods-SamsClubTVBuyingGuideTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6CAC7BF1304C3A4EB43176B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SamsClubTVBuyingGuideTests/Pods-SamsClubTVBuyingGuideTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E73D8310D896780A347DD275 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5557CEBF1F7AFF3000D943AB /* Sources */ = {
@@ -488,6 +675,7 @@
 		};
 		5557CEEC1F7AFF3000D943AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB7B9A5C6F441FCE27F3901 /* Pods-SamsClubTVBuyingGuide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +691,7 @@
 		};
 		5557CEED1F7AFF3000D943AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C442BD02AC0524BDE8EF9B2 /* Pods-SamsClubTVBuyingGuide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -518,6 +707,7 @@
 		};
 		5557CEEF1F7AFF3000D943AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BDF81938B44B2BDAFC8C03B /* Pods-SamsClubTVBuyingGuideTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -535,6 +725,7 @@
 		};
 		5557CEF01F7AFF3000D943AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC8F863832FDC761D8939608 /* Pods-SamsClubTVBuyingGuideTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -552,6 +743,7 @@
 		};
 		5557CEF21F7AFF3000D943AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 860092C567E8B5A0D6539F72 /* Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -568,6 +760,7 @@
 		};
 		5557CEF31F7AFF3000D943AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFDB66C291E0872757FEB2A5 /* Pods-SamsClubTVBuyingGuideUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
