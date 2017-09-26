@@ -97,12 +97,15 @@
 		5557CEC51F7AFF3000D943AB /* SamsClubTVBuyingGuide */ = {
 			isa = PBXGroup;
 			children = (
-				5557CEC61F7AFF3000D943AB /* AppDelegate.swift */,
-				5557CEC81F7AFF3000D943AB /* ViewController.swift */,
-				5557CECA1F7AFF3000D943AB /* Main.storyboard */,
-				5557CECD1F7AFF3000D943AB /* Assets.xcassets */,
-				5557CECF1F7AFF3000D943AB /* LaunchScreen.storyboard */,
+				5557CEF51F7AFF5A00D943AB /* Controllers */,
 				5557CED21F7AFF3000D943AB /* Info.plist */,
+				5557CEF61F7AFF6800D943AB /* Models */,
+				5557CEF71F7AFF6F00D943AB /* Services */,
+				5557CEF81F7AFF7A00D943AB /* Storyboards */,
+				5557CEFB1F7AFFAF00D943AB /* Supporting Files */,
+				5557CEF91F7AFF8300D943AB /* Utilities */,
+				5557CEFA1F7AFF9000D943AB /* Views */,
+				5557CEF41F7AFF4D00D943AB /* XIBs */,
 			);
 			path = SamsClubTVBuyingGuide;
 			sourceTree = "<group>";
@@ -123,6 +126,67 @@
 				5557CEE81F7AFF3000D943AB /* Info.plist */,
 			);
 			path = SamsClubTVBuyingGuideUITests;
+			sourceTree = "<group>";
+		};
+		5557CEF41F7AFF4D00D943AB /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		5557CEF51F7AFF5A00D943AB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5557CEC81F7AFF3000D943AB /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5557CEF61F7AFF6800D943AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5557CEF71F7AFF6F00D943AB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5557CEF81F7AFF7A00D943AB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5557CECA1F7AFF3000D943AB /* Main.storyboard */,
+				5557CECF1F7AFF3000D943AB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5557CEF91F7AFF8300D943AB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5557CEFA1F7AFF9000D943AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5557CEFB1F7AFFAF00D943AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5557CECD1F7AFF3000D943AB /* Assets.xcassets */,
+				5557CEC61F7AFF3000D943AB /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
