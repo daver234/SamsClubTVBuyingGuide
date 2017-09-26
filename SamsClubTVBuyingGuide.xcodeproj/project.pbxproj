@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC61F7AFF3000D943AB /* AppDelegate.swift */; };
+		5557CEC91F7AFF3000D943AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC81F7AFF3000D943AB /* ViewController.swift */; };
+		5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECA1F7AFF3000D943AB /* Main.storyboard */; };
+		5557CECE1F7AFF3000D943AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECD1F7AFF3000D943AB /* Assets.xcassets */; };
+		5557CED11F7AFF3000D943AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECF1F7AFF3000D943AB /* LaunchScreen.storyboard */; };
+		5557CEDC1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEDB1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.swift */; };
+		5557CEE71F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEE61F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5557CED81F7AFF3000D943AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5557CEBB1F7AFF3000D943AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5557CEC21F7AFF3000D943AB;
+			remoteInfo = SamsClubTVBuyingGuide;
+		};
+		5557CEE31F7AFF3000D943AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5557CEBB1F7AFF3000D943AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5557CEC21F7AFF3000D943AB;
+			remoteInfo = SamsClubTVBuyingGuide;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsClubTVBuyingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5557CEC61F7AFF3000D943AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5557CEC81F7AFF3000D943AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5557CECB1F7AFF3000D943AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5557CECD1F7AFF3000D943AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5557CED01F7AFF3000D943AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5557CED21F7AFF3000D943AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5557CED71F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamsClubTVBuyingGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5557CEDB1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamsClubTVBuyingGuideTests.swift; sourceTree = "<group>"; };
+		5557CEDD1F7AFF3000D943AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5557CEE21F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamsClubTVBuyingGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5557CEE61F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamsClubTVBuyingGuideUITests.swift; sourceTree = "<group>"; };
+		5557CEE81F7AFF3000D943AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5557CEC01F7AFF3000D943AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5557CED41F7AFF3000D943AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5557CEDF1F7AFF3000D943AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5557CEBA1F7AFF3000D943AB = {
+			isa = PBXGroup;
+			children = (
+				5557CEC51F7AFF3000D943AB /* SamsClubTVBuyingGuide */,
+				5557CEDA1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests */,
+				5557CEE51F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests */,
+				5557CEC41F7AFF3000D943AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5557CEC41F7AFF3000D943AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */,
+				5557CED71F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.xctest */,
+				5557CEE21F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5557CEC51F7AFF3000D943AB /* SamsClubTVBuyingGuide */ = {
+			isa = PBXGroup;
+			children = (
+				5557CEC61F7AFF3000D943AB /* AppDelegate.swift */,
+				5557CEC81F7AFF3000D943AB /* ViewController.swift */,
+				5557CECA1F7AFF3000D943AB /* Main.storyboard */,
+				5557CECD1F7AFF3000D943AB /* Assets.xcassets */,
+				5557CECF1F7AFF3000D943AB /* LaunchScreen.storyboard */,
+				5557CED21F7AFF3000D943AB /* Info.plist */,
+			);
+			path = SamsClubTVBuyingGuide;
+			sourceTree = "<group>";
+		};
+		5557CEDA1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests */ = {
+			isa = PBXGroup;
+			children = (
+				5557CEDB1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.swift */,
+				5557CEDD1F7AFF3000D943AB /* Info.plist */,
+			);
+			path = SamsClubTVBuyingGuideTests;
+			sourceTree = "<group>";
+		};
+		5557CEE51F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5557CEE61F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.swift */,
+				5557CEE81F7AFF3000D943AB /* Info.plist */,
+			);
+			path = SamsClubTVBuyingGuideUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5557CEC21F7AFF3000D943AB /* SamsClubTVBuyingGuide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5557CEEB1F7AFF3000D943AB /* Build configuration list for PBXNativeTarget "SamsClubTVBuyingGuide" */;
+			buildPhases = (
+				5557CEBF1F7AFF3000D943AB /* Sources */,
+				5557CEC01F7AFF3000D943AB /* Frameworks */,
+				5557CEC11F7AFF3000D943AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SamsClubTVBuyingGuide;
+			productName = SamsClubTVBuyingGuide;
+			productReference = 5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5557CED61F7AFF3000D943AB /* SamsClubTVBuyingGuideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5557CEEE1F7AFF3000D943AB /* Build configuration list for PBXNativeTarget "SamsClubTVBuyingGuideTests" */;
+			buildPhases = (
+				5557CED31F7AFF3000D943AB /* Sources */,
+				5557CED41F7AFF3000D943AB /* Frameworks */,
+				5557CED51F7AFF3000D943AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5557CED91F7AFF3000D943AB /* PBXTargetDependency */,
+			);
+			name = SamsClubTVBuyingGuideTests;
+			productName = SamsClubTVBuyingGuideTests;
+			productReference = 5557CED71F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5557CEE11F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5557CEF11F7AFF3000D943AB /* Build configuration list for PBXNativeTarget "SamsClubTVBuyingGuideUITests" */;
+			buildPhases = (
+				5557CEDE1F7AFF3000D943AB /* Sources */,
+				5557CEDF1F7AFF3000D943AB /* Frameworks */,
+				5557CEE01F7AFF3000D943AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5557CEE41F7AFF3000D943AB /* PBXTargetDependency */,
+			);
+			name = SamsClubTVBuyingGuideUITests;
+			productName = SamsClubTVBuyingGuideUITests;
+			productReference = 5557CEE21F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5557CEBB1F7AFF3000D943AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Dave Rothschild";
+				TargetAttributes = {
+					5557CEC21F7AFF3000D943AB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					5557CED61F7AFF3000D943AB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5557CEC21F7AFF3000D943AB;
+					};
+					5557CEE11F7AFF3000D943AB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5557CEC21F7AFF3000D943AB;
+					};
+				};
+			};
+			buildConfigurationList = 5557CEBE1F7AFF3000D943AB /* Build configuration list for PBXProject "SamsClubTVBuyingGuide" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5557CEBA1F7AFF3000D943AB;
+			productRefGroup = 5557CEC41F7AFF3000D943AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5557CEC21F7AFF3000D943AB /* SamsClubTVBuyingGuide */,
+				5557CED61F7AFF3000D943AB /* SamsClubTVBuyingGuideTests */,
+				5557CEE11F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5557CEC11F7AFF3000D943AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5557CED11F7AFF3000D943AB /* LaunchScreen.storyboard in Resources */,
+				5557CECE1F7AFF3000D943AB /* Assets.xcassets in Resources */,
+				5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5557CED51F7AFF3000D943AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5557CEE01F7AFF3000D943AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5557CEBF1F7AFF3000D943AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5557CEC91F7AFF3000D943AB /* ViewController.swift in Sources */,
+				5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5557CED31F7AFF3000D943AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5557CEDC1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5557CEDE1F7AFF3000D943AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5557CEE71F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5557CED91F7AFF3000D943AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5557CEC21F7AFF3000D943AB /* SamsClubTVBuyingGuide */;
+			targetProxy = 5557CED81F7AFF3000D943AB /* PBXContainerItemProxy */;
+		};
+		5557CEE41F7AFF3000D943AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5557CEC21F7AFF3000D943AB /* SamsClubTVBuyingGuide */;
+			targetProxy = 5557CEE31F7AFF3000D943AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5557CECA1F7AFF3000D943AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5557CECB1F7AFF3000D943AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5557CECF1F7AFF3000D943AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5557CED01F7AFF3000D943AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5557CEE91F7AFF3000D943AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5557CEEA1F7AFF3000D943AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5557CEEC1F7AFF3000D943AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64ZMRUDATB;
+				INFOPLIST_FILE = SamsClubTVBuyingGuide/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daverothschild.SamsClubTVBuyingGuide;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5557CEED1F7AFF3000D943AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64ZMRUDATB;
+				INFOPLIST_FILE = SamsClubTVBuyingGuide/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daverothschild.SamsClubTVBuyingGuide;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5557CEEF1F7AFF3000D943AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64ZMRUDATB;
+				INFOPLIST_FILE = SamsClubTVBuyingGuideTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daverothschild.SamsClubTVBuyingGuideTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SamsClubTVBuyingGuide.app/SamsClubTVBuyingGuide";
+			};
+			name = Debug;
+		};
+		5557CEF01F7AFF3000D943AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64ZMRUDATB;
+				INFOPLIST_FILE = SamsClubTVBuyingGuideTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daverothschild.SamsClubTVBuyingGuideTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SamsClubTVBuyingGuide.app/SamsClubTVBuyingGuide";
+			};
+			name = Release;
+		};
+		5557CEF21F7AFF3000D943AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64ZMRUDATB;
+				INFOPLIST_FILE = SamsClubTVBuyingGuideUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daverothschild.SamsClubTVBuyingGuideUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SamsClubTVBuyingGuide;
+			};
+			name = Debug;
+		};
+		5557CEF31F7AFF3000D943AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64ZMRUDATB;
+				INFOPLIST_FILE = SamsClubTVBuyingGuideUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daverothschild.SamsClubTVBuyingGuideUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SamsClubTVBuyingGuide;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5557CEBE1F7AFF3000D943AB /* Build configuration list for PBXProject "SamsClubTVBuyingGuide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5557CEE91F7AFF3000D943AB /* Debug */,
+				5557CEEA1F7AFF3000D943AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5557CEEB1F7AFF3000D943AB /* Build configuration list for PBXNativeTarget "SamsClubTVBuyingGuide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5557CEEC1F7AFF3000D943AB /* Debug */,
+				5557CEED1F7AFF3000D943AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5557CEEE1F7AFF3000D943AB /* Build configuration list for PBXNativeTarget "SamsClubTVBuyingGuideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5557CEEF1F7AFF3000D943AB /* Debug */,
+				5557CEF01F7AFF3000D943AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5557CEF11F7AFF3000D943AB /* Build configuration list for PBXNativeTarget "SamsClubTVBuyingGuideUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5557CEF21F7AFF3000D943AB /* Debug */,
+				5557CEF31F7AFF3000D943AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5557CEBB1F7AFF3000D943AB /* Project object */;
+}
