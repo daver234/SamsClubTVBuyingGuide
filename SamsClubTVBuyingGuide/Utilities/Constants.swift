@@ -29,6 +29,7 @@ let PRODUCT_CELL = "ProductCell"
 let OUT_OF_STOCK = "Out of stock"
 let IN_STOCK = "In stock"
 let STOCK_NOT_AVAILABLE = "Item not available"
+let LOADING_IMAGE = "loadingImage.png"
 
 /// Errors
 let MISSING_JSON_VALUE = "Value not available"

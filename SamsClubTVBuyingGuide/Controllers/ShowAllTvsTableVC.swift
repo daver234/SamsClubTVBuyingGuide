@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ShowAllTvsTableVC: UITableViewController {
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 0.7882352941, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        
+        tableView.prefetchDataSource = self as? UITableViewDataSourcePrefetching
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,13 +48,18 @@ extension ShowAllTvsTableVC {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         guard let page = NetworkManager.instance.allProducts[0].products?.count  else { return 0 }
-        
-        print("in tableview, total count", page)
         return page
     }
     
+    /// Use Apple and Kingfisher prefetching to download images ahead of time to improve the user experience.
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        guard let product = NetworkManager.instance.allProducts[0].products  else {
+            return
+        }
+        let urls = product.flatMap { $0.productImage }
+        ImagePrefetcher(urls: urls).start()
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -63,7 +72,6 @@ extension ShowAllTvsTableVC {
         }
         
         cell.configureCell(product: product)
-        // ProductViewTableViewCell().configureCell(product: page)
         return cell
     }
     
@@ -81,7 +89,6 @@ extension ShowAllTvsTableVC {
             self.tableView.tableFooterView?.isHidden = false
         }
     }
-    
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

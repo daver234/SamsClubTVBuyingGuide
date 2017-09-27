@@ -188,8 +188,8 @@
 		5557CEF61F7AFF6800D943AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5557CF0A1F7B061100D943AB /* Product.swift */,
 				5557CF0C1F7B063200D943AB /* MockData.swift */,
+				5557CF0A1F7B061100D943AB /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

@@ -8,6 +8,7 @@
 
 import UIKit
 import Cosmos
+import Kingfisher
 
 class ProductViewTableViewCell: UITableViewCell {
     
@@ -19,8 +20,6 @@ class ProductViewTableViewCell: UITableViewCell {
     @IBOutlet weak var inStockLabel: UILabel!
     @IBOutlet weak var reviewCountLabel: UILabel!
     @IBOutlet weak var starView: CosmosView!
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,27 +37,21 @@ class ProductViewTableViewCell: UITableViewCell {
         
         if let inStock = product.inStock, inStock {
             self.inStockLabel.text = IN_STOCK
-            self.inStockLabel.textColor = ColorPalette.Green.Medium  // #colorLiteral(red: 0.3568627451, green: 0.5607843137, blue: 0.1333333333, alpha: 1)
+            self.inStockLabel.textColor = ColorPalette.Green.Medium
         } else {
             self.inStockLabel.text = OUT_OF_STOCK
-            self.inStockLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
-            self.shippingLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            self.inStockLabel.textColor = ColorPalette.Red.Medium
+            self.shippingLabel.textColor = ColorPalette.White.Medium
         }
         
-        // self.reviewCountLabel.text = String(describing: product.reviewCount ?? 0)
-        
-        /// Getting the image to show
-        /// Maybe implement image cache and pull from that?
+        /// Using Kingfisher Swift library to download and cache images
+        /// Find it here: https://github.com/onevcat/Kingfisher
+        ///
+        /// First get image out of assets as a placeholder while downloading the image from a URL
+        let image = UIImage(named: LOADING_IMAGE)
         guard let url = product.productImage else { return }
-        let data = try? Data(contentsOf: url)
-        
-        if let imageData = data {
-            let image = UIImage(data: imageData)
-            
-            /// Put image on main queue when received
-            DispatchQueue.main.async {
-                self.productImage.image = image
-            }
+        DispatchQueue.main.async {
+            self.productImage.kf.setImage(with: url, placeholder: image)
         }
     }
 }
