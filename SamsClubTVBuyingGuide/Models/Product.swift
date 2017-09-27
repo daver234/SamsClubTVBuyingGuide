@@ -65,3 +65,4 @@ struct Product: Decodable {
     /// Is the product in stock
     var inStock: Bool?
 }
+

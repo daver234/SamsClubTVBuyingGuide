@@ -11,7 +11,8 @@ import Kingfisher
 
 class ShowAllTvsTableVC: UITableViewController {
     
-    
+    fileprivate var isEndOfData = false
+    fileprivate var pageNumber = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,17 +92,16 @@ extension ShowAllTvsTableVC {
             
             self.tableView.tableFooterView = spinner
             self.tableView.tableFooterView?.isHidden = false
+            
+            /// Get more products
+            NetworkManager.instance.getProductsForPage(pageNumber: 1, pageSize: PAGE_SIZE) { (response) in
+                DispatchQueue.main.async {
+                    tableView.reloadData()
+                }
+            }
         }
     }
     
-    /// Turn off cell selection when returning from detail view to table view
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-////        UIView.animate(withDuration: 1.5, delay: 2.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 12, options: .curveLinear, animations: {
-////            // cell.layoutIfNeeded()
-////            tableView.deselectRow(at: indexPath, animated: true)
-////        }, completion: nil)
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
