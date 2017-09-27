@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Used to take out the highlighting of the selected row
 extension UITableView {
     public func deselectSelectedRow(animated: Bool) {
         if let indexPathForSelectedRow = self.indexPathForSelectedRow {

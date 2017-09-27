@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// A centeral repo of the constants used in this app
+/// Make changes here rather than in classes
 typealias CompletionHandler = (_ Success: Bool) -> ()
 
 /// URL Constants

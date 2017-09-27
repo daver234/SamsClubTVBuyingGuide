@@ -11,9 +11,10 @@ import SafariServices
 
 class StartVC: UIViewController, SFSafariViewControllerDelegate {
 
+    // MARK: - Variables
     let reachability = Reachability()!
     
-    
+    // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +25,7 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        /// Watch for connectivity being turned off
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
         do {
             try reachability.startNotifier()
@@ -51,9 +52,9 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
     
+    /// Check for what state changed for connectivity
     @objc func reachabilityChanged(note: Notification) {
         let reachability = note.object as! Reachability
-        
         switch reachability.connection {
         case .wifi:
             print("Reachable via WiFi")

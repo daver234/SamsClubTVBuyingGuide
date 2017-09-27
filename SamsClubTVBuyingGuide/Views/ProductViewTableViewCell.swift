@@ -10,6 +10,7 @@ import UIKit
 import Cosmos
 import Kingfisher
 
+/// All the details of the cell in ShowAllTvsTableVC
 class ProductViewTableViewCell: UITableViewCell {
     
     // IBOutlets - For Product

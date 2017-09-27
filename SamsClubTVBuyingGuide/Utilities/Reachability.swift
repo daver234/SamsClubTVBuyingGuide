@@ -24,6 +24,7 @@
 
 /// Added by Dave Rothschild - September 2017
 /// Github reference: https://github.com/ashleymills/Reachability.swift/blob/master/Reachability/Reachability.swift
+/// Used to determine if network conectivity has been turned off
 
 import SystemConfiguration
 import Foundation
