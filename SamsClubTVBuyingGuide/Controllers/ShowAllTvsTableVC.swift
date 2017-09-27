@@ -24,6 +24,10 @@ class ShowAllTvsTableVC: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 150
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        /// Allows user to see what cell they came from after returning from ProductDetailVC
+        /// This uses the UITableView extension in Extensions.swift
+        self.tableView.deselectSelectedRow(animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,7 +52,7 @@ extension ShowAllTvsTableVC {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let page = NetworkManager.instance.allProducts[0].products?.count  else { return 0 }
+        guard let page = NetworkManager.instance.allProducts[0].products?.count else { return 0 }
         return page
     }
     
@@ -89,6 +93,15 @@ extension ShowAllTvsTableVC {
             self.tableView.tableFooterView?.isHidden = false
         }
     }
+    
+    /// Turn off cell selection when returning from detail view to table view
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+////        UIView.animate(withDuration: 1.5, delay: 2.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 12, options: .curveLinear, animations: {
+////            // cell.layoutIfNeeded()
+////            tableView.deselectRow(at: indexPath, animated: true)
+////        }, completion: nil)
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -65,8 +65,9 @@ extension NetworkManager {
                 guard let name = first[0].productName else { return }
                 print("here is name: ", name)
                 
-                self.allProducts.append(products)
-                
+                DispatchQueue.main.async {
+                    self.allProducts.append(products)
+                }
                 
             }  catch DecodingError.valueNotFound(let value, let context) {
                 print("Missing key: \(value)")

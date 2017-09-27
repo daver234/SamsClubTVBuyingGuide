@@ -28,6 +28,7 @@
 		5557CF0F1F7B066000D943AB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CF0E1F7B066000D943AB /* NetworkManager.swift */; };
 		5557CF111F7B0EE400D943AB /* ShowAllTvsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CF101F7B0EE400D943AB /* ShowAllTvsTableVC.swift */; };
 		556787FC1F7B2F260005148A /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556787FB1F7B2F260005148A /* ProductDetailVC.swift */; };
+		556787FE1F7B40A70005148A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556787FD1F7B40A70005148A /* Extensions.swift */; };
 		CE126A3D3E175D16B11CE3C9 /* Pods_SamsClubTVBuyingGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC30CD621634E7DEA242FF7C /* Pods_SamsClubTVBuyingGuideUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		5557CF0E1F7B066000D943AB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5557CF101F7B0EE400D943AB /* ShowAllTvsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllTvsTableVC.swift; sourceTree = "<group>"; };
 		556787FB1F7B2F260005148A /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		556787FD1F7B40A70005148A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		556787FF1F7B4E580005148A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5FB7B9A5C6F441FCE27F3901 /* Pods-SamsClubTVBuyingGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuide/Pods-SamsClubTVBuyingGuide.debug.xcconfig"; sourceTree = "<group>"; };
 		860092C567E8B5A0D6539F72 /* Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideUITests/Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BDF81938B44B2BDAFC8C03B /* Pods-SamsClubTVBuyingGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideTests/Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 		5557CEBA1F7AFF3000D943AB = {
 			isa = PBXGroup;
 			children = (
+				556787FF1F7B4E580005148A /* README.md */,
 				5557CEC51F7AFF3000D943AB /* SamsClubTVBuyingGuide */,
 				5557CEDA1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests */,
 				5557CEE51F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests */,
@@ -220,6 +224,7 @@
 				5557CF021F7B042900D943AB /* Colors.swift */,
 				5557CF041F7B044D00D943AB /* Reachability.swift */,
 				5557CF061F7B053A00D943AB /* Constants.swift */,
+				556787FD1F7B40A70005148A /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -560,6 +565,7 @@
 				5557CF111F7B0EE400D943AB /* ShowAllTvsTableVC.swift in Sources */,
 				556787FC1F7B2F260005148A /* ProductDetailVC.swift in Sources */,
 				5557CF0D1F7B063200D943AB /* MockData.swift in Sources */,
+				556787FE1F7B40A70005148A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +738,7 @@
 				INFOPLIST_FILE = SamsClubTVBuyingGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daverothschild.SamsClubTVBuyingGuide;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -749,6 +756,7 @@
 				INFOPLIST_FILE = SamsClubTVBuyingGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daverothschild.SamsClubTVBuyingGuide;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
