@@ -40,18 +40,21 @@ extension NetworkManager {
         ///Check to see if we have already retrieved all the data.  If so, return and don't call the API again.
         guard !isEndOfData else {
             print("*** YEA GOT TO END DATA")
+            completion(false)
             return
         }
 
         print("*** in NetworkManager: next pageNumber to get is:", pageNumber)
         guard let url = URL.init(string: "\(BASE_URL)/\(API_KEY)/\(pageNumber)/\(pageSize)") else {
             print("Error: in guard for URL so something didn't work")
+            completion(false)
             return
         }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
                 debugPrint("Received an error trying to get the data:", error!)
+                completion(false)
                 return
             }
             
@@ -71,7 +74,7 @@ extension NetworkManager {
             do {
                 let result = try JSONDecoder().decode(ProductPage.self, from: data)
                 self.allProducts.append(result)
-                print("*** number in allProducts", self.allProducts.count)
+                print("*** number in allProducts; numberOfPagesRetrieved; 1st 1 greater than 2nd", self.allProducts.count, self.numberOfPagesRetrieved)
                 
                 /// Since a page was retrieved, increment the counter
                 self.numberOfPagesRetrieved += 1

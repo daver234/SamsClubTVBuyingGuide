@@ -14,6 +14,7 @@ class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching
     
     // MARK: - Variables
     // var currentPage: Int = 1
+    @IBOutlet weak var tableFooterView: UIView!
     
     // MARK: - Functions
     override func viewDidLoad() {
@@ -62,8 +63,8 @@ extension ShowAllTvsTableVC {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         /// First get the images
         // print("&&&& just before guard, subscript to All products is: ", (currentPage - 1))
-        let currentPage = NetworkManager.instance.numberOfPagesRetrieved
-        guard let product = NetworkManager.instance.allProducts[currentPage - 1].products  else {
+        let currentPage = NetworkManager.instance.numberOfPagesRetrieved - 1
+        guard let product = NetworkManager.instance.allProducts[currentPage].products  else {
             return
         }
         let urls = product.flatMap { $0.productImage }
@@ -76,7 +77,13 @@ extension ShowAllTvsTableVC {
         
         if let maxIndex = upcomingRows.max() {
             
-            let nextPage: Int = Int(ceil(Double(maxIndex) / Double(PAGE_SIZE))) + 1
+            // let nextPage: Int = Int(ceil(Double(maxIndex) / Double(PAGE_SIZE)))
+            
+            /// The maxIndex in the highest indexPath.row that is upcoming.
+            /// Adding to maxIndex causes the API call to happen 5 cells sooner that where the spinner will show.
+            /// This allows for time to get the data and reduce the amount of time the user sees the spinner.
+            /// So in general, this should improve the user experience.
+            let nextPage: Int = ( (maxIndex + 5) / PAGE_SIZE)
             print("&&& FIRST nextPage", nextPage)
 //            print("Here is current page", currentPage)
             print("&&&&&& maxIndex", maxIndex)
@@ -92,18 +99,25 @@ extension ShowAllTvsTableVC {
                 //loadLocalData(page: nextPage)
                 
                 // Check to see if we are done loading data.  Otherwise continue and make another API call
-                guard !NetworkManager.instance.isEndOfData else {
-                    print("&&& in isEndOfData")
-                    return
-                }
+//                guard !NetworkManager.instance.isEndOfData else {
+//                    print("&&& in isEndOfData")
+//                    return
+//                }
+                
+//                if NetworkManager.instance.isEndOfData {
+//                    self.tableView.reload
+//                }
                 
                 // Your function, which makes a network request to fetch the respective page of data from the network
                 //startLoadingDataFromNetwork(page: nextPage
+                let _ = "Here"
                 NetworkManager.instance.getProductsForPage(pageNumber: nextPage, pageSize: PAGE_SIZE) { (response) in
                 if response {
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
+                } else {
+                    print("&&& loaded all the data.  Done")
                 }
                 // self.currentPage = nextPage
                 }
@@ -117,10 +131,10 @@ extension ShowAllTvsTableVC {
         }
         
         // Check to see if we are done loading data.  Otherwise continue and make another API call
-        guard !NetworkManager.instance.isEndOfData else {
-            print("&&& in isEndOfData")
-            return UITableViewCell()
-        }
+//        guard !NetworkManager.instance.isEndOfData else {
+//            print("&&& in isEndOfData")
+//            return UITableViewCell()
+//        }
         print("&&&& indexPath.row is: ", indexPath.row)
         // print("&&& (currentPage): ", currentPage)
         /// If we at PAGE_SIZE, go get the next page
@@ -148,12 +162,13 @@ extension ShowAllTvsTableVC {
         let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
         if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
             
-            let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-            spinner.startAnimating()
-            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
-            
-            self.tableView.tableFooterView = spinner
-            self.tableView.tableFooterView?.isHidden = false
+            tableFooterView.isHidden = false
+//            let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+//            spinner.startAnimating()
+//            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+//
+//            self.tableView.tableFooterView = spinner
+//            self.tableView.tableFooterView?.isHidden = false
             
             // need to set spinner to nil after getting data
         }
