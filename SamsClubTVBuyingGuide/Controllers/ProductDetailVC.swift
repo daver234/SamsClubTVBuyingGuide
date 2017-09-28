@@ -8,6 +8,7 @@
 
 import UIKit
 import Cosmos
+import WebKit
 
 /// Show the details of one product
 class ProductDetailVC: UIViewController {
@@ -25,8 +26,9 @@ class ProductDetailVC: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var freeShippingLabel: UILabel!
     @IBOutlet weak var inStockLabel: UILabel!
-    @IBOutlet weak var shortDescription: UITextView!
-    @IBOutlet weak var longDescription: UITextView!
+    @IBOutlet weak var shortDescription: WKWebView!
+    @IBOutlet weak var longDescription: WKWebView!
+    
     
     
     // MARK: - Functions
@@ -36,15 +38,19 @@ class ProductDetailVC: UIViewController {
         print("variables", pageWithTV, productNumberInPage)
         setUpView()
     }
-    
+
     func setUpView() {
         guard let products = NetworkManager.instance.allProducts[pageWithTV].products else { return }
         productNameLabel.text = products[productNumberInPage].productName ?? "N/A"
         reviewRatingLabel.rating = products[productNumberInPage].reviewRating ?? 0
         reviewCountLabel.text = "\(products[productNumberInPage].reviewCount ?? 0)"
         priceLabel.text = products[productNumberInPage].price ?? "N/A"
-        shortDescription.text = products[productNumberInPage].shortDescription ?? "N/A"
-        longDescription.text = products[productNumberInPage].longDescription ?? "N/A"
+        
+        let fontsForWebViewShort = "<font face='System' size='15' color= 'black'>" + (products[productNumberInPage].shortDescription ?? "Not available.")
+        shortDescription.loadHTMLString(fontsForWebViewShort, baseURL: nil)
+        // let longHtmlText = products[productNumberInPage].longDescription ?? "Not available."
+        let fontsForWebViewLong = "<font face='System' size='15' color= 'black'>" + (products[productNumberInPage].longDescription ?? "Not available.")
+        longDescription.loadHTMLString(fontsForWebViewLong, baseURL: nil)
         
         if let inStock = products[productNumberInPage].inStock, inStock {
             inStockLabel.text = IN_STOCK
@@ -71,3 +77,5 @@ class ProductDetailVC: UIViewController {
         
     }
 }
+
+
