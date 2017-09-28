@@ -19,8 +19,8 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
         super.viewDidLoad()
         
         /// Connection available to get data from API
-        /// By loading products here we have avoid a delay when the user goes to view the products
-        NetworkManager.instance.getProductsForPage(pageNumber: 1, pageSize: PAGE_SIZE) { (response) in
+        /// By loading products here we have avoid a delay when the user goes to view the list of products in ShowAllTvsTableVC
+        NetworkManager.instance.getProductsForPage(pageNumber: STARTING_PAGE_NUMBER, pageSize: PAGE_SIZE) { (response) in
         }
     }
     

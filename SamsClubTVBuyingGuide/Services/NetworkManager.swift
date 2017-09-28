@@ -14,16 +14,13 @@ class NetworkManager {
     // Mark: - Variables
     /// This is a singleton object
     static let instance = NetworkManager()
-    
-    /// Create dictionary of products (i.e. TVs)
     var allProducts = [ProductPage]()
-    
-    var justTvs = [Product]()
-    fileprivate(set) var pageNumberCounter = 0
+    fileprivate(set) var numberOfPagesRetrieved = 0
     fileprivate(set) var totalProductsCountFromServer = 0
     fileprivate(set) var totalPagesToGet = 0
-    fileprivate(set) var firstLaunch = true
-    fileprivate var notEndOfData = true
+    fileprivate(set) var isFirstLaunch = true
+    fileprivate(set) var isEndOfData = false
+    fileprivate(set) var totalProductsRetrieved = 0
     
     /// Prevent new instances from being created on the outside
     private init() {
@@ -40,29 +37,15 @@ extension NetworkManager {
          - completion: bool for success or failure of call to API
     */
     func getProductsForPage(pageNumber: Int, pageSize: Int, completion: @escaping CompletionHandler) {
-        if firstLaunch {
-            firstLaunch = false
-        } else if let setTotalProducts = allProducts[0].totalProducts {
-            if setTotalProducts > 0 {
-                
-                totalProductsCountFromServer = setTotalProducts
-                print("ok in here now", setTotalProducts)
-                totalPagesToGet = Int(ceil(Double(totalPagesToGet) / Double(PAGE_SIZE)))
-                if pageNumberCounter == totalPagesToGet {
-                    notEndOfData = false
-                }
-            }
+        ///Check to see if we have already retrieved all the data.  If so, return and don't call the API again.
+        guard !isEndOfData else {
+            print("*** YEA GOT TO END DATA")
+            return
         }
-        
-        
-        /// If we have got all the data (loaded all the pages of product into justTvs) then don't call the api again
-        /// That means notEndOfData is false....we ARE at the end of the data.
-        guard notEndOfData else { return }
-        
-        pageNumberCounter += 1
-        
+
+        print("*** in NetworkManager: next pageNumber to get is:", pageNumber)
         guard let url = URL.init(string: "\(BASE_URL)/\(API_KEY)/\(pageNumber)/\(pageSize)") else {
-            print("in guard")
+            print("Error: in guard for URL so something didn't work")
             return
         }
         
@@ -83,55 +66,58 @@ extension NetworkManager {
             
             guard let data = data else { return }
             
-            // Now that we have data, let's decode it into the model
+            /// Now that we have data, let's decode it into the model and it to the local data structure.
+            /// And do the appropriate checks to see if we are done getting data from the server.
             do {
                 let result = try JSONDecoder().decode(ProductPage.self, from: data)
+                self.allProducts.append(result)
+                print("*** number in allProducts", self.allProducts.count)
                 
-                print(result.totalProducts ?? 0)
-                print("pageNumberToGet: ", self.pageNumberCounter)
-                print("pageNumber from result", result.pageNumber ?? 0)
-                print(result.pageSize ?? 0)
+                /// Since a page was retrieved, increment the counter
+                self.numberOfPagesRetrieved += 1
                 
-                guard let foundProducts = result.products else {
-                    return
-                }
-                // print("found products = ", foundProducts)
-                
-                // guard let name = foundProducts[0].productName else { return }
-                // print("here is name: ", name)
-                
-                DispatchQueue.main.async {
-                    self.allProducts.append(result)
+                /// Check to see if we have retrieved all the pages.  If so, change isEndOfData to true.
+                if self.totalPagesToGet == self.numberOfPagesRetrieved {
+                    self.isEndOfData = true
                 }
                 
-                self.totalProductsCountFromServer += result.totalProducts ?? 0
-                print("totalProductsCountFromServer", self.totalProductsCountFromServer)
+                guard let newProductsRetrieved = result.products?.count else { return }
+                self.totalProductsRetrieved += newProductsRetrieved
+                print("**** here is count of totalProductsRetrieved", self.totalProductsRetrieved)
+                print("**** how many pages retrieved as per allProduct structure?", self.allProducts.count)
+               
+                /// Check to see if this is the first call to the API.  It happens on first launch.
+                /// If so, then we need to know the total products on the server and then calculate
+                /// how many pages we might need to retrieve.
+                if self.isFirstLaunch {
+                    if let setTotalProducts = self.allProducts[0].totalProducts {
+                        self.totalProductsCountFromServer = setTotalProducts
+                        
+                        /// Calculate total number of pages that might need to be retrieved. Round up
+                        self.totalPagesToGet = Int(ceil(Double(self.totalProductsCountFromServer) / Double(PAGE_SIZE)))
+                        
+                        /// Don't come throught this again so set isFirstLaunch to false
+                        self.isFirstLaunch = false
+                    }
+                }
                 
-//                if let addedProducts = result.products {
-//                    DispatchQueue.main.async {
-//                        self.justTvs.append(addedProducts)
-//                    }
-//                }
-                
-                print("total products in allProducts:", self.allProducts.count)
-                //print("these are products", self.justTvs)
                 completion(true)
                 
             }  catch DecodingError.valueNotFound(let value, let context) {
                 print("Missing key: \(value)")
                 print("Debug description: \(context.debugDescription)")
-                completion(true)
+                completion(false)
             }  catch DecodingError.typeMismatch(let type, let context) {
                 print("Type mismatch: \(type)")
                 print("Debug description: \(context.debugDescription)")
-                completion(true)
+                completion(false)
             }  catch DecodingError.keyNotFound(let key, let context) {
                 print("Missing key: \(key)")
                 print("Debug description: \(context.debugDescription)")
-                completion(true)
+                completion(false)
             } catch let jsonError {
                 print("Error serializing JSON", jsonError)
-                completion(true)
+                completion(false)
             }
             }.resume()
     }

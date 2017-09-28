@@ -13,15 +13,12 @@ import Kingfisher
 class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching {
     
     // MARK: - Variables
-    fileprivate var isEndOfData = false
-    fileprivate var pageNumber = 2
-    // testing
-    var currentPage: Int = 1
+    // var currentPage: Int = 1
     
     // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 0.7882352941, alpha: 1)
+        navigationController?.navigationBar.barTintColor = ColorPalette.Blue.Medium
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.tableView.prefetchDataSource = self
     }
@@ -49,24 +46,23 @@ class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching
 
 
 
-
-
 extension ShowAllTvsTableVC {
     
     // MARK: - TableView functions
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let page = NetworkManager.instance.allProducts[0].products?.count else { return 0 }
-        return page
+        // print("&&&& number of rows means totalProductsRetrieved", NetworkManager.instance.totalProductsRetrieved)
+        return NetworkManager.instance.totalProductsRetrieved
     }
     
     /// Use Apple and Kingfisher prefetching to download images ahead of time to improve the user experience.
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         /// First get the images
+        // print("&&&& just before guard, subscript to All products is: ", (currentPage - 1))
+        let currentPage = NetworkManager.instance.numberOfPagesRetrieved
         guard let product = NetworkManager.instance.allProducts[currentPage - 1].products  else {
             return
         }
@@ -81,20 +77,35 @@ extension ShowAllTvsTableVC {
         if let maxIndex = upcomingRows.max() {
             
             let nextPage: Int = Int(ceil(Double(maxIndex) / Double(PAGE_SIZE))) + 1
+            print("&&& FIRST nextPage", nextPage)
+//            print("Here is current page", currentPage)
+            print("&&&&&& maxIndex", maxIndex)
+//            print("here is upcoming rows", upcomingRows)
             
             if nextPage > currentPage {
+                print("&&& in nextPage >", nextPage)
+                print("&&& Here is current page", currentPage)
+                print("&&& here is maxIndex", maxIndex)
+                print("&&& here is upcoming rows", upcomingRows)
+                print("done ShowAll -------------------")
                 // Your function, which attempts to load respective page from the local database
                 //loadLocalData(page: nextPage)
                 
+                // Check to see if we are done loading data.  Otherwise continue and make another API call
+                guard !NetworkManager.instance.isEndOfData else {
+                    print("&&& in isEndOfData")
+                    return
+                }
+                
                 // Your function, which makes a network request to fetch the respective page of data from the network
-                //startLoadingDataFromNetwork(page: nextPage)
-               NetworkManager.instance.getProductsForPage(pageNumber: 1, pageSize: PAGE_SIZE) { (response) in
+                //startLoadingDataFromNetwork(page: nextPage
+                NetworkManager.instance.getProductsForPage(pageNumber: nextPage, pageSize: PAGE_SIZE) { (response) in
                 if response {
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
                 }
-                self.currentPage = nextPage
+                // self.currentPage = nextPage
                 }
             }
         }
@@ -105,7 +116,22 @@ extension ShowAllTvsTableVC {
             return UITableViewCell()
         }
         
-        guard let product = NetworkManager.instance.allProducts[0].products?[indexPath.row]  else {
+        // Check to see if we are done loading data.  Otherwise continue and make another API call
+        guard !NetworkManager.instance.isEndOfData else {
+            print("&&& in isEndOfData")
+            return UITableViewCell()
+        }
+        print("&&&& indexPath.row is: ", indexPath.row)
+        // print("&&& (currentPage): ", currentPage)
+        /// If we at PAGE_SIZE, go get the next page
+//        if indexPath.row == PAGE_SIZE {
+//            DispatchQueue.main.async {
+//                tableView.reloadData()
+//            }
+//        }
+        let pageToGet = indexPath.row / PAGE_SIZE
+        let productToGet = indexPath.row % PAGE_SIZE
+        guard let product = NetworkManager.instance.allProducts[pageToGet].products?[productToGet]  else {
             return UITableViewCell()
         }
         

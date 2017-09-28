@@ -4,9 +4,9 @@
 
 The purpose of this app is to help someone buy a new TV.
 
-I meet the requirement of showing a list of items from the API call but I'm doing in a way that trys to answer the question:  What is something useful that could be done with this data?
+I meet the requirement of showing a list of items from the API call but I'm doing in a way that tries to answer the question:  What is something useful that could be done with this data?
 
-It's always important to think beyond the stated requirement, in certain situations, to demostrate how to reframe problems.
+It's always important to think beyond the stated requirement, in certain situations, demonstrate how to reframe problems.
 
 In this case, what job is a person trying to get done given that, technically, I can provide them with information on new TVs.
 

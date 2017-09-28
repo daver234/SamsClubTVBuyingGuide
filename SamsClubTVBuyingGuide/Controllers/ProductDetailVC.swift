@@ -11,6 +11,7 @@ import UIKit
 /// Show the details of one product
 class ProductDetailVC: UIViewController {
 
+    // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = ColorPalette.White.Medium
