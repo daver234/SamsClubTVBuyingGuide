@@ -13,7 +13,10 @@ import Kingfisher
 class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching {
     
     // MARK: - Variables
-    // var currentPage: Int = 1
+    var pageNumberForSegue = 0
+    var productNumberInPageForSegue = 0
+
+    // MARK: - Outlets
     @IBOutlet weak var tableFooterView: UIView!
     
     // MARK: - Functions
@@ -99,7 +102,6 @@ extension ShowAllTvsTableVC {
             print("&&& here is maxIndex", maxIndex)
             print("done ShowAll -------------------")
             
-            let _ = "Here"
             NetworkManager.instance.getProductsForPage(pageNumber: nextPage, pageSize: PAGE_SIZE) { (response) in
                 if response {
                     DispatchQueue.main.async {
@@ -108,7 +110,6 @@ extension ShowAllTvsTableVC {
                 } else {
                     print("&&& loaded all the data.  Done")
                 }
-                // self.currentPage = nextPage
             }
         }
     }
@@ -120,7 +121,11 @@ extension ShowAllTvsTableVC {
         
         print("&&&& indexPath.row is: ", indexPath.row)
 
+        /// Find the page with the product for the cell
+        /// Just need cell number and default page size to calculate which page it is in
         let pageToGet = indexPath.row / PAGE_SIZE
+        
+        /// To get the product number within a page, just need the modulus of row to page size
         let productToGet = indexPath.row % PAGE_SIZE
         guard let product = NetworkManager.instance.allProducts[pageToGet].products?[productToGet]  else {
             return UITableViewCell()
@@ -136,7 +141,6 @@ extension ShowAllTvsTableVC {
         let lastSectionIndex = tableView.numberOfSections - 1
         let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
         if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
-            
             tableFooterView.isHidden = false
         }
     }
@@ -144,9 +148,16 @@ extension ShowAllTvsTableVC {
     /// might try this for spinner and data loading.....https://stackoverflow.com/questions/32425466/load-more-after-coming-to-bottom-of-uitableview
     // https://stackoverflow.com/questions/20269474/uitableview-load-more-when-scrolling-to-bottom-like-facebook-application
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        pageNumberForSegue = productNumberInPageForSegue
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let destination = segue.destination as? ProductDetailVC {
+            // let cell = sender as? ProductViewTableViewCell
+            guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
+            destination.pageWithTV = selectedRow / PAGE_SIZE
+            destination.productNumberInPage = selectedRow % PAGE_SIZE
+        }
     }
 }
