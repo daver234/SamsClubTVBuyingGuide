@@ -297,7 +297,7 @@
                                                 </stackView>
                                             </subviews>
                                         </stackView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pRH-xM-ddG">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pRH-xM-ddG">
                                             <rect key="frame" x="13" y="29" width="90" height="90"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="90" id="7pG-Fw-DwI"/>
@@ -359,8 +359,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iyt-oy-htN">
-                                <rect key="frame" x="70" y="163" width="240" height="137"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iyt-oy-htN">
+                                <rect key="frame" x="70" y="163" width="240" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="utS-O5-Wvi">
@@ -374,28 +374,10 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sharp 40&quot; Class 1080p FHD TV LC-40P3020U" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l59-cX-lwh">
                                 <rect key="frame" x="22" y="74" width="341" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="qAI-CR-Lhc">
-                                <rect key="frame" x="154" y="340" width="142.5" height="13.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Free shipping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8c-gq-3JW">
-                                        <rect key="frame" x="0.0" y="0.0" width="66" height="13.5"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="In stock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4I1-Jk-SRu">
-                                        <rect key="frame" x="101" y="0.0" width="41.5" height="13.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1w2-JB-ahL">
                                 <rect key="frame" x="22" y="603" width="205" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -449,8 +431,16 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ei3-Hl-Tek">
+                                <rect key="frame" x="22" y="488" width="337" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3x-0L-1Qx" customClass="RoundedButton" customModule="SamsClubTVBuyingGuide" customModuleProvider="target">
-                                <rect key="frame" x="16" y="385" width="343" height="50"/>
+                                <rect key="frame" x="15" y="385" width="345" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.56078431370000004" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ril-Fc-wdB"/>
@@ -464,27 +454,56 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buyBtnPressed:" destination="Hf3-sw-6Fs" eventType="touchUpInside" id="r0t-U2-lQt"/>
+                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="qAI-CR-Lhc">
+                                <rect key="frame" x="153" y="363" width="142.5" height="13.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Free shipping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8c-gq-3JW">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="In stock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4I1-Jk-SRu">
+                                        <rect key="frame" x="101" y="0.0" width="41.5" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.41945424679999999" green="0.58069151640000005" blue="0.25099626180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1,299.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ls-6S-MWY">
-                                <rect key="frame" x="149" y="315" width="77" height="21"/>
+                                <rect key="frame" x="148" y="338" width="77" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ei3-Hl-Tek">
-                                <rect key="frame" x="22" y="488" width="337" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rHQ-EJ-9dA" firstAttribute="trailing" secondItem="o3x-0L-1Qx" secondAttribute="trailing" constant="15" id="AGO-Qb-Un1"/>
+                            <constraint firstItem="o3x-0L-1Qx" firstAttribute="leading" secondItem="rHQ-EJ-9dA" secondAttribute="leading" constant="15" id="SYl-XP-ZlX"/>
+                            <constraint firstItem="o3x-0L-1Qx" firstAttribute="centerX" secondItem="Zyd-Ej-1TR" secondAttribute="centerX" id="vXA-Jb-hfy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rHQ-EJ-9dA"/>
                     </view>
                     <size key="freeformSize" width="375" height="800"/>
+                    <connections>
+                        <outlet property="freeShippingLabel" destination="L8c-gq-3JW" id="zpy-rv-Gfm"/>
+                        <outlet property="inStockLabel" destination="4I1-Jk-SRu" id="7LT-P5-zw0"/>
+                        <outlet property="longDescription" destination="utS-O5-Wvi" id="etR-O4-2Oo"/>
+                        <outlet property="priceLabel" destination="1ls-6S-MWY" id="SgB-kL-NA5"/>
+                        <outlet property="productImage" destination="Iyt-oy-htN" id="yjb-bN-vdo"/>
+                        <outlet property="productNameLabel" destination="l59-cX-lwh" id="dOm-pE-vN2"/>
+                        <outlet property="reviewCountLabel" destination="ApM-TI-Nei" id="eyZ-T7-mST"/>
+                        <outlet property="reviewRatingLabel" destination="5ck-Zy-PQ1" id="kho-NF-9ZC"/>
+                        <outlet property="shortDescription" destination="Ei3-Hl-Tek" id="OgD-ft-WlU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Js-po-XhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
