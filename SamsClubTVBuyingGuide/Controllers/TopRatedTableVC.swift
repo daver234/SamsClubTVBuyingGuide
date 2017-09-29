@@ -11,32 +11,22 @@ import FoldingCell
 
 class TopRatedTableVC: UITableViewController {
     
-    fileprivate struct CellMeasure {
-        struct CellHeight {
-            static let close: CGFloat = 130 // equal or greater foregroundView height
-            static let open: CGFloat = 260 // equal or greater containerView height
-        }
-    }
-    
-    // var cellHeights = (0..<PAGE_SIZE).map { _ in CellMeasure.CellHeight.close }
-    // let kRowsCount = 10
+    // MARK: - Variables
     let kCloseCellHeight: CGFloat = 130
     let kOpenCellHeight: CGFloat = 260
     fileprivate var cellHeights: [CGFloat] = []
-    
     let data = MockDataManager.instance.allMockData[0]
 
+    // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
 
     private func setup() {
-        cellHeights = Array(repeating: CellMeasure.CellHeight.close, count: PAGE_SIZE)
-        tableView.estimatedRowHeight = CellMeasure.CellHeight.close
+        cellHeights = Array(repeating: kCloseCellHeight, count: PAGE_SIZE)
+        tableView.estimatedRowHeight = kCloseCellHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        // tableView.backgroundColor = ColorPalette.Blue.Light // UIColor(named: ColorPalette.Blue.Light)
-        //tableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background"))
     }
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -61,9 +51,6 @@ extension TopRatedTableVC {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TOP_RATED, for: indexPath) as! TopRatedTableViewCell
-        //let durations: [TimeInterval] = [0.26, 0.2, 0.2]
-        //cell.durationsForExpandedState = durations
-        //cell.durationsForCollapsedState = durations
         guard let product = MockDataManager.instance.allMockData[0].products?[indexPath.row]  else {
             return UITableViewCell()
         }
@@ -88,17 +75,6 @@ extension TopRatedTableVC {
             duration = 0.8
         }
         
-//        if cellHeights[indexPath.row] == CellMeasure.CellHeight.close { // open cell
-//            cellHeights[indexPath.row] = CellMeasure.CellHeight.open
-//            cell.selectedAnimation(true, animated: true, completion: nil)
-//
-//            duration = 0.5
-//        } else {// close cell
-//            cellHeights[indexPath.row] = CellMeasure.CellHeight.close
-//            cell.selectedAnimation(false, animated: true, completion: nil)
-//            duration = 1.1
-//        }
-        
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
             tableView.beginUpdates()
             tableView.endUpdates()
@@ -109,15 +85,10 @@ extension TopRatedTableVC {
         guard case let cell as TopRatedTableViewCell = cell else {
             return
         }
-        
-        cell.backgroundColor = .clear
-        
-        if cellHeights[indexPath.row] == CellMeasure.CellHeight.close {
+        if cellHeights[indexPath.row] == kCloseCellHeight {
             cell.selectedAnimation(false, animated: false, completion:nil)
         } else {
             cell.selectedAnimation(true, animated: false, completion: nil)
         }
     }
-        
-
 }
