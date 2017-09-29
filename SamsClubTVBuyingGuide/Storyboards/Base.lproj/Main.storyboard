@@ -167,22 +167,58 @@
             </objects>
             <point key="canvasLocation" x="1534" y="-277"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Top Rated TableVC-->
         <scene sceneID="XL1-Cw-bNe">
             <objects>
-                <tableViewController id="20N-ok-Cp0" sceneMemberID="viewController">
+                <tableViewController id="20N-ok-Cp0" customClass="TopRatedTableVC" customModule="SamsClubTVBuyingGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7tW-6O-xS0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Oc6-x2-bnx">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopRatedCell" rowHeight="330" id="Oc6-x2-bnx" customClass="FoldingCell" customModule="FoldingCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="330"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oc6-x2-bnx" id="YCs-ou-qjy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="329.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Aw-Je-cjG" userLabel="Foreground" customClass="RotatedView" customModule="FoldingCell">
+                                            <rect key="frame" x="20" y="15" width="335" height="100"/>
+                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="fxi-SR-dka"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPh-HV-e6m" userLabel="Container">
+                                            <rect key="frame" x="20" y="123" width="335" height="200"/>
+                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="DYJ-KO-dig"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8Aw-Je-cjG" secondAttribute="trailing" constant="12" id="MGM-IP-SwD"/>
+                                        <constraint firstItem="8Aw-Je-cjG" firstAttribute="top" secondItem="YCs-ou-qjy" secondAttribute="topMargin" constant="7" identifier="ForegroundViewTop" id="NV0-bn-UQ9"/>
+                                        <constraint firstItem="IPh-HV-e6m" firstAttribute="top" secondItem="YCs-ou-qjy" secondAttribute="topMargin" constant="105" id="Urn-sl-bvY"/>
+                                        <constraint firstItem="IPh-HV-e6m" firstAttribute="top" secondItem="8Aw-Je-cjG" secondAttribute="bottom" constant="8" identifier="ContainerViewTop" id="rdl-Gi-23O"/>
+                                        <constraint firstItem="8Aw-Je-cjG" firstAttribute="leading" secondItem="YCs-ou-qjy" secondAttribute="leadingMargin" constant="12" id="vf8-PT-2fs"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="IPh-HV-e6m" secondAttribute="trailing" constant="12" id="wLw-Ag-IEq"/>
+                                        <constraint firstItem="IPh-HV-e6m" firstAttribute="leading" secondItem="YCs-ou-qjy" secondAttribute="leadingMargin" constant="12" id="yIe-4x-ILS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="itemCount">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="containerView" destination="IPh-HV-e6m" id="0ZR-9c-Gpi"/>
+                                    <outlet property="containerViewTop" destination="rdl-Gi-23O" id="cW3-uf-bKt"/>
+                                    <outlet property="foregroundView" destination="8Aw-Je-cjG" id="FmB-W2-NHO"/>
+                                    <outlet property="foregroundViewTop" destination="NV0-bn-UQ9" id="5cy-jo-XXN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -26,6 +26,7 @@ let PRODUCT_DETAIL = "toProductDetail"
 
 /// Cells
 let PRODUCT_CELL = "ProductCell"
+let TOP_RATED = "TopRatedCell"
 
 /// Other
 let OUT_OF_STOCK = "Out of stock"
@@ -34,6 +35,7 @@ let STOCK_NOT_AVAILABLE = "Item not available"
 let LOADING_IMAGE = "loadingImage.png"
 let PAGE_SIZE = 30
 let STARTING_PAGE_NUMBER = 0
+let MOCK_DATA_CELL_COUNT = 5
 
 /// Errors
 let MISSING_JSON_VALUE = "Value not available"
