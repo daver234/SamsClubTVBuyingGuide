@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// A singleton class to set up the MockData
+/// Still a work in progress
 class MockDataManager {
     
     // MARK: - Variables
@@ -15,12 +17,10 @@ class MockDataManager {
     fileprivate(set) var allMockData = [ProductPage]()
     fileprivate(set) var allMockDataProductsCount = 0
     
+    // MARK: - Functions
     func getMockDataForTopRated() {
-       
-            
         guard let url = URL.init(string: "\(BASE_URL)/\(API_KEY)/\(0)/\(PAGE_SIZE)") else {
             print("Error: in guard for URL so something didn't work")
-            
             return
         }
         
@@ -45,12 +45,6 @@ class MockDataManager {
             do {
                 let result = try JSONDecoder().decode(ProductPage.self, from: data)
                 self.allMockData.append(result)
-                
-//                if let count = self.allMockData[0].products?.count {
-//                    self.allMockDataProductsCount = count
-//                }
-                // self.allMockDataProductsCount = allMockData[0].products?.count
-                // print("allMockData", self.allMockData)
                 
             }  catch DecodingError.valueNotFound(let value, let context) {
                 print("Missing key: \(value)")
