@@ -19,8 +19,10 @@ class TopRatedTableVC: UITableViewController {
     }
     
     var cellHeights = (0..<MOCK_DATA_CELL_COUNT).map { _ in CellMeasure.CellHeight.close }
-    let kRowsCount = 10
+    // let kRowsCount = 10
     //var cellHeights: [CGFloat] = []
+    
+    let data = MockDataManager.instance.allMockData[0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,8 @@ extension TopRatedTableVC {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MOCK_DATA_CELL_COUNT
+        guard let products = data.products else { return 1 }
+        return  products.count
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -44,7 +47,7 @@ extension TopRatedTableVC {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TOP_RATED, for: indexPath) as! FoldingCell
-        let durations: [TimeInterval] = [0.26, 0.2, 0.2]
+        //let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         //cell.durationsForExpandedState = durations
         //cell.durationsForCollapsedState = durations
         return cell

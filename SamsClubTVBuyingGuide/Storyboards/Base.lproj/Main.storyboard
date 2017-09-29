@@ -176,7 +176,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopRatedCell" rowHeight="400" id="Oc6-x2-bnx" customClass="FoldingCell" customModule="FoldingCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopRatedCell" rowHeight="400" id="Oc6-x2-bnx" customClass="TopRatedTableViewCell" customModule="SamsClubTVBuyingGuide" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oc6-x2-bnx" id="YCs-ou-qjy">
@@ -220,7 +220,7 @@
                                                     <rect key="frame" x="250" y="70" width="71.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.35686274509999999" green="0.56078431370000004" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -274,6 +274,9 @@
                                                             <real key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buyBtnPressed:" destination="Oc6-x2-bnx" eventType="touchUpInside" id="Zmt-rp-XYD"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -284,7 +287,7 @@
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="8Aw-Je-cjG" secondAttribute="trailing" constant="12" id="MGM-IP-SwD"/>
                                         <constraint firstItem="8Aw-Je-cjG" firstAttribute="top" secondItem="YCs-ou-qjy" secondAttribute="topMargin" constant="7" identifier="ForegroundViewTop" id="NV0-bn-UQ9"/>
-                                        <constraint firstItem="IPh-HV-e6m" firstAttribute="top" secondItem="YCs-ou-qjy" secondAttribute="topMargin" constant="125" id="Urn-sl-bvY"/>
+                                        <constraint firstItem="IPh-HV-e6m" firstAttribute="top" secondItem="YCs-ou-qjy" secondAttribute="topMargin" constant="125" identifier="ContainerViewTop" id="Urn-sl-bvY"/>
                                         <constraint firstItem="8Aw-Je-cjG" firstAttribute="leading" secondItem="YCs-ou-qjy" secondAttribute="leadingMargin" constant="12" id="vf8-PT-2fs"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="IPh-HV-e6m" secondAttribute="trailing" constant="12" id="wLw-Ag-IEq"/>
                                         <constraint firstItem="IPh-HV-e6m" firstAttribute="leading" secondItem="YCs-ou-qjy" secondAttribute="leadingMargin" constant="12" id="yIe-4x-ILS"/>
@@ -296,9 +299,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <outlet property="buyBtn" destination="rQT-CP-mOV" id="2d8-iU-Org"/>
                                     <outlet property="containerView" destination="IPh-HV-e6m" id="0ZR-9c-Gpi"/>
+                                    <outlet property="containerViewTop" destination="Urn-sl-bvY" id="B4x-sD-l4R"/>
                                     <outlet property="foregroundView" destination="8Aw-Je-cjG" id="FmB-W2-NHO"/>
                                     <outlet property="foregroundViewTop" destination="NV0-bn-UQ9" id="5cy-jo-XXN"/>
+                                    <outlet property="inStockLabel" destination="JoM-2O-k7m" id="R8j-Gx-RvN"/>
+                                    <outlet property="longDescription" destination="XdM-fS-Kb5" id="BRe-Rl-AKq"/>
+                                    <outlet property="productImage" destination="xNW-WZ-lEd" id="fUX-On-KnR"/>
+                                    <outlet property="productNameLabel" destination="7kM-zn-x9D" id="JS6-1l-fL0"/>
+                                    <outlet property="productPriceLabel" destination="8wl-Eb-pG1" id="eYu-Aa-kRH"/>
+                                    <outlet property="shippingLabel" destination="mtT-Sw-n5A" id="hoN-4l-MEo"/>
+                                    <outlet property="shortDescription" destination="Xck-1H-GxA" id="cUN-Ab-ajv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

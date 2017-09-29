@@ -11,6 +11,7 @@
 		3921B8E7AA90A25FEB5B99DE /* Pods_SamsClubTVBuyingGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8683FFA56749B1437E3DA1 /* Pods_SamsClubTVBuyingGuide.framework */; };
 		550BCFEB1F7DE41E00908824 /* TopRatedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFEA1F7DE41E00908824 /* TopRatedTableViewCell.swift */; };
 		550BCFED1F7DE44100908824 /* TopRatedTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFEC1F7DE44100908824 /* TopRatedTableVC.swift */; };
+		550BCFF11F7E017600908824 /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFF01F7E017600908824 /* MockDataManager.swift */; };
 		5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC61F7AFF3000D943AB /* AppDelegate.swift */; };
 		5557CEC91F7AFF3000D943AB /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC81F7AFF3000D943AB /* StartVC.swift */; };
 		5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECA1F7AFF3000D943AB /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		3C442BD02AC0524BDE8EF9B2 /* Pods-SamsClubTVBuyingGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuide/Pods-SamsClubTVBuyingGuide.release.xcconfig"; sourceTree = "<group>"; };
 		550BCFEA1F7DE41E00908824 /* TopRatedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedTableViewCell.swift; sourceTree = "<group>"; };
 		550BCFEC1F7DE44100908824 /* TopRatedTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedTableVC.swift; sourceTree = "<group>"; };
+		550BCFF01F7E017600908824 /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
 		5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsClubTVBuyingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5557CEC61F7AFF3000D943AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5557CEC81F7AFF3000D943AB /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -189,9 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				5557CEFC1F7B035200D943AB /* NoConnectivityVC.swift */,
-				5557CEC81F7AFF3000D943AB /* StartVC.swift */,
-				5557CF101F7B0EE400D943AB /* ShowAllTvsTableVC.swift */,
 				556787FB1F7B2F260005148A /* ProductDetailVC.swift */,
+				5557CF101F7B0EE400D943AB /* ShowAllTvsTableVC.swift */,
+				5557CEC81F7AFF3000D943AB /* StartVC.swift */,
 				550BCFEC1F7DE44100908824 /* TopRatedTableVC.swift */,
 			);
 			path = Controllers;
@@ -209,6 +211,7 @@
 		5557CEF71F7AFF6F00D943AB /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				550BCFF01F7E017600908824 /* MockDataManager.swift */,
 				5557CF0E1F7B066000D943AB /* NetworkManager.swift */,
 			);
 			path = Services;
@@ -237,8 +240,8 @@
 		5557CEFA1F7AFF9000D943AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5557CF001F7B03FE00D943AB /* RoundedButton.swift */,
 				5557CF081F7B05E000D943AB /* ProductViewTableViewCell.swift */,
+				5557CF001F7B03FE00D943AB /* RoundedButton.swift */,
 				550BCFEA1F7DE41E00908824 /* TopRatedTableViewCell.swift */,
 			);
 			path = Views;
@@ -565,6 +568,7 @@
 				550BCFED1F7DE44100908824 /* TopRatedTableVC.swift in Sources */,
 				5557CF0F1F7B066000D943AB /* NetworkManager.swift in Sources */,
 				5557CF051F7B044D00D943AB /* Reachability.swift in Sources */,
+				550BCFF11F7E017600908824 /* MockDataManager.swift in Sources */,
 				5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */,
 				5557CF071F7B053A00D943AB /* Constants.swift in Sources */,
 				5557CEFE1F7B035200D943AB /* NoConnectivityVC.swift in Sources */,

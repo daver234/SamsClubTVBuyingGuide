@@ -59,12 +59,6 @@ class ProductDetailVC: UIViewController {
         shortDescription.text = (products[productNumberInPage].shortDescription ?? "Not available.").html2String
         longDescription.text = (products[productNumberInPage].longDescription ?? "Not available.").html2String
         
-//        let fontsForWebViewShort = "<font face='Arial' size='10' color= 'black'>" + (products[productNumberInPage].shortDescription ?? "Not available.")
-//        shortDescription.loadHTMLString(fontsForWebViewShort, baseURL: nil)
-//        // let longHtmlText = products[productNumberInPage].longDescription ?? "Not available."
-//        let fontsForWebViewLong = "<font face='Arial' size='10' color= 'black'>" + (products[productNumberInPage].longDescription ?? "Not available.")
-//        longDescription.loadHTMLString(fontsForWebViewLong, baseURL: nil)
-        
         if let inStock = products[productNumberInPage].inStock, inStock {
             inStockLabel.text = IN_STOCK
             inStockLabel.textColor = ColorPalette.Green.Medium

@@ -14,7 +14,7 @@ class NetworkManager {
     // Mark: - Variables
     /// This is a singleton object
     static let instance = NetworkManager()
-    var allProducts = [ProductPage]()
+    fileprivate(set) var allProducts = [ProductPage]()
     fileprivate(set) var numberOfPagesRetrieved = 0
     fileprivate(set) var totalProductsCountFromServer = 0
     fileprivate(set) var totalPagesToGet = 0
