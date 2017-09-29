@@ -293,16 +293,6 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQT-CP-mOV">
-                                                            <rect key="frame" x="217" y="78" width="110" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="3"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
@@ -352,7 +342,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="buyBtn" destination="rQT-CP-mOV" id="hIl-4o-qsM"/>
                                     <outlet property="containerView" destination="IPh-HV-e6m" id="0ZR-9c-Gpi"/>
                                     <outlet property="containerViewTop" destination="Urn-sl-bvY" id="B4x-sD-l4R"/>
                                     <outlet property="firstContainerView" destination="N4c-E8-Hfy" id="1mo-fG-3nT"/>
