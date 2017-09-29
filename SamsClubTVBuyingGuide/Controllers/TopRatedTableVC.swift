@@ -18,7 +18,7 @@ class TopRatedTableVC: UITableViewController {
         }
     }
     
-    var cellHeights = (0..<MOCK_DATA_CELL_COUNT).map { _ in CellMeasure.CellHeight.close }
+    var cellHeights = (0..<PAGE_SIZE).map { _ in CellMeasure.CellHeight.close }
     // let kRowsCount = 10
     //var cellHeights: [CGFloat] = []
     
@@ -46,10 +46,14 @@ extension TopRatedTableVC {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TOP_RATED, for: indexPath) as! FoldingCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TOP_RATED, for: indexPath) as! TopRatedTableViewCell
         //let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         //cell.durationsForExpandedState = durations
         //cell.durationsForCollapsedState = durations
+        guard let product = MockDataManager.instance.allMockData[0].products?[indexPath.row]  else {
+            return UITableViewCell()
+        }
+        cell.configureCell(product: product)
         return cell
     }
 
@@ -62,6 +66,7 @@ extension TopRatedTableVC {
         if cellHeights[indexPath.row] == CellMeasure.CellHeight.close { // open cell
             cellHeights[indexPath.row] = CellMeasure.CellHeight.open
             cell.selectedAnimation(true, animated: true, completion: nil)
+            
             duration = 0.5
         } else {// close cell
             cellHeights[indexPath.row] = CellMeasure.CellHeight.close

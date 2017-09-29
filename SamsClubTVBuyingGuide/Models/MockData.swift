@@ -8,7 +8,7 @@
 
 import Foundation
 
-/*
+
  let json = """
  [{
  "fullName": "Federico Zanetello",
@@ -23,16 +23,12 @@ import Foundation
  "id": 123456,
  "twitter": "http://twitter.com/zntfdr"
  }]
- """.data(using: .utf8)! // our data in native format
- let myStructArray = try JSONDecoder().decode([Swifter].self, from: json)
- 
- myStructArray.forEach { print($0) } // decoded!!!!!
- 
- */
+ """.data(using: .utf8)!
+
 
 
  
- /// Sample returned JSON to use for Unit test
+ /// TopRated TVs for MockData and Testing
  let topRatedJson = """
  {
      "id": "e13ad87c-0fcf-4eaf-b779-36220288b4df",
@@ -91,6 +87,40 @@ import Foundation
              "reviewCount": 2,
              "inStock": true
          }
+    ],
+    "totalProducts": 224,
+    "pageNumber": 0,
+    "pageSize": 30,
+    "status": 200,
+    "kind": "walmart#resourcesItem",
+    "etag": "\"YInXzt8HJdoVuUAZP-9wex9eVII/aFK55aYlKdzoEYnM8SVPd4i2VhU\""
 }
 """.data(using: .utf8)!
+
+
+let jsonTwo = """
+{
+"id": "a7f70973-2ed1-402c-bea6-cf7547ca3602",
+"products": [
+{
+"productId": "22",
+"productName": "Ellerton TV Console",
+"shortDescription": "Really Good TV",
+"longDescription": "Really good TV again",
+"price": "$949.00",
+"productImage": "https://walmartlabs-test.appspot.com/images/image2.jpeg",
+"reviewRating": 2.0,
+"reviewCount": 1,
+"inStock": true
+}
+],
+"totalProducts": 224,
+"pageNumber": 0,
+"pageSize": 30,
+"status": 200,
+"kind": "walmart#resourcesItem",
+"etag": "21""
+}
+""".data(using: .utf8)!
+
 
