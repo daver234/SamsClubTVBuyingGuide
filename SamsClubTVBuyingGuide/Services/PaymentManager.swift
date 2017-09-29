@@ -35,28 +35,28 @@ class PaymentManager: NSObject {
     
     func startPayment(product: Product, completion: @escaping PaymentCompletionHandler) {
         
-//        self.productNameLabel.text = product.productName ?? "Not Available"
-//        self.productPriceLabel.text = product.price ?? "N/A"
-//        self.shortDescription.text = (product.shortDescription ?? "Not available.").html2String
-//        self.longDescription.text = (product.longDescription ?? "Not available.").html2String
-//        self.topRatedLabel.layer.cornerRadius = 8
-//        self.productPriceUnFold.text = product.price ?? "N/A
+        /// Need to take out the $ from the price field or Apple Pay will reject it.
+        /// Apple Pay will add back the $ sign.
+        /// Tax number is a placeholder.  Ideally do a calculation.
+        guard let digits = product.price else { return }
+        let index4 = digits.index(digits.startIndex, offsetBy: 1)
+        let cleanPrice = String(digits[index4...])
         
-        let tv = PKPaymentSummaryItem(label: (product.productName ?? "TV"), amount: NSDecimalNumber(string: product.price), type: .final)
-        let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(string: "1.00"), type: .final)
-        let total = PKPaymentSummaryItem(label: "Sam's Club", amount: NSDecimalNumber(string: "TBD"), type: .pending)
+        let tv = PKPaymentSummaryItem(label: "New TV", amount: NSDecimalNumber(string: cleanPrice), type: .final)
+        let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(string: "0.00"), type: .final)
+        let total = PKPaymentSummaryItem(label: "Sams Club", amount: NSDecimalNumber(string: cleanPrice), type: .pending)
         
-        paymentSummaryItems = [tv, tax, total];
+        paymentSummaryItems = [tv, tax, total]
+        print("paymentSummaryItems",paymentSummaryItems)
         completionHandler = completion
         
         // Create our payment request
         let paymentRequest = PKPaymentRequest()
         paymentRequest.paymentSummaryItems = paymentSummaryItems
-        // paymentRequest.merchantIdentifier = Configuration.Merchant.identififer
+        paymentRequest.merchantIdentifier = APPLE_MERCHENT_ID
         paymentRequest.merchantCapabilities = .capability3DS
         paymentRequest.countryCode = "US"
         paymentRequest.currencyCode = "USD"
-        // paymentRequest.requiredShippingAddressFields = [.phone, .email]
         paymentRequest.supportedNetworks = PaymentManager.supportedNetworks
         
         // Display our payment request

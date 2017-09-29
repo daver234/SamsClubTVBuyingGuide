@@ -8,6 +8,7 @@
 
 import UIKit
 import FoldingCell
+import PassKit
 
 class TopRatedTableVC: UITableViewController {
     

@@ -13,7 +13,6 @@
 		550BCFED1F7DE44100908824 /* TopRatedTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFEC1F7DE44100908824 /* TopRatedTableVC.swift */; };
 		550BCFF11F7E017600908824 /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFF01F7E017600908824 /* MockDataManager.swift */; };
 		550BCFF31F7ECD6600908824 /* PaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFF21F7ECD6600908824 /* PaymentManager.swift */; };
-		550BCFF61F7ED21600908824 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFF51F7ED21600908824 /* Configuration.swift */; };
 		5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC61F7AFF3000D943AB /* AppDelegate.swift */; };
 		5557CEC91F7AFF3000D943AB /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC81F7AFF3000D943AB /* StartVC.swift */; };
 		5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECA1F7AFF3000D943AB /* Main.storyboard */; };
@@ -62,7 +61,6 @@
 		550BCFF01F7E017600908824 /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
 		550BCFF21F7ECD6600908824 /* PaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
 		550BCFF41F7ECD9100908824 /* SamsClubTVBuyingGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SamsClubTVBuyingGuide.entitlements; sourceTree = "<group>"; };
-		550BCFF51F7ED21600908824 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsClubTVBuyingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5557CEC61F7AFF3000D943AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5557CEC81F7AFF3000D943AB /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				5557CF021F7B042900D943AB /* Colors.swift */,
-				550BCFF51F7ED21600908824 /* Configuration.swift */,
 				5557CF061F7B053A00D943AB /* Constants.swift */,
 				556787FD1F7B40A70005148A /* Extensions.swift */,
 				5557CF041F7B044D00D943AB /* Reachability.swift */,
@@ -577,7 +574,6 @@
 				5557CF091F7B05E000D943AB /* ProductViewTableViewCell.swift in Sources */,
 				5557CEC91F7AFF3000D943AB /* StartVC.swift in Sources */,
 				5557CF0B1F7B061100D943AB /* Product.swift in Sources */,
-				550BCFF61F7ED21600908824 /* Configuration.swift in Sources */,
 				5557CF031F7B042900D943AB /* Colors.swift in Sources */,
 				550BCFED1F7DE44100908824 /* TopRatedTableVC.swift in Sources */,
 				5557CF0F1F7B066000D943AB /* NetworkManager.swift in Sources */,

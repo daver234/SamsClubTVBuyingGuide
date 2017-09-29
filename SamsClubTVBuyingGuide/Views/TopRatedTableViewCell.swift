@@ -25,28 +25,20 @@ class TopRatedTableViewCell: FoldingCell {
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var inStockLabel: UILabel!
     @IBOutlet weak var shippingLabel: UILabel!
-    
-    @IBOutlet weak var buyBtn: UIButton!
+    @IBOutlet weak var buyBtn: PKPaymentButton!
     @IBOutlet weak var shortDescription: UITextView!
     @IBOutlet weak var longDescription: UITextView!
     @IBOutlet weak var topRatedLabel: UILabel!
     @IBOutlet weak var productImageUnFold: UIImageView!
     @IBOutlet weak var productPriceUnFold: UILabel!
+    @IBOutlet weak var firstContainerView: UIView!
+    
+    var button: UIButton?
     
     override func awakeFromNib() {
         foregroundView.layer.cornerRadius = 10
         foregroundView.layer.masksToBounds = true
         super.awakeFromNib()
-        
-        /// For Apple Pay
-        let result = PaymentManager.applePayStatus()
-        if result.canMakePayments {
-            self.buyBtn =  PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)  // PKPaymentButton(type: .buy, style: .black)
-            self.buyBtn?.addTarget(self, action: #selector(TopRatedTableViewCell.payPressed), for: .touchUpInside)
-        } else if result.canSetupCards {
-            self.buyBtn =  PKPaymentButton(paymentButtonType: .setUp, paymentButtonStyle: .black) // PKPaymentButton(type: .setUp, style: .black)
-            buyBtn?.addTarget(self, action: #selector(TopRatedTableViewCell.setupPressed), for: .touchUpInside)
-        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -66,7 +58,6 @@ class TopRatedTableViewCell: FoldingCell {
         self.longDescription.text = (product.longDescription ?? "Not available.").html2String
         self.topRatedLabel.layer.cornerRadius = 8
         self.productPriceUnFold.text = product.price ?? "N/A"
-        // self.buyBtn = PKPaymentButton(paymentButtonType: PKPaymentButtonType.buy, paymentButtonStyle: PKPaymentButtonStyle.black)
         
         if let inStock = product.inStock, inStock {
             self.inStockLabel.text = IN_STOCK
@@ -83,8 +74,25 @@ class TopRatedTableViewCell: FoldingCell {
             self.productImage.kf.setImage(with: url, placeholder: image)
             self.productImageUnFold.kf.setImage(with: url, placeholder: image)
         }
+        
+        /// For Apple Pay
+        let result = PaymentManager.applePayStatus()
+        if result.canMakePayments {
+            button =  PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
+            button?.addTarget(self, action: #selector(TopRatedTableViewCell.payPressed(sender:)), for: .touchUpInside)
+        } else if result.canSetupCards {
+            button =  PKPaymentButton(paymentButtonType: .setUp, paymentButtonStyle: .black)
+            button?.addTarget(self, action: #selector(TopRatedTableViewCell.setupPressed), for: .touchUpInside)
+        } else if buyBtn == nil {
+            print("buy is nil")
+        }
+        
+        if button != nil {
+            button!.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
+            firstContainerView.addSubview(button!)
+        }
     }
-
+    
     /// For Apple Pay to start the payment process
     @objc func payPressed(sender: AnyObject) {
         paymentHandler.startPayment(product: productForApplePay) { (success) in

@@ -293,11 +293,10 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQT-CP-mOV" customClass="PKPaymentButton">
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQT-CP-mOV">
                                                             <rect key="frame" x="217" y="78" width="110" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <state key="normal" title="Buy with Apple Pay"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="3"/>
@@ -353,9 +352,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="buyBtn" destination="rQT-CP-mOV" id="zYf-RI-Imj"/>
+                                    <outlet property="buyBtn" destination="rQT-CP-mOV" id="hIl-4o-qsM"/>
                                     <outlet property="containerView" destination="IPh-HV-e6m" id="0ZR-9c-Gpi"/>
                                     <outlet property="containerViewTop" destination="Urn-sl-bvY" id="B4x-sD-l4R"/>
+                                    <outlet property="firstContainerView" destination="N4c-E8-Hfy" id="1mo-fG-3nT"/>
                                     <outlet property="foregroundView" destination="8Aw-Je-cjG" id="FmB-W2-NHO"/>
                                     <outlet property="foregroundViewTop" destination="NV0-bn-UQ9" id="5cy-jo-XXN"/>
                                     <outlet property="inStockLabel" destination="JoM-2O-k7m" id="R8j-Gx-RvN"/>
