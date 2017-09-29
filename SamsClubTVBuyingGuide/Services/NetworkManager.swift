@@ -73,6 +73,7 @@ extension NetworkManager {
             /// And do the appropriate checks to see if we are done getting data from the server.
             do {
                 let result = try JSONDecoder().decode(ProductPage.self, from: data)
+                
                 self.allProducts.append(result)
                 print("*** number in allProducts; numberOfPagesRetrieved; 1st 1 greater than 2nd", self.allProducts.count, self.numberOfPagesRetrieved)
                 
