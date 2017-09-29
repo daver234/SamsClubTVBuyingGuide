@@ -15,7 +15,7 @@ class TopRatedTableVC: UITableViewController {
     let kCloseCellHeight: CGFloat = 130
     let kOpenCellHeight: CGFloat = 260
     fileprivate var cellHeights: [CGFloat] = []
-    let data = MockDataManager.instance.allMockData[0]
+    fileprivate var data = NetworkManager.instance.allProducts[0]
 
     // MARK: - Functions
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ extension TopRatedTableVC {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let products = data.products else { return 1 }
-        return  products.count - 25
+        return  products.count - 24
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -51,7 +51,7 @@ extension TopRatedTableVC {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TOP_RATED, for: indexPath) as! TopRatedTableViewCell
-        guard let product = MockDataManager.instance.allMockData[0].products?[indexPath.row]  else {
+        guard let product = NetworkManager.instance.allProducts[0].products?[indexPath.row]  else {
             return UITableViewCell()
         }
         cell.configureCell(product: product)
