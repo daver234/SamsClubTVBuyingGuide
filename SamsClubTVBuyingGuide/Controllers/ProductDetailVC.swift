@@ -39,6 +39,15 @@ class ProductDetailVC: UIViewController {
         print("variables", pageWithTV, productNumberInPage)
         setUpView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        /// Set status bar back to default because inital view is white so we need a dark color (default)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+    }
 
     func setUpView() {
         guard let products = NetworkManager.instance.allProducts[pageWithTV].products else { return }
