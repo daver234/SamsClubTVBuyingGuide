@@ -8,7 +8,7 @@ target 'SamsClubTVBuyingGuide' do
   use_frameworks!
   pod 'Cosmos', '~> 12.0'
   pod 'Kingfisher', '~> 4.0'
-  # Pods for SamsClubTVBuyingGuide
+  pod 'FoldingCell', '~> 2.0.3' 
 
   target 'SamsClubTVBuyingGuideTests' do
     inherit! :search_paths
