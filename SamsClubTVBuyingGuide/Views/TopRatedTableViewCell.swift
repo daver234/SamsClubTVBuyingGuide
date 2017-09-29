@@ -21,6 +21,9 @@ class TopRatedTableViewCell: FoldingCell {
     @IBOutlet weak var buyBtn: RoundedButton!
     @IBOutlet weak var shortDescription: UITextView!
     @IBOutlet weak var longDescription: UITextView!
+    @IBOutlet weak var topRatedLabel: UILabel!
+    @IBOutlet weak var productImageUnFold: UIImageView!
+    @IBOutlet weak var productPriceUnFold: UILabel!
     
     override func awakeFromNib() {
         foregroundView.layer.cornerRadius = 10
@@ -42,6 +45,8 @@ class TopRatedTableViewCell: FoldingCell {
         self.productPriceLabel.text = product.price ?? "N/A"
         self.shortDescription.text = (product.shortDescription ?? "Not available.").html2String
         self.longDescription.text = (product.longDescription ?? "Not available.").html2String
+        self.topRatedLabel.layer.cornerRadius = 8
+        self.productPriceUnFold.text = product.price ?? "N/A"
         
         if let inStock = product.inStock, inStock {
             self.inStockLabel.text = IN_STOCK
@@ -56,6 +61,7 @@ class TopRatedTableViewCell: FoldingCell {
         guard let url = product.productImage else { return }
         DispatchQueue.main.async {
             self.productImage.kf.setImage(with: url, placeholder: image)
+            self.productImageUnFold.kf.setImage(with: url, placeholder: image)
         }
     }
 
