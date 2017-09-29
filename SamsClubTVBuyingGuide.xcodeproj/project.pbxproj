@@ -12,6 +12,8 @@
 		550BCFEB1F7DE41E00908824 /* TopRatedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFEA1F7DE41E00908824 /* TopRatedTableViewCell.swift */; };
 		550BCFED1F7DE44100908824 /* TopRatedTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFEC1F7DE44100908824 /* TopRatedTableVC.swift */; };
 		550BCFF11F7E017600908824 /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFF01F7E017600908824 /* MockDataManager.swift */; };
+		550BCFF31F7ECD6600908824 /* PaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFF21F7ECD6600908824 /* PaymentManager.swift */; };
+		550BCFF61F7ED21600908824 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFF51F7ED21600908824 /* Configuration.swift */; };
 		5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC61F7AFF3000D943AB /* AppDelegate.swift */; };
 		5557CEC91F7AFF3000D943AB /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC81F7AFF3000D943AB /* StartVC.swift */; };
 		5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECA1F7AFF3000D943AB /* Main.storyboard */; };
@@ -58,6 +60,9 @@
 		550BCFEA1F7DE41E00908824 /* TopRatedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedTableViewCell.swift; sourceTree = "<group>"; };
 		550BCFEC1F7DE44100908824 /* TopRatedTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedTableVC.swift; sourceTree = "<group>"; };
 		550BCFF01F7E017600908824 /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
+		550BCFF21F7ECD6600908824 /* PaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
+		550BCFF41F7ECD9100908824 /* SamsClubTVBuyingGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SamsClubTVBuyingGuide.entitlements; sourceTree = "<group>"; };
+		550BCFF51F7ED21600908824 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsClubTVBuyingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5557CEC61F7AFF3000D943AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5557CEC81F7AFF3000D943AB /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 		5557CEC51F7AFF3000D943AB /* SamsClubTVBuyingGuide */ = {
 			isa = PBXGroup;
 			children = (
+				550BCFF41F7ECD9100908824 /* SamsClubTVBuyingGuide.entitlements */,
 				5557CED21F7AFF3000D943AB /* Info.plist */,
 				5557CEF51F7AFF5A00D943AB /* Controllers */,
 				5557CEF61F7AFF6800D943AB /* Models */,
@@ -213,6 +219,7 @@
 			children = (
 				550BCFF01F7E017600908824 /* MockDataManager.swift */,
 				5557CF0E1F7B066000D943AB /* NetworkManager.swift */,
+				550BCFF21F7ECD6600908824 /* PaymentManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -230,9 +237,10 @@
 			isa = PBXGroup;
 			children = (
 				5557CF021F7B042900D943AB /* Colors.swift */,
-				5557CF041F7B044D00D943AB /* Reachability.swift */,
+				550BCFF51F7ED21600908824 /* Configuration.swift */,
 				5557CF061F7B053A00D943AB /* Constants.swift */,
 				556787FD1F7B40A70005148A /* Extensions.swift */,
+				5557CF041F7B044D00D943AB /* Reachability.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -357,6 +365,11 @@
 					5557CEC21F7AFF3000D943AB = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
+						};
 					};
 					5557CED61F7AFF3000D943AB = {
 						CreatedOnToolsVersion = 9.0;
@@ -564,6 +577,7 @@
 				5557CF091F7B05E000D943AB /* ProductViewTableViewCell.swift in Sources */,
 				5557CEC91F7AFF3000D943AB /* StartVC.swift in Sources */,
 				5557CF0B1F7B061100D943AB /* Product.swift in Sources */,
+				550BCFF61F7ED21600908824 /* Configuration.swift in Sources */,
 				5557CF031F7B042900D943AB /* Colors.swift in Sources */,
 				550BCFED1F7DE44100908824 /* TopRatedTableVC.swift in Sources */,
 				5557CF0F1F7B066000D943AB /* NetworkManager.swift in Sources */,
@@ -573,6 +587,7 @@
 				5557CF071F7B053A00D943AB /* Constants.swift in Sources */,
 				5557CEFE1F7B035200D943AB /* NoConnectivityVC.swift in Sources */,
 				5557CF011F7B03FE00D943AB /* RoundedButton.swift in Sources */,
+				550BCFF31F7ECD6600908824 /* PaymentManager.swift in Sources */,
 				550BCFEB1F7DE41E00908824 /* TopRatedTableViewCell.swift in Sources */,
 				5557CF111F7B0EE400D943AB /* ShowAllTvsTableVC.swift in Sources */,
 				556787FC1F7B2F260005148A /* ProductDetailVC.swift in Sources */,
@@ -745,11 +760,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SamsClubTVBuyingGuide/SamsClubTVBuyingGuide.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64ZMRUDATB;
 				INFOPLIST_FILE = SamsClubTVBuyingGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daverothschild.SamsClubTVBuyingGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dave.samsclub;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -763,11 +779,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SamsClubTVBuyingGuide/SamsClubTVBuyingGuide.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64ZMRUDATB;
 				INFOPLIST_FILE = SamsClubTVBuyingGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daverothschild.SamsClubTVBuyingGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dave.samsclub;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
