@@ -52,7 +52,7 @@ extension TopRatedTableVC {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let products = data.products else { return 1 }
-        return  products.count - 20
+        return  products.count - 25
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
