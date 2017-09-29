@@ -21,9 +21,18 @@ class SamsClubTVBuyingGuideTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func samsClubAPICallTest() {
+        let expectationResult = expectation(description: "Call the Sams Club test API and get back 1 page with 30 products")
+        NetworkManager.instance.getProductsForPage(pageNumber: STARTING_PAGE_NUMBER, pageSize: PAGE_SIZE) { (response) in
+            XCTAssertTrue(response)
+            expectationResult.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
+            }
+        }
     }
     
     func testPerformanceExample() {

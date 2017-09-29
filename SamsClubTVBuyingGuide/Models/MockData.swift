@@ -8,27 +8,8 @@
 
 import Foundation
 
-
- let json = """
- [{
- "fullName": "Federico Zanetello",
- "id": 123456,
- "twitter": "http://twitter.com/zntfdr"
- },{
- "fullName": "Federico Zanetello",
- "id": 123456,
- "twitter": "http://twitter.com/zntfdr"
- },{
- "fullName": "Federico Zanetello",
- "id": 123456,
- "twitter": "http://twitter.com/zntfdr"
- }]
- """.data(using: .utf8)!
-
-
-
- 
- /// TopRated TVs for MockData and Testing
+ /// Mock Data
+ /// Still a work in progress due to formatting issues
  let topRatedJson = """
  {
      "id": "e13ad87c-0fcf-4eaf-b779-36220288b4df",
