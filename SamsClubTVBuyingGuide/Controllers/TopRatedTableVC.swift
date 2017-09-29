@@ -14,13 +14,11 @@ class TopRatedTableVC: UITableViewController {
     fileprivate struct CellMeasure {
         struct CellHeight {
             static let close: CGFloat = 100 // equal or greater foregroundView height
-            static let open: CGFloat = 200 // equal or greater containerView height
+            static let open: CGFloat = 250 // equal or greater containerView height
         }
     }
     
     var cellHeights = (0..<MOCK_DATA_CELL_COUNT).map { _ in CellMeasure.CellHeight.close }
-    //let kCloseCellHeight: CGFloat = 100
-    //let kOpenCellHeight: CGFloat = 400
     let kRowsCount = 10
     //var cellHeights: [CGFloat] = []
 
@@ -47,8 +45,8 @@ extension TopRatedTableVC {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TOP_RATED, for: indexPath) as! FoldingCell
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
-        cell.durationsForExpandedState = durations
-        cell.durationsForCollapsedState = durations
+        //cell.durationsForExpandedState = durations
+        //cell.durationsForCollapsedState = durations
         return cell
     }
 
@@ -63,7 +61,7 @@ extension TopRatedTableVC {
             cell.selectedAnimation(true, animated: true, completion: nil)
             duration = 0.5
         } else {// close cell
-            cellHeights[indexPath.row] = kCloseCellHeight
+            cellHeights[indexPath.row] = CellMeasure.CellHeight.close
             cell.selectedAnimation(false, animated: true, completion: nil)
             duration = 1.1
         }
@@ -81,7 +79,7 @@ extension TopRatedTableVC {
         
         cell.backgroundColor = .clear
         
-        if cellHeights[indexPath.row] == kCloseCellHeight {
+        if cellHeights[indexPath.row] == CellMeasure.CellHeight.close {
             cell.selectedAnimation(false, animated: false, completion:nil)
         } else {
             cell.selectedAnimation(true, animated: false, completion: nil)
