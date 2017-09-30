@@ -51,7 +51,7 @@ extension TopRatedTableVC {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TOP_RATED, for: indexPath) as! TopRatedTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TOP_RATED_CELL, for: indexPath) as! TopRatedTableViewCell
         guard let product = NetworkManager.instance.allProducts[0].products?[indexPath.row]  else {
             return UITableViewCell()
         }

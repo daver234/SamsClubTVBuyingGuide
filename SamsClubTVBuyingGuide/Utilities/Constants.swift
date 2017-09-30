@@ -23,10 +23,11 @@ let THINGS_TO_KNOW = "toThingsToKnowVC"
 let ARKIT_ROOM = "toARkitRoomVC"
 let SHOW_ALL_TVS = "toShowAllTvs"
 let PRODUCT_DETAIL = "toProductDetail"
+let TOP_RATED = "toTopRated"
 
 /// Cells
 let PRODUCT_CELL = "ProductCell"
-let TOP_RATED = "TopRatedCell"
+let TOP_RATED_CELL = "TopRatedCell"
 
 /// Other
 let OUT_OF_STOCK = "Out of stock"

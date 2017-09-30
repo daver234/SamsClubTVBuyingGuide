@@ -76,7 +76,17 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
     }
     
     @IBAction func showTopRatedBtnPressed(_ sender: Any) {
-        SwiftSpinner.show("Just the top rated...")
+        if isNetworkDone {
+            SwiftSpinner.hide()
+            performSegue(withIdentifier: TOP_RATED, sender: nil)
+        } else {
+            SwiftSpinner.show("Every TV on its way...")
+            let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
+            DispatchQueue.main.asyncAfter(deadline: when) { [weak self] in
+                SwiftSpinner.hide()
+                self?.performSegue(withIdentifier: TOP_RATED, sender: nil)
+            }
+        }
     }
     
     /// When user taps Done button, Safari View Controller dismisses and returns to StartVC

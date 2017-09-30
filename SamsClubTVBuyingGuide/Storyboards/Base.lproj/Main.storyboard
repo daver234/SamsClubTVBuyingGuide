@@ -88,7 +88,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="showTopRatedBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Am-xz-lI9"/>
-                                            <segue destination="20N-ok-Cp0" kind="show" identifier="toTopRated" id="QmZ-ot-HSS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -156,6 +155,7 @@
                     <size key="freeformSize" width="375" height="730"/>
                     <connections>
                         <segue destination="Sl0-JJ-3Iz" kind="show" identifier="toShowAllTvs" id="4A7-Tl-wIo"/>
+                        <segue destination="20N-ok-Cp0" kind="show" identifier="toTopRated" id="wqG-OI-aYc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
