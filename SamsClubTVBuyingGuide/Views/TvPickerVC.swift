@@ -30,7 +30,7 @@ class TvPickerVC: UIViewController {
         sceneView = SCNView(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         view.insertSubview(sceneView, at: 0)
         
-        let scene = SCNScene(named: "art.scnassets/ramps.scn")!
+        let scene = SCNScene(named: "art.scnassets/television.scn")!
         sceneView.scene = scene
         preferredContentSize = size
         

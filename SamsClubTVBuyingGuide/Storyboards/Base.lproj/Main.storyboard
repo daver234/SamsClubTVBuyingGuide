@@ -161,28 +161,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Vin RoomVC-->
+        <!--ShowT Vin Room-->
         <scene sceneID="Svs-yz-ylw">
             <objects>
-                <viewController id="2nk-nG-kiy" customClass="TVinRoomVC" customModule="SamsClubTVBuyingGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2nk-nG-kiy" customClass="ShowTVinRoom" customModule="SamsClubTVBuyingGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VI3-AN-8lA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOb-le-clz">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOb-le-clz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg7-Ku-qBb">
                                 <rect key="frame" x="322" y="618" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="tv"/>
                                 <connections>
+                                    <action selector="toBtnPressed:" destination="2nk-nG-kiy" eventType="touchUpInside" id="D1j-R1-xWx"/>
                                     <action selector="tvBtnPressed:" destination="2nk-nG-kiy" eventType="touchUpInside" id="0TS-fA-nmP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DOb-le-clz" firstAttribute="top" secondItem="VI3-AN-8lA" secondAttribute="top" id="FCt-oX-Wlj"/>
+                            <constraint firstItem="DOb-le-clz" firstAttribute="bottom" secondItem="U6F-o8-Jfh" secondAttribute="bottom" id="avz-RO-1ba"/>
+                            <constraint firstItem="DOb-le-clz" firstAttribute="leading" secondItem="U6F-o8-Jfh" secondAttribute="leading" id="cQr-lC-Ked"/>
+                            <constraint firstItem="DOb-le-clz" firstAttribute="trailing" secondItem="U6F-o8-Jfh" secondAttribute="trailing" id="yMM-QF-UA9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="U6F-o8-Jfh"/>
                     </view>
                     <connections>
