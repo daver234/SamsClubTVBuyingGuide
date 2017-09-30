@@ -13,6 +13,7 @@
 		550BCFED1F7DE44100908824 /* TopRatedTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFEC1F7DE44100908824 /* TopRatedTableVC.swift */; };
 		550BCFF11F7E017600908824 /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFF01F7E017600908824 /* MockDataManager.swift */; };
 		550BCFF31F7ECD6600908824 /* PaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFF21F7ECD6600908824 /* PaymentManager.swift */; };
+		550BD01F1F7F721100908824 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BD01E1F7F721100908824 /* FilterVC.swift */; };
 		5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC61F7AFF3000D943AB /* AppDelegate.swift */; };
 		5557CEC91F7AFF3000D943AB /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC81F7AFF3000D943AB /* StartVC.swift */; };
 		5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECA1F7AFF3000D943AB /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		5557CF111F7B0EE400D943AB /* ShowAllTvsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CF101F7B0EE400D943AB /* ShowAllTvsTableVC.swift */; };
 		556787FC1F7B2F260005148A /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556787FB1F7B2F260005148A /* ProductDetailVC.swift */; };
 		556787FE1F7B40A70005148A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556787FD1F7B40A70005148A /* Extensions.swift */; };
+		55E182BA1F7FFB2100D05685 /* TVinRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E182B91F7FFB2100D05685 /* TVinRoomVC.swift */; };
 		CE126A3D3E175D16B11CE3C9 /* Pods_SamsClubTVBuyingGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC30CD621634E7DEA242FF7C /* Pods_SamsClubTVBuyingGuideUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,7 @@
 		550BCFF01F7E017600908824 /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
 		550BCFF21F7ECD6600908824 /* PaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
 		550BCFF41F7ECD9100908824 /* SamsClubTVBuyingGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SamsClubTVBuyingGuide.entitlements; sourceTree = "<group>"; };
+		550BD01E1F7F721100908824 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsClubTVBuyingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5557CEC61F7AFF3000D943AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5557CEC81F7AFF3000D943AB /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		556787FB1F7B2F260005148A /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		556787FD1F7B40A70005148A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		556787FF1F7B4E580005148A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		55E182B91F7FFB2100D05685 /* TVinRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVinRoomVC.swift; sourceTree = "<group>"; };
 		5FB7B9A5C6F441FCE27F3901 /* Pods-SamsClubTVBuyingGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuide/Pods-SamsClubTVBuyingGuide.debug.xcconfig"; sourceTree = "<group>"; };
 		860092C567E8B5A0D6539F72 /* Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideUITests/Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BDF81938B44B2BDAFC8C03B /* Pods-SamsClubTVBuyingGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideTests/Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,11 +198,13 @@
 		5557CEF51F7AFF5A00D943AB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				550BD01E1F7F721100908824 /* FilterVC.swift */,
 				5557CEFC1F7B035200D943AB /* NoConnectivityVC.swift */,
 				556787FB1F7B2F260005148A /* ProductDetailVC.swift */,
 				5557CF101F7B0EE400D943AB /* ShowAllTvsTableVC.swift */,
 				5557CEC81F7AFF3000D943AB /* StartVC.swift */,
 				550BCFEC1F7DE44100908824 /* TopRatedTableVC.swift */,
+				55E182B91F7FFB2100D05685 /* TVinRoomVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -583,11 +589,13 @@
 				5557CF071F7B053A00D943AB /* Constants.swift in Sources */,
 				5557CEFE1F7B035200D943AB /* NoConnectivityVC.swift in Sources */,
 				5557CF011F7B03FE00D943AB /* RoundedButton.swift in Sources */,
+				550BD01F1F7F721100908824 /* FilterVC.swift in Sources */,
 				550BCFF31F7ECD6600908824 /* PaymentManager.swift in Sources */,
 				550BCFEB1F7DE41E00908824 /* TopRatedTableViewCell.swift in Sources */,
 				5557CF111F7B0EE400D943AB /* ShowAllTvsTableVC.swift in Sources */,
 				556787FC1F7B2F260005148A /* ProductDetailVC.swift in Sources */,
 				5557CF0D1F7B063200D943AB /* MockData.swift in Sources */,
+				55E182BA1F7FFB2100D05685 /* TVinRoomVC.swift in Sources */,
 				556787FE1F7B40A70005148A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

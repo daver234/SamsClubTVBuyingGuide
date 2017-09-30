@@ -161,20 +161,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Vin RoomVC-->
         <scene sceneID="Svs-yz-ylw">
             <objects>
-                <viewController id="2nk-nG-kiy" sceneMemberID="viewController">
+                <viewController id="2nk-nG-kiy" customClass="TVinRoomVC" customModule="SamsClubTVBuyingGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VI3-AN-8lA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOb-le-clz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg7-Ku-qBb">
+                                <rect key="frame" x="322" y="618" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="tv"/>
+                                <connections>
+                                    <action selector="tvBtnPressed:" destination="2nk-nG-kiy" eventType="touchUpInside" id="0TS-fA-nmP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="U6F-o8-Jfh"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="DOb-le-clz" id="cnh-jU-gWS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sek-A7-kuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="-650"/>
+            <point key="canvasLocation" x="1685.5999999999999" y="-650.82458770614699"/>
         </scene>
         <!--Top Rated TableVC-->
         <scene sceneID="XL1-Cw-bNe">
@@ -542,15 +559,46 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="2Dg-Cy-wPt">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="filterBtnPressed:" destination="fMa-zc-brs" id="OM7-vw-AQs"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="filterBtn" destination="2Dg-Cy-wPt" id="IC1-qu-7SL"/>
                         <outlet property="tableFooterView" destination="ib2-tS-Yle" id="yzV-L3-7b7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8G-rg-TtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2159" y="999"/>
+        </scene>
+        <!--FilterVC-->
+        <scene sceneID="cmj-qX-6oB">
+            <objects>
+                <viewController storyboardIdentifier="FilterVC" title="FilterVC" id="dGU-eA-hVj" customClass="FilterVC" customModule="SamsClubTVBuyingGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mvk-nv-Fae">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filter Coming Soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGw-M7-m4X">
+                                <rect key="frame" x="16" y="56" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.32941176470588235" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="UBE-PC-bkl"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="150" height="250"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="150" height="250"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ege-X2-IiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2731" y="414"/>
         </scene>
         <!--Product DetailVC-->
         <scene sceneID="r3B-4v-2d7">
@@ -804,5 +852,6 @@
         <image name="JustTV" width="360" height="354"/>
         <image name="back" width="28" height="28"/>
         <image name="samsclublogo2" width="274" height="61"/>
+        <image name="tv" width="28" height="28"/>
     </resources>
 </document>

@@ -24,6 +24,7 @@ let ARKIT_ROOM = "toARkitRoomVC"
 let SHOW_ALL_TVS = "toShowAllTvs"
 let PRODUCT_DETAIL = "toProductDetail"
 let TOP_RATED = "toTopRated"
+let FILTER_POPOVER = "toFilterPopOver"
 
 /// Cells
 let PRODUCT_CELL = "ProductCell"
@@ -41,3 +42,6 @@ let APPLE_MERCHENT_ID = "merchant.com.dave.samsclub"
 
 /// Errors
 let MISSING_JSON_VALUE = "Value not available"
+
+/// ViewController Identifiers
+let FILTER_VC = "FilterVC"

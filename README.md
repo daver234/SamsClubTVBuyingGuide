@@ -69,6 +69,7 @@ There is always more work to do on software.  For this project, some of those th
 * Let user save some favorite TVs from the long list
 * Some Sam's Club store integration
 * User account
+* App icon that follows brand guidelines
 * More animation/motion for better experience
 * Break storyboard into pieces for team work
 * Data should be cleaned up on the backend
@@ -77,4 +78,8 @@ There is always more work to do on software.  For this project, some of those th
 * Swipe to next and previous item in ShowAllTvsVC
 * .....and more
 
+Attributions
+* TV scene kit image was purchased from Turbosquid.com
+* None of the assets in here should be used in a comercial product
+* Icons from icons8.com
 Copyright Dave Rothschild

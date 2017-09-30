@@ -10,13 +10,14 @@ import UIKit
 import Kingfisher
 
 /// A table view to show the results from calling the API
-class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching {
+class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching, UIPopoverPresentationControllerDelegate {
     
     // MARK: - Variables
     var pageNumberForSegue = 0
     var productNumberInPageForSegue = 0
 
     // MARK: - Outlets
+    @IBOutlet weak var filterBtn: UIBarButtonItem!
     @IBOutlet weak var tableFooterView: UIView!
     
     // MARK: - Functions
@@ -45,6 +46,24 @@ class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching
     /// Return to StartVC
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    /// Need for popover in filter button
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
+
+    /// Shows a filter popover view
+    @IBAction func filterBtnPressed(_ sender: UIBarButtonItem) {
+        let popover = storyboard?.instantiateViewController(withIdentifier: FILTER_VC) as! FilterVC
+        popover.modalPresentationStyle = UIModalPresentationStyle.popover
+        popover.popoverPresentationController?.backgroundColor = UIColor.green
+        popover.popoverPresentationController?.delegate = self
+        popover.popoverPresentationController?.backgroundColor = ColorPalette.Blue.Medium
+        popover.popoverPresentationController?.sourceView = self.view
+        popover.popoverPresentationController?.sourceRect = CGRect(x: self.view!.bounds.width, y: 0, width: 0, height: 0)
+        popover.popoverPresentationController?.permittedArrowDirections = .up
+        self.present(popover, animated: true)
     }
 }
 
