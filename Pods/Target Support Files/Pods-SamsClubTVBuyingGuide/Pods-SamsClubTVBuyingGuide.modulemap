@@ -1,0 +1,6 @@
+framework module Pods_SamsClubTVBuyingGuide {
+  umbrella header "Pods-SamsClubTVBuyingGuide-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,21 @@
+PODS:
+  - Cosmos (12.0.1)
+  - FoldingCell (2.0.5)
+  - Kingfisher (4.1.0)
+  - SwiftSpinner (1.4.1)
+
+DEPENDENCIES:
+  - Cosmos (~> 12.0)
+  - FoldingCell (~> 2.0.3)
+  - Kingfisher (~> 4.0)
+  - SwiftSpinner
+
+SPEC CHECKSUMS:
+  Cosmos: 4a9f57998a08788a1062c7b8eefbc62d2b590f39
+  FoldingCell: fb189fc746e95b722a1debf8ef455006b70cae2e
+  Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
+  SwiftSpinner: bf7c13332ad008952a09358cadf24a186510ae31
+
+PODFILE CHECKSUM: b41949b1d438e6544c5179605316b19110093bf3
+
+COCOAPODS: 1.1.1
