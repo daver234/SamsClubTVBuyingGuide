@@ -8,28 +8,33 @@
 
 import UIKit
 
-class FilterVC: UIViewController {
+class FilterVC: UIViewController, UITableViewDelegate  {
 
-//    var newView: UIView!
-//    var size: CGSize!
-//
-//    init(size: CGSize) {
-//        super.init(nibName: nil, bundle: nil)
-//        self.size = size
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.frame = CGRect(origin: CGPoint.zero, size: size)
-//        newView = UIView(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-//        view.insertSubview(newView, at: 0)
+        
     }
+}
 
-  
 
-
+extension FilterVC:  UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filterType.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TYPE_OF_FILTER, for: indexPath) as? FilterTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.filterTypeLabel.text = filterType[indexPath.row]
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // cell selected code here
+    }
+    
 }

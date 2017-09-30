@@ -29,6 +29,7 @@ let FILTER_POPOVER = "toFilterPopOver"
 /// Cells
 let PRODUCT_CELL = "ProductCell"
 let TOP_RATED_CELL = "TopRatedCell"
+let TYPE_OF_FILTER = "TypeOfFilterCell"
 
 /// Other
 let OUT_OF_STOCK = "Out of stock"
@@ -45,3 +46,6 @@ let MISSING_JSON_VALUE = "Value not available"
 
 /// ViewController Identifiers
 let FILTER_VC = "FilterVC"
+
+/// Data
+let filterType = ["Price: High to Low","Price: Low to High","Screen Size", "4k", "Top Rated","Brands","Top Sellers" ]

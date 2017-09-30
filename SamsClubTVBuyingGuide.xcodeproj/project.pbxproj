@@ -35,6 +35,7 @@
 		556787FC1F7B2F260005148A /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556787FB1F7B2F260005148A /* ProductDetailVC.swift */; };
 		556787FE1F7B40A70005148A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556787FD1F7B40A70005148A /* Extensions.swift */; };
 		55E182BA1F7FFB2100D05685 /* TVinRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E182B91F7FFB2100D05685 /* TVinRoomVC.swift */; };
+		55E182BE1F804F4600D05685 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E182BD1F804F4600D05685 /* FilterTableViewCell.swift */; };
 		CE126A3D3E175D16B11CE3C9 /* Pods_SamsClubTVBuyingGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC30CD621634E7DEA242FF7C /* Pods_SamsClubTVBuyingGuideUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		556787FD1F7B40A70005148A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		556787FF1F7B4E580005148A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55E182B91F7FFB2100D05685 /* TVinRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVinRoomVC.swift; sourceTree = "<group>"; };
+		55E182BD1F804F4600D05685 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		5FB7B9A5C6F441FCE27F3901 /* Pods-SamsClubTVBuyingGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuide/Pods-SamsClubTVBuyingGuide.debug.xcconfig"; sourceTree = "<group>"; };
 		860092C567E8B5A0D6539F72 /* Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideUITests/Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BDF81938B44B2BDAFC8C03B /* Pods-SamsClubTVBuyingGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideTests/Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		5557CEFA1F7AFF9000D943AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				55E182BD1F804F4600D05685 /* FilterTableViewCell.swift */,
 				5557CF081F7B05E000D943AB /* ProductViewTableViewCell.swift */,
 				5557CF001F7B03FE00D943AB /* RoundedButton.swift */,
 				550BCFEA1F7DE41E00908824 /* TopRatedTableViewCell.swift */,
@@ -589,6 +592,7 @@
 				5557CF071F7B053A00D943AB /* Constants.swift in Sources */,
 				5557CEFE1F7B035200D943AB /* NoConnectivityVC.swift in Sources */,
 				5557CF011F7B03FE00D943AB /* RoundedButton.swift in Sources */,
+				55E182BE1F804F4600D05685 /* FilterTableViewCell.swift in Sources */,
 				550BD01F1F7F721100908824 /* FilterVC.swift in Sources */,
 				550BCFF31F7ECD6600908824 /* PaymentManager.swift in Sources */,
 				550BCFEB1F7DE41E00908824 /* TopRatedTableViewCell.swift in Sources */,
