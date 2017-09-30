@@ -78,7 +78,7 @@
                                             <constraint firstAttribute="height" constant="50" id="Nel-9i-NTg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Show Best Sellers">
+                                        <state key="normal" title="See Best Sellers">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -660,7 +660,7 @@
                                                     <constraint firstAttribute="width" constant="340" id="9m8-Ni-pqe"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                <state key="normal" title="Buy with Apple Pay...">
+                                                <state key="normal" title="Add to Cart">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
