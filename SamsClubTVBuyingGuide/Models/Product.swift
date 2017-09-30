@@ -17,7 +17,7 @@ struct ProductPage: Decodable {
     /// Dictionary of products
     var products: [Product]?
     
-    /// Total number of TVs in backend data store
+    /// Total number pages in the server with product objects
     var totalProducts: Int?
     
     /// Current page number

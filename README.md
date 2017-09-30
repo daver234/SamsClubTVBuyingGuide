@@ -34,10 +34,17 @@ As I stated above (and you can see in my blog), the frame is around what job the
 * **Show New All TVs**  This is the classic list of all the TVs.  The API can retrieve over 6,600 + TVs (not all TVs as the data is not clean).  There is no search or sort.  The filter button does not work but the really app would surely have one.  The idea of this view is to show that all the data has arrived, is parsed correctly, displayed correctly and layout correctly.  Tap any cell to see the detail for that item.
 * **See Top Rated TVs**  When shopping online, the user is presented with a huge list of choices.  Various properties are added to indicate preference in an effort to simplify choice.  This button goes a step further and just shows the top rated TVs.  The idea is that when I don't know what to buy, I'll just start with the top rated.  The user does not need to go to the list of everything and then run through some filter UI.  In general, the fewer taps, the better.  Note: the data that shows is not **actually** the top rated TVs.  There is no search API so I just take the first number of TVs from page 0 of the API call.  This allows the concept to be shown.  Also, the resulting table view uses. The view uses a folding cell. Taping and going to another view controller just adds a slight amount of mental load.  The purpose the the Top Rated view is to simplify and make the choice mentally easier.  Somewhat like walking down the TV isle in a Sams's Club where there are just a few TVs on display with some bullet points of features and a big stock.  It cries out: "Just pick one of these."
 
+## Other Comments
+
+There was a requirement to lazy load more items in the tableview.  Rather than waiting for the user to get to the end of the tableview and showing a spinner while they wait, I implemented pre-fetching the data using the iOS APIs for this, as well as using it for image pre-fetching.
+
+In my read of the one page API documentation, it appeared that totalProducts was the total number of products available from the backend data store.  So I developed the logic to determine how many pages, at 30 items per page, would be needed to get to the end.  And then, handle the end case in the table view.  Upon testing I found that totalProducts is really the total number of pages that have products in the json.  As of this writing in September, that was 224 pages, or about 6.720 products (the last page only has 1 product so it's less).  Many of the product elements appear duplicated.  The existing app will handle the 224 pages if the logic checking is removed for the page count.  Right now it checks for 224 products across 30 products per page which require 8 pages.
 
 ## Requriements
 
-This app includes Apple Pay.  It's best to run this on the simulator.  You may need to do some configuration to run it on the simulator and the device if you get provisioning profile errors.  Try slightly changing the bundle ID on the general tab.  Then go the Capabilities tab and go down to Apple Pay. Tap the plus button to add a merchant ID.  The merchant ID starts with "merchant" which is pre-populated in the text field.  Paste in your modified bundle ID and hit ok to set up a new merchant ID.  Test payment on the simulator.
+* This app includes Apple Pay.  It's best to run this on the simulator. To run it on a device you really need a test account set up in iTunes Connect and a test card from Apple.  You may need to do some configuration to run it on the simulator and the device if you get provisioning profile errors.  Try slightly changing the bundle ID on the general tab.  Then go the Capabilities tab and go down to Apple Pay. Tap the plus button to add a merchant ID.  The merchant ID starts with "merchant" which is pre-populated in the text field.  Paste in your modified bundle ID and hit ok to set up a new merchant ID.  Test the payment on the simulator.  Take that new merchent ID and change out the existing one in the Constants.swift file.
+* Once you have changed the bundle ID, try signing with your provisioning profile.
+* The version of this App on Github does not have the API key.  Please get your own API key and place it in Constants.swift where the blank string exists.
 
 ## Installation of Pods
 
@@ -65,6 +72,8 @@ There is always more work to do on software.  For this project, some of those th
 * Break storyboard into pieces for team work
 * Data should be cleaned up on the backend
 * Auto layout improvements (still a few warnings also)
+* Change Top Rated view to use Apple store type design rather than folding cell
+* Swipe to next and previous item in ShowAllTvsVC
 * .....and more
 
 Copyright Dave Rothschild
