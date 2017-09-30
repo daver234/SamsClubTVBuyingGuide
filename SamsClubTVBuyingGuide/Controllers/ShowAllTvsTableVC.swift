@@ -15,9 +15,6 @@ class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching
     // MARK: - Variables
     var pageNumberForSegue = 0
     var productNumberInPageForSegue = 0
-    
-    /// Show activity indicator if data is not ready
-    let indicator:UIActivityIndicatorView = UIActivityIndicatorView  (activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
 
     // MARK: - Outlets
     @IBOutlet weak var tableFooterView: UIView!
@@ -28,7 +25,6 @@ class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching
         navigationController?.navigationBar.barTintColor = ColorPalette.Blue.Medium
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.tableView.prefetchDataSource = self
-        activityIndicator()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,15 +46,6 @@ class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    func activityIndicator() {
-        indicator.color = ColorPalette.Blue.Medium
-        indicator.frame = CGRect(x: 60, y: 60, width: 40, height: 40)
-        indicator.center = self.view.center
-        self.view.addSubview(indicator)
-        indicator.bringSubview(toFront: self.view)
-        indicator.startAnimating()
-    }
 }
 
 
@@ -71,8 +58,6 @@ extension ShowAllTvsTableVC {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        indicator.stopAnimating()
-        indicator.hidesWhenStopped = true
         return NetworkManager.instance.totalProductsRetrieved
     }
     
