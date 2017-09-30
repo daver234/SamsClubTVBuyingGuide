@@ -8,19 +8,28 @@
 
 import UIKit
 
-class FilterVC: UIViewController, UITableViewDelegate  {
+class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
 
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-}
+    
+    /// Quickly flash the vertical scroll bar in popover so user gets indicator that the table scrolls.
+    /// Without this, it is not obvious that the table scrolls for more choices
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.flashScrollIndicators()
+    }
 
-
-extension FilterVC:  UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filterType.count
     }
@@ -29,12 +38,8 @@ extension FilterVC:  UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TYPE_OF_FILTER, for: indexPath) as? FilterTableViewCell else {
             return UITableViewCell()
         }
-        cell.filterTypeLabel.text = filterType[indexPath.row]
+        // cell.filterTypeLabel.text = filterType[indexPath.row]
+        cell.setupView(label: filterType[indexPath.row])
         return cell
     }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // cell selected code here
-    }
-    
 }

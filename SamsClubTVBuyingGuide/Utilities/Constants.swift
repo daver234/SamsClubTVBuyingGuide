@@ -48,4 +48,4 @@ let MISSING_JSON_VALUE = "Value not available"
 let FILTER_VC = "FilterVC"
 
 /// Data
-let filterType = ["Price: High to Low","Price: Low to High","Screen Size", "4k", "Top Rated","Brands","Top Sellers" ]
+let filterType = ["Price: High","Price: Low","Screen Size", "4k", "Top Rated","Brands","Top Sellers" ]

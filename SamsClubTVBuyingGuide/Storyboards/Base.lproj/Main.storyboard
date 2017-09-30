@@ -600,7 +600,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Coming Soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGw-M7-m4X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGw-M7-m4X">
                                 <rect key="frame" x="8" y="10" width="134" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -610,25 +610,25 @@
                                 <rect key="frame" x="0.0" y="40" width="150" height="210"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeOfFilterCell" rowHeight="17" id="mkj-xe-W8h" customClass="FilterTableViewCell" customModule="SamsClubTVBuyingGuide" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="150" height="17"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeOfFilterCell" id="mkj-xe-W8h" customClass="FilterTableViewCell" customModule="SamsClubTVBuyingGuide" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="150" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mkj-xe-W8h" id="prw-Qz-tT5">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="16.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypq-08-TYf">
-                                                    <rect key="frame" x="8" y="0.0" width="127" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <rect key="frame" x="10" y="10" width="130" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Ypq-08-TYf" firstAttribute="leading" secondItem="prw-Qz-tT5" secondAttribute="leading" constant="8" id="Hc4-hr-uXy"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ypq-08-TYf" secondAttribute="trailing" constant="15" id="MJ4-sz-c2X"/>
-                                                <constraint firstAttribute="bottom" secondItem="Ypq-08-TYf" secondAttribute="bottom" constant="1.5" id="c4r-hA-Fxc"/>
-                                                <constraint firstItem="Ypq-08-TYf" firstAttribute="top" secondItem="prw-Qz-tT5" secondAttribute="top" id="hYT-Bv-9Yz"/>
+                                                <constraint firstItem="Ypq-08-TYf" firstAttribute="top" secondItem="prw-Qz-tT5" secondAttribute="topMargin" constant="2" id="PM5-BQ-FZe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ypq-08-TYf" secondAttribute="trailing" constant="2" id="QZC-84-CCH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ypq-08-TYf" secondAttribute="bottom" constant="2" id="Yug-aP-7Li"/>
+                                                <constraint firstItem="Ypq-08-TYf" firstAttribute="leading" secondItem="prw-Qz-tT5" secondAttribute="leadingMargin" constant="2" id="h3D-KT-QUa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

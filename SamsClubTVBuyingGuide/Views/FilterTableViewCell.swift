@@ -10,7 +10,10 @@ import UIKit
 
 class FilterTableViewCell: UITableViewCell {
 
+    // MARK: - Variables
     @IBOutlet weak var filterTypeLabel: UILabel!
+    
+    // MARK: - Functions
     override func awakeFromNib() {
         super.awakeFromNib()
        
@@ -21,4 +24,7 @@ class FilterTableViewCell: UITableViewCell {
         self.accessoryType = selected ? .checkmark : .none
     }
 
+    func setupView(label: String) {
+        filterTypeLabel.text = label
+    }
 }
