@@ -184,8 +184,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abn-Ei-zb5">
-                                <rect key="frame" x="327" y="30" width="28" height="28"/>
-                                <state key="normal" image="cancel"/>
+                                <rect key="frame" x="315" y="30" width="40" height="40"/>
+                                <state key="normal" image="closeWhite"/>
                                 <connections>
                                     <action selector="cancelBtnTapped:" destination="2nk-nG-kiy" eventType="touchUpInside" id="OQ6-QY-5De"/>
                                 </connections>
@@ -932,7 +932,7 @@
     <resources>
         <image name="JustTV" width="360" height="354"/>
         <image name="back" width="28" height="28"/>
-        <image name="cancel" width="28" height="28"/>
+        <image name="closeWhite" width="40" height="40"/>
         <image name="samsclublogo2" width="274" height="61"/>
         <image name="tvHD" width="40" height="40"/>
     </resources>

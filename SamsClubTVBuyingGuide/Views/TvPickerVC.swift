@@ -44,8 +44,8 @@ class TvPickerVC: UIViewController {
         camera.usesOrthographicProjection = true
         scene.rootNode.camera = camera
         
-        let obj = SCNScene(named: "art.scnassets/pipe.dae")
-        let node = obj?.rootNode.childNode(withName: "pipe", recursively: true)
+        let obj = SCNScene(named: "art.scnassets/smallBlackTV2.dae")
+        let node = obj?.rootNode.childNode(withName: "smallTelevision", recursively: true)
         node?.scale = SCNVector3Make(0.0062, 0.0062, 0.002)
         node?.position = SCNVector3Make(-0.95, 0.5, -1)
         guard let nodeReady = node else { return }
