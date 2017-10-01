@@ -108,7 +108,7 @@ extension NetworkManager {
                 completion(true)
                 
             }  catch DecodingError.valueNotFound(let value, let context) {
-                print("Missing key: \(value)")
+                print("Value not found: \(value)")
                 print("Debug description: \(context.debugDescription)")
                 completion(false)
             }  catch DecodingError.typeMismatch(let type, let context) {

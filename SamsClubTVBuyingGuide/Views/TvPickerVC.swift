@@ -13,6 +13,7 @@ class TvPickerVC: UIViewController {
     
     var sceneView: SCNView!
     var size: CGSize!
+    weak var showTVinRoomVC: ShowTVinRoomVC!
     
     /// Create this so that when ShowTvInRoomVC shows the popover, we can specify the size
     init(size: CGSize) {
@@ -43,15 +44,29 @@ class TvPickerVC: UIViewController {
         let camera = SCNCamera()
         camera.usesOrthographicProjection = true
         scene.rootNode.camera = camera
-        
-        let obj = SCNScene(named: "art.scnassets/smallBlackTV2.dae")
-        let node = obj?.rootNode.childNode(withName: "newTelevision", recursively: true)
-        node?.scale = SCNVector3Make(2.0, 2.0, 2.0)
-        node?.position = SCNVector3Make(-0.95, -0.95, -1)
-        guard let nodeReady = node else { return }
-        scene.rootNode.addChildNode(nodeReady)
-        
         preferredContentSize = size
         
+        /// Need to pick up tap on TV in popover to pass it to ShowTvInRoomVC
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        sceneView.addGestureRecognizer(tap)
+        
+        let tv = TV.getTV()
+        TV.startRotation(node: tv)
+        scene.rootNode.addChildNode(tv)
+        
+    }
+    
+    /// Pass object to ShowTvInRoomVC
+    @objc func handleTap(_ gestureRecognizer: UIGestureRecognizer) {
+        /// Find location of the tap in the scene view and store it
+        let p = gestureRecognizer.location(in: sceneView)
+        let hitResults = sceneView.hitTest(p, options: [:])
+        
+        if hitResults.count > 0 {
+            let node = hitResults[0].node
+            guard let name = node.name else { return }
+            print(name)
+            showTVinRoomVC.onTvSelected(name)
+        }
     }
 }

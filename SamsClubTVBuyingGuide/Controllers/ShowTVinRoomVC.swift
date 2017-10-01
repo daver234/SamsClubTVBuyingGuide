@@ -12,7 +12,11 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ShowTVinRoom: UIViewController, ARSCNViewDelegate, UIPopoverPresentationControllerDelegate {
+class ShowTVinRoomVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationControllerDelegate {
+    
+    // MARK: - Variables
+    var selectedTVName: String?
+    var selectedTV: SCNNode?
     
     // MARK: - IBOutlets
     @IBOutlet var sceneView: ARSCNView!
@@ -31,6 +35,7 @@ class ShowTVinRoom: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
         
         // Create a new scene
         let scene = SCNScene(named: "art.scnassets/television.dae")!
+        sceneView.automaticallyUpdatesLighting = true
         
         // Set the scene to the view
         sceneView.scene = scene
@@ -91,10 +96,26 @@ class ShowTVinRoom: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
     @IBAction func tvBtnPressed(_ sender: UIButton) {
         /// Set size of popover
         let tvPickerVC = TvPickerVC(size: CGSize(width: 250, height: 500))
+        tvPickerVC.showTVinRoomVC = self
         tvPickerVC.modalPresentationStyle = .popover
         tvPickerVC.popoverPresentationController?.delegate = self
         present(tvPickerVC, animated: true, completion: nil)
         tvPickerVC.popoverPresentationController?.sourceView = sender
         tvPickerVC.popoverPresentationController?.sourceRect = sender.bounds
+    }
+    
+    func onTvSelected(_ tvName: String) {
+        selectedTVName = tvName
+    }
+    
+    func placeTV(position: SCNVector3) {
+        if let tvName = selectedTVName {
+            // controls.isHidden = false
+            let tv = TV.getTVForName(tvName: tvName)
+            selectedTV = tv
+            tv.position = position
+            tv.scale = SCNVector3Make(0.01, 0.01, 0.01)
+            sceneView.scene.rootNode.addChildNode(tv)
+        }
     }
 }

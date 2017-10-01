@@ -19,21 +19,6 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
     // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /// Connection available to get data from API
-        /// By loading products here we have avoid a delay when the user goes to view the list of products in ShowAllTvsTableVC
-        NetworkManager.instance.getProductsForPage(pageNumber: STARTING_PAGE_NUMBER, pageSize: PAGE_SIZE) { [weak self] (response) in
-            if response {
-                // guard let strongSelf = self else { return }
-                self?.isNetworkDone = true
-                DispatchQueue.main.async {
-                    SwiftSpinner.hide()
-                }
-            }
-        }
-        
-        /// Set up mock data in case user looks at top rated
-        MockDataManager.instance.getMockDataForTopRated()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +29,9 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
         } catch {
             print("could not start reachability notifier")
         }
+        
+        /// Go get the data and load into NetworkManager singleton
+        callAPI()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -62,29 +50,42 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
     }
     
     @IBAction func showAllTvsBtnPressed(_ sender: Any) {
-        if isNetworkDone {
-            SwiftSpinner.hide()
-            performSegue(withIdentifier: SHOW_ALL_TVS, sender: nil)
-        } else {
-            SwiftSpinner.show("Every TV on its way...")
-            let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
-            DispatchQueue.main.asyncAfter(deadline: when) { [weak self] in
-                SwiftSpinner.hide()
-                self?.performSegue(withIdentifier: SHOW_ALL_TVS, sender: nil)
-            }
-        }
+        setSpinner(forView: SHOW_ALL_TVS, isNetworkingDone: isNetworkDone)
     }
     
     @IBAction func showTopRatedBtnPressed(_ sender: Any) {
-        if isNetworkDone {
+        setSpinner(forView: TOP_RATED, isNetworkingDone: isNetworkDone)
+    }
+    
+    /// Decide how to handle the spinner
+    func setSpinner(forView: String, isNetworkingDone: Bool) {
+        switch (forView, isNetworkingDone) {
+        case (forView, true):
             SwiftSpinner.hide()
-            performSegue(withIdentifier: TOP_RATED, sender: nil)
-        } else {
+            performSegue(withIdentifier: forView, sender: nil)
+            break
+        case (forView, false):
             SwiftSpinner.show("Every TV on its way...")
             let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
             DispatchQueue.main.asyncAfter(deadline: when) { [weak self] in
                 SwiftSpinner.hide()
-                self?.performSegue(withIdentifier: TOP_RATED, sender: nil)
+                self?.performSegue(withIdentifier: forView, sender: nil)
+            }
+        default:
+            break
+        }
+    }
+    
+    func callAPI() {
+        NetworkManager.instance.getProductsForPage(pageNumber: STARTING_PAGE_NUMBER, pageSize: PAGE_SIZE) { [weak self] (response) in
+            if response {
+                // guard let strongSelf = self else { return }
+                self?.isNetworkDone = true
+                DispatchQueue.main.async {
+                    SwiftSpinner.hide()
+                }
+            } else {
+                print("Error in network manager response")
             }
         }
     }

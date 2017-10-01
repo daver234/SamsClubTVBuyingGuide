@@ -6,10 +6,9 @@
 //  Copyright © 2017 Dave Rothschild. All rights reserved.
 //
 
-import Foundation
 
  /// Mock Data
- /// Still a work in progress due to formatting issues
+ /// Still a work in progress 
  let topRatedJson = """
  {
      "id": "e13ad87c-0fcf-4eaf-b779-36220288b4df",
