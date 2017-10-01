@@ -84,13 +84,9 @@ class TopRatedTableViewCell: FoldingCell {
             button?.addTarget(self, action: #selector(TopRatedTableViewCell.setupPressed), for: .touchUpInside)
         }
     
-        
         if button != nil {
             guard let buttonWidth = button?.frame.width else { return }
             guard let buttonHeight = button?.frame.height else { return }
-            //let width = (firstContainerView.frame.size.width - buttonWidth)
-            // let height = (firstContainerView.frame.size.height - buttonHeight)
-            // button!.autoresizingMask = [width, height]
             button?.frame = CGRect(x: 140, y: 80, width: buttonWidth, height: buttonHeight)
             firstContainerView.addSubview(button!)
         }

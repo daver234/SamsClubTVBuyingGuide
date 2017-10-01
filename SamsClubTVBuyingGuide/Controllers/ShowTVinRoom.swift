@@ -53,10 +53,10 @@ class ShowTVinRoom: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
         sceneView.session.pause()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
+    @IBAction func cancelBtnTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
+    
     
     // MARK: - ARSCNViewDelegate
     

@@ -14,6 +14,7 @@
 		550BCFF11F7E017600908824 /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFF01F7E017600908824 /* MockDataManager.swift */; };
 		550BCFF31F7ECD6600908824 /* PaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BCFF21F7ECD6600908824 /* PaymentManager.swift */; };
 		550BD01F1F7F721100908824 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BD01E1F7F721100908824 /* FilterVC.swift */; };
+		5510E94E1F8072A000D7D8F6 /* tvsScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5510E94D1F8072A000D7D8F6 /* tvsScene.scn */; };
 		5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC61F7AFF3000D943AB /* AppDelegate.swift */; };
 		5557CEC91F7AFF3000D943AB /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC81F7AFF3000D943AB /* StartVC.swift */; };
 		5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECA1F7AFF3000D943AB /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		550BCFF21F7ECD6600908824 /* PaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
 		550BCFF41F7ECD9100908824 /* SamsClubTVBuyingGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SamsClubTVBuyingGuide.entitlements; sourceTree = "<group>"; };
 		550BD01E1F7F721100908824 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		5510E94D1F8072A000D7D8F6 /* tvsScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = tvsScene.scn; path = "../Supporting Files/art.scnassets/tvsScene.scn"; sourceTree = "<group>"; };
 		5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsClubTVBuyingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5557CEC61F7AFF3000D943AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5557CEC81F7AFF3000D943AB /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				5557CEC81F7AFF3000D943AB /* StartVC.swift */,
 				550BCFEC1F7DE44100908824 /* TopRatedTableVC.swift */,
 				55E182C91F80630C00D05685 /* ShowTVinRoom.swift */,
+				5510E94D1F8072A000D7D8F6 /* tvsScene.scn */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55E182C21F80604A00D05685 /* art.scnassets in Resources */,
+				5510E94E1F8072A000D7D8F6 /* tvsScene.scn in Resources */,
 				5557CED11F7AFF3000D943AB /* LaunchScreen.storyboard in Resources */,
 				5557CECE1F7AFF3000D943AB /* Assets.xcassets in Resources */,
 				5557CEFF1F7B035200D943AB /* NoConnectivityVC.xib in Resources */,

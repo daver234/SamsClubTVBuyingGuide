@@ -37,8 +37,20 @@ class TvPickerVC: UIViewController {
         /// now add the sceneView
         view.insertSubview(sceneView, at: 0)
         
-        let scene = SCNScene(named: "art.scnassets/television.dae")!
+        let scene = SCNScene(named: "art.scnassets/tvsScene.scn")!
         sceneView.scene = scene
+        
+        let camera = SCNCamera()
+        camera.usesOrthographicProjection = true
+        scene.rootNode.camera = camera
+        
+        let obj = SCNScene(named: "art.scnassets/pipe.dae")
+        let node = obj?.rootNode.childNode(withName: "pipe", recursively: true)
+        node?.scale = SCNVector3Make(0.0062, 0.0062, 0.002)
+        node?.position = SCNVector3Make(-0.95, 0.5, -1)
+        guard let nodeReady = node else { return }
+        scene.rootNode.addChildNode(nodeReady)
+        
         preferredContentSize = size
         
     }
