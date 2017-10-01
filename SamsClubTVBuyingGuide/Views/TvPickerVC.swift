@@ -14,6 +14,7 @@ class TvPickerVC: UIViewController {
     var sceneView: SCNView!
     var size: CGSize!
     
+    /// Create this so that when ShowTvInRoomVC shows the popover, we can specify the size
     init(size: CGSize) {
         super.init(nibName: nil, bundle: nil)
         self.size = size
@@ -26,11 +27,17 @@ class TvPickerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /// setting position of the popover.  ShowTvInRoomVC will position the view
         view.frame = CGRect(origin: CGPoint.zero, size: size)
+        
+        /// Initialize a Scene View; need this so it is consistent with the size set above.
+        /// Create a scene and pass in a frame
         sceneView = SCNView(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        
+        /// now add the sceneView
         view.insertSubview(sceneView, at: 0)
         
-        let scene = SCNScene(named: "art.scnassets/television.scn")!
+        let scene = SCNScene(named: "art.scnassets/television.dae")!
         sceneView.scene = scene
         preferredContentSize = size
         

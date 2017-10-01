@@ -16,6 +16,8 @@ class ShowTVinRoom: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
     
     // MARK: - IBOutlets
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var tvPickerBtn: UIButton!
+    
     
     // MARK: - Functions
     override func viewDidLoad() {
@@ -86,12 +88,13 @@ class ShowTVinRoom: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
         return .none
     }
     
-    @IBAction func toBtnPressed(_ sender: UIButton) {
-        let showTVinRoom = ShowTVinRoom(size: CGSize(width: 250, height: 500))
-        showTVinRoom.modalPresentationStyle = .popover
-        showTVinRoom.popoverPresentationController?.delegate = self
-        present(showTVinRoom, animated: true, completion: nil)
-        showTVinRoom.popoverPresentationController?.sourceView = sender
-        showTVinRoom.popoverPresentationController?.sourceRect = sender.bounds
+    @IBAction func tvBtnPressed(_ sender: UIButton) {
+        /// Set size of popover
+        let tvPickerVC = TvPickerVC(size: CGSize(width: 250, height: 500))
+        tvPickerVC.modalPresentationStyle = .popover
+        tvPickerVC.popoverPresentationController?.delegate = self
+        present(tvPickerVC, animated: true, completion: nil)
+        tvPickerVC.popoverPresentationController?.sourceView = sender
+        tvPickerVC.popoverPresentationController?.sourceRect = sender.bounds
     }
 }

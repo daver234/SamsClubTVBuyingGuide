@@ -161,10 +161,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--ShowT Vin Room-->
+        <!--ShowTVin Room-->
         <scene sceneID="Svs-yz-ylw">
             <objects>
-                <viewController id="2nk-nG-kiy" customClass="ShowTVinRoom" customModule="SamsClubTVBuyingGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2nk-nG-kiy" userLabel="ShowTVin Room" customClass="ShowTVinRoom" customModule="SamsClubTVBuyingGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VI3-AN-8lA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,12 +173,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg7-Ku-qBb">
-                                <rect key="frame" x="322" y="618" width="28" height="28"/>
+                                <rect key="frame" x="301" y="604" width="58" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="tv"/>
+                                <state key="normal" image="tvHD"/>
                                 <connections>
-                                    <action selector="toBtnPressed:" destination="2nk-nG-kiy" eventType="touchUpInside" id="D1j-R1-xWx"/>
-                                    <action selector="tvBtnPressed:" destination="2nk-nG-kiy" eventType="touchUpInside" id="0TS-fA-nmP"/>
+                                    <action selector="tvBtnPressed:" destination="2nk-nG-kiy" eventType="touchUpInside" id="vNB-CM-vU9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -193,6 +192,7 @@
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="DOb-le-clz" id="cnh-jU-gWS"/>
+                        <outlet property="tvPickerBtn" destination="lg7-Ku-qBb" id="yEl-qu-JRD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sek-A7-kuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -919,6 +919,6 @@
         <image name="JustTV" width="360" height="354"/>
         <image name="back" width="28" height="28"/>
         <image name="samsclublogo2" width="274" height="61"/>
-        <image name="tv" width="28" height="28"/>
+        <image name="tvHD" width="40" height="40"/>
     </resources>
 </document>
