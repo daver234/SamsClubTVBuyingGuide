@@ -65,7 +65,7 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
             performSegue(withIdentifier: forView, sender: nil)
             break
         case (forView, false):
-            SwiftSpinner.show("Every TV on its way...")
+            SwiftSpinner.show("Trying to reach the server...")
             let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
             DispatchQueue.main.asyncAfter(deadline: when) { [weak self] in
                 SwiftSpinner.hide()

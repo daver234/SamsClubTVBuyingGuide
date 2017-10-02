@@ -32,18 +32,35 @@ class SamsClubTVBuyingGuideUITests: XCTestCase {
     
     func testShowAllProducts() {
         XCUIApplication().launch()
+        let app = XCUIApplication()
         app.buttons["Show All TVs"].tap()
         XCTAssert(app.staticTexts["Free shipping"].exists)
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Samsung 50\" Class 4K Ultra HD LED Smart TV - UN50JU650DFXZA"]/*[[".cells.staticTexts[\"Samsung 50\\\" Class 4K Ultra HD LED Smart TV - UN50JU650DFXZA\"]",".staticTexts[\"Samsung 50\\\" Class 4K Ultra HD LED Smart TV - UN50JU650DFXZA\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.scrollViews.otherElements.buttons["Add to Cart"].tap()
+        app.navigationBars["SamsClubTVBuyingGuide.ProductDetailVC"].buttons["All TVs"].tap()
+        
+    }
+    
+    func testTomsGuide() {
+        XCUIApplication().launch()
+        let app = XCUIApplication()
+        app.buttons["Tom's Guide: 11 Things to Know"].tap()
+    }
+    
+    func testShowTopRated() {
+        XCUIApplication().launch()
+        let app = XCUIApplication()
+        app.buttons["See Top Rated TVs"].tap()
+        let tablesQuery = app.tables
+        let samsung50Class4kUltraHdLedSmartTvUn50ju650dfxzaStaticText = tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Samsung 50\" Class 4K Ultra HD LED Smart TV - UN50JU650DFXZA"]/*[[".cells.staticTexts[\"Samsung 50\\\" Class 4K Ultra HD LED Smart TV - UN50JU650DFXZA\"]",".staticTexts[\"Samsung 50\\\" Class 4K Ultra HD LED Smart TV - UN50JU650DFXZA\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        samsung50Class4kUltraHdLedSmartTvUn50ju650dfxzaStaticText.tap()
+        samsung50Class4kUltraHdLedSmartTvUn50ju650dfxzaStaticText.tap()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    
     
 }

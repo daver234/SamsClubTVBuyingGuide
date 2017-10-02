@@ -6,7 +6,7 @@
 //  Copyright © 2017 Dave Rothschild. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// A singleton to handle getting the data, parsing the JSON and converting to local a local data structure
 class NetworkManager {
@@ -39,12 +39,16 @@ extension NetworkManager {
     func getProductsForPage(pageNumber: Int, pageSize: Int, completion: @escaping CompletionHandler) {
         ///Check to see if we have already retrieved all the data.  If so, return and don't call the API again.
         guard !isEndOfData else {
-            print("*** YEA GOT TO END DATA")
+            print("GOT TO END DATA")
             completion(false)
             return
         }
-
         print("*** in NetworkManager: next pageNumber to get is:", pageNumber)
+        
+        guard API_KEY != "" else {
+            showAlert(title: "Missing API Key", message: "Please add your own API KEY in Constants.swift at API_KEY.")
+            return
+        }
         guard let url = URL.init(string: "\(BASE_URL)/\(API_KEY)/\(pageNumber)/\(pageSize)") else {
             print("Error: in guard for URL so something didn't work")
             completion(false)
@@ -124,5 +128,17 @@ extension NetworkManager {
                 completion(false)
             }
             }.resume()
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        var rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        if let navigationController = rootViewController as? UINavigationController {
+            rootViewController = navigationController.viewControllers.first
+        }
+        if let tabBarController = rootViewController as? UITabBarController {
+            rootViewController = tabBarController.selectedViewController
+        }
+        rootViewController?.present(alertController, animated: true, completion: nil)
     }
 }

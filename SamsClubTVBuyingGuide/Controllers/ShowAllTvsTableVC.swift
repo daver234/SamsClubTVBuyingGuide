@@ -136,8 +136,6 @@ extension ShowAllTvsTableVC {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PRODUCT_CELL, for: indexPath) as? ProductViewTableViewCell else {
             return UITableViewCell()
         }
-        
-        print("&&&& indexPath.row is: ", indexPath.row)
 
         /// Find the page with the product for the cell
         /// Just need cell number and default page size to calculate which page it is in
