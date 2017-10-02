@@ -38,7 +38,7 @@ There are a variety of XCTestCases included in this project.  Take a look.
 * You need iOS 11.  This is Swift 4. You might need iPhone 6s or higher for ARkit features.
 * **This app includes Apple Pay.  I won't compile without following these instructions**.  You need to do some configuration to avoid provisioning profile errors.  Try slightly changing the bundle ID on the general tab.  Then go the Capabilities tab and go down to Apple Pay. Tap the plus button to add a merchant ID.  The merchant ID starts with "merchant" which is pre-populated in the text field.  Paste in your modified bundle ID and hit ok to set up a new merchant ID.  Test the payment on the simulator.  Take that new merchent ID and change out the existing one in the Constants.swift file.
 * Once you have changed the bundle ID, try signing with your provisioning profile.
-* The version of this App on Github does not have the API key.  **Please get your own API key and place it in Constants.swift where the blank string exists.**
+* The version of this App on Github does not have the API key.  **Please get your own API key and place it in Constants.swift .**
 
 ## Installation of Pods
 ### Included Libraries via Pods
