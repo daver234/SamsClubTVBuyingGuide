@@ -15,7 +15,7 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 /// URL Constants
 let TOMS_GUIDE = "https://www.tomsguide.com/us/tv-buying-guide,review-1943.html"
 let BASE_URL = "https://walmartlabs-test.appspot.com/_ah/api/walmart/v1/walmartproducts"
-let API_KEY = "" // get a API key and enter here.
+let API_KEY = "e62b524f-4a34-403b-a65c-50cfdd487f46" // get a API key and enter here.
 
 /// Segues
 let THINGS_TO_KNOW = "toThingsToKnowVC"
@@ -38,7 +38,7 @@ let LOADING_IMAGE = "loadingImage.png"
 let PAGE_SIZE = 30
 let STARTING_PAGE_NUMBER = 0
 let MOCK_DATA_CELL_COUNT = 5
-let APPLE_MERCHENT_ID = ""  // create and enter your merchant ID.  Needed for Apple Pay.
+let APPLE_MERCHENT_ID = "merchant.com.dave.samsclub"  // create and enter your merchant ID.  Needed for Apple Pay.
 
 /// Scene Constants for ARKit related work
 let MAIN_SCENE = "art.scnassets/main.scn"
