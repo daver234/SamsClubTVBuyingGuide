@@ -35,6 +35,14 @@ class TV {
         return node!
     }
     
+    class func getRetroTV() -> SCNNode {
+        let obj = SCNScene(named: RETRO_TV_DAE)
+        let node = obj?.rootNode.childNode(withName: RETRO_NAME, recursively: false)
+        node?.scale = SCNVector3Make(1.0, 1.0, 1.0)
+        node?.position = SCNVector3Make(-0.75, -2, -1)
+        return node!
+    }
+    
     /// Rotate TV in popover in ShowTVinRoomVC
     class func startRotation(node: SCNNode) {
         let rotate = SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: CGFloat(0.01 * Double.pi), z: 0, duration: 0.1))

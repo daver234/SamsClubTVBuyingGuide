@@ -91,7 +91,7 @@ class ProductDetailVC: UIViewController {
         /// to see if more pages are there and if not load more.
         /// For now, just swiping for products on current page (30 products per page).
         print("swipe left...I heard you")
-        guard productNumberInPage != 29 else {
+        guard productNumberInPage != (PAGE_SIZE - 1) else {
             print("Sorry out of products on this page. Go back to list view")
             return
         }

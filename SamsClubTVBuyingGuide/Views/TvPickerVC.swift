@@ -56,6 +56,10 @@ class TvPickerVC: UIViewController {
         TV.startRotation(node: tv)
         scene.rootNode.addChildNode(tv)
         
+//        let retroTv = TV.getRetroTV()
+//        TV.startRotation(node: retroTv)
+//        scene.rootNode.addChildNode(retroTv)
+        
     }
     
     /// Pass object to ShowTvInRoomVC
