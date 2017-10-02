@@ -21,7 +21,10 @@ class ShowTVinRoomVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentation
     // MARK: - IBOutlets
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var tvPickerBtn: UIButton!
-    
+    @IBOutlet weak var rotateBtn: UIButton!
+    @IBOutlet weak var upBtn: UIButton!
+    @IBOutlet weak var downBtn: UIButton!
+    @IBOutlet weak var controls: UIStackView!
     
     // MARK: - Functions
     override func viewDidLoad() {
@@ -41,6 +44,16 @@ class ShowTVinRoomVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentation
         sceneView.scene = scene
         
         tvPickerBtn.layer.cornerRadius = 10
+        
+        let gesture1 = UILongPressGestureRecognizer(target: self, action: #selector(onLongPress(gesture:)))
+        let gesture2 = UILongPressGestureRecognizer(target: self, action: #selector(onLongPress(gesture:)))
+        let gesture3 = UILongPressGestureRecognizer(target: self, action: #selector(onLongPress(gesture:)))
+        gesture1.minimumPressDuration = 0.3
+        gesture2.minimumPressDuration = 0.3
+        gesture3.minimumPressDuration = 0.3
+        rotateBtn.addGestureRecognizer(gesture1)
+        upBtn.addGestureRecognizer(gesture2)
+        downBtn.addGestureRecognizer(gesture3)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,31 +77,22 @@ class ShowTVinRoomVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentation
         dismiss(animated: true, completion: nil)
     }
     
-    
-    // MARK: - ARSCNViewDelegate
-    
-    /*
-     // Override to create and configure nodes for anchors added to the view's session.
-     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-     let node = SCNNode()
-     
-     return node
-     }
-     */
-    
     func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
     }
     
     func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
     }
     
     func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let results = sceneView.hitTest(touch.location(in: sceneView), types: [.featurePoint])
+        guard  let hitFeature = results.last else { return }
+        let hitTransform = SCNMatrix4(hitFeature.worldTransform)
+        let hitPosition = SCNVector3Make(hitTransform.m41, hitTransform.m42, hitTransform.m43)
+        placeTV(position: hitPosition)
     }
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
@@ -112,12 +116,39 @@ class ShowTVinRoomVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentation
     
     func placeTV(position: SCNVector3) {
         if let tvName = selectedTVName {
-            // controls.isHidden = false
+            controls.isHidden = false
             let tv = TV.getTVForName(tvName: tvName)
             selectedTV = tv
             tv.position = position
-            tv.scale = SCNVector3Make(0.01, 0.01, 0.01)
+            tv.scale = SCNVector3Make(0.07, 0.07, 0.07)
             sceneView.scene.rootNode.addChildNode(tv)
         }
     }
+    
+    @IBAction func onRemovePressed(_ sender: Any) {
+        if let tv = selectedTV {
+            tv.removeFromParentNode()
+            selectedTV = nil
+        }
+    }
+    
+    @objc func onLongPress(gesture: UILongPressGestureRecognizer) {
+        if let tv = selectedTV {
+            if gesture.state == .ended {
+                tv.removeAllActions()
+            } else if gesture.state == .began {
+                if gesture.view === rotateBtn {
+                    let rotate = SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: CGFloat(0.08 * Double.pi), z: 0, duration: 0.1))
+                    tv.runAction(rotate)
+                } else if gesture.view === upBtn {
+                    let move = SCNAction.repeatForever(SCNAction.moveBy(x: 0, y: 0.08, z: 0, duration: 0.1))
+                    tv.runAction(move)
+                } else if gesture.view === downBtn {
+                    let move = SCNAction.repeatForever(SCNAction.moveBy(x: 0, y: -0.08, z: 0, duration: 0.1))
+                    tv.runAction(move)
+                }
+            }
+        }
+    }
+    
 }

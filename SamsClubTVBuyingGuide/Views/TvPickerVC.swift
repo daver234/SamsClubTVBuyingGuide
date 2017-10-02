@@ -67,6 +67,7 @@ class TvPickerVC: UIViewController {
             guard let name = node.name else { return }
             print(name)
             showTVinRoomVC.onTvSelected(name)
+            dismiss(animated: true, completion: nil)
         }
     }
 }
