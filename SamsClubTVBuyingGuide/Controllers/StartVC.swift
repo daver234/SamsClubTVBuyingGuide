@@ -66,7 +66,7 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
             break
         case (forView, false):
             SwiftSpinner.show("Trying to reach the server...")
-            let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
+            let when = DispatchTime.now() + 3 
             DispatchQueue.main.asyncAfter(deadline: when) { [weak self] in
                 SwiftSpinner.hide()
                 self?.performSegue(withIdentifier: forView, sender: nil)
@@ -78,14 +78,13 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
     
     func callAPI() {
         NetworkManager.instance.getProductsForPage(pageNumber: STARTING_PAGE_NUMBER, pageSize: PAGE_SIZE) { [weak self] (response) in
-            if response {
-                // guard let strongSelf = self else { return }
-                self?.isNetworkDone = true
-                DispatchQueue.main.async {
-                    SwiftSpinner.hide()
-                }
-            } else {
+            guard response else {
                 print("Error in network manager response")
+                return
+            }
+            self?.isNetworkDone = true
+            DispatchQueue.main.async {
+                SwiftSpinner.hide()
             }
         }
     }
