@@ -14,6 +14,7 @@ import PassKit
 
 typealias PaymentCompletionHandler = (Bool) -> Void
 
+/// For Apple Pay
 class PaymentManager: NSObject {
     
     static let supportedNetworks: [PKPaymentNetwork] = [
@@ -73,9 +74,8 @@ class PaymentManager: NSObject {
     }
 }
 
-/*
- PKPaymentAuthorizationControllerDelegate conformance.
- */
+
+/// PKPaymentAuthorizationControllerDelegate conformance.
 extension PaymentManager: PKPaymentAuthorizationControllerDelegate {
     
     func paymentAuthorizationController(_ controller: PKPaymentAuthorizationController, didAuthorizePayment payment: PKPayment, completion: @escaping (PKPaymentAuthorizationStatus) -> Void) {
@@ -84,8 +84,6 @@ extension PaymentManager: PKPaymentAuthorizationControllerDelegate {
         if payment.shippingContact?.emailAddress == nil || payment.shippingContact?.phoneNumber == nil {
             paymentStatus = .failure
         } else {
-            // Here you would send the payment token to your server or payment provider to process
-            // Once processed, return an appropriate status in the completion handler (success, failure, etc)
             paymentStatus = .success
         }
         
@@ -101,22 +99,6 @@ extension PaymentManager: PKPaymentAuthorizationControllerDelegate {
                     self.completionHandler!(false)
                 }
             }
-        }
-    }
-    
-    func paymentAuthorizationController(_ controller: PKPaymentAuthorizationController, didSelectPaymentMethod paymentMethod: PKPaymentMethod, completion: @escaping ([PKPaymentSummaryItem]) -> Void) {
-        // The didSelectPaymentMethod delegate method allows you to make changes when the user updates their payment card
-        // Here we're applying a $2 discount when a debit card is selected
-        if paymentMethod.type == .debit {
-            var discountedSummaryItems = paymentSummaryItems
-            let discount = PKPaymentSummaryItem(label: "Debit Card Discount", amount: NSDecimalNumber(string: "-2.00"))
-            discountedSummaryItems.insert(discount, at: paymentSummaryItems.count - 1)
-            if let total = paymentSummaryItems.last {
-                total.amount = total.amount.subtracting(NSDecimalNumber(string: "5.00"))
-            }
-            completion(discountedSummaryItems)
-        } else {
-            completion(paymentSummaryItems)
         }
     }
 }

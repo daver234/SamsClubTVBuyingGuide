@@ -132,6 +132,7 @@ class ShowTVinRoomVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentation
         }
     }
     
+    /// For placing TV in the scene
     @objc func onLongPress(gesture: UILongPressGestureRecognizer) {
         if let tv = selectedTV {
             if gesture.state == .ended {

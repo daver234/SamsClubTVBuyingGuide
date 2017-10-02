@@ -11,6 +11,7 @@ import SceneKit
 
 class TvPickerVC: UIViewController {
     
+    // MARK: - Variables
     var sceneView: SCNView!
     var size: CGSize!
     weak var showTVinRoomVC: ShowTVinRoomVC!

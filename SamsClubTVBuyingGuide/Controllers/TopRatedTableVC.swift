@@ -83,9 +83,7 @@ extension TopRatedTableVC {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard case let cell as TopRatedTableViewCell = cell else {
-            return
-        }
+        guard case let cell as TopRatedTableViewCell = cell else { return }
         if cellHeights[indexPath.row] == kCloseCellHeight {
             cell.selectedAnimation(false, animated: false, completion:nil)
         } else {

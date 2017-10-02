@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// The data structures used to store the parased results from the server
+/// The data structures used to store the parased results from the server.
 struct ProductPage: Decodable {
     
     /// Some type of Id

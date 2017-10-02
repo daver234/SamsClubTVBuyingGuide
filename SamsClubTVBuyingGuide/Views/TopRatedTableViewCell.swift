@@ -18,6 +18,7 @@ class TopRatedTableViewCell: FoldingCell {
     // MARK: - Variables
     let paymentHandler = PaymentManager()
     var productForApplePay = Product()
+    var button: UIButton?
     
     // MARK: - IBOutlets
     @IBOutlet weak var productImage: UIImageView!
@@ -32,8 +33,7 @@ class TopRatedTableViewCell: FoldingCell {
     @IBOutlet weak var productPriceUnFold: UILabel!
     @IBOutlet weak var firstContainerView: UIView!
     
-    var button: UIButton?
-    
+    // MARK: - Functions
     override func awakeFromNib() {
         foregroundView.layer.cornerRadius = 10
         foregroundView.layer.masksToBounds = true

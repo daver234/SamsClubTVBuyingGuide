@@ -45,6 +45,7 @@ extension NetworkManager {
         }
         print("*** in NetworkManager: next pageNumber to get is:", pageNumber)
         
+        /// Check for API key
         guard API_KEY != "" else {
             showAlert(title: "Missing API Key", message: "Please add your own API KEY in Constants.swift at API_KEY.")
             return

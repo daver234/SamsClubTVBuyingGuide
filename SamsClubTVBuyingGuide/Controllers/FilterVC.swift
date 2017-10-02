@@ -10,9 +10,10 @@ import UIKit
 
 class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
-
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -38,7 +39,6 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TYPE_OF_FILTER, for: indexPath) as? FilterTableViewCell else {
             return UITableViewCell()
         }
-        // cell.filterTypeLabel.text = filterType[indexPath.row]
         cell.setupView(label: filterType[indexPath.row])
         return cell
     }

@@ -18,7 +18,6 @@ class ProductDetailVC: UIViewController {
     var productNumberInPage = 0
     
     // MARK: - IBOutlets
-    
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var reviewRatingLabel: CosmosView!
     @IBOutlet weak var reviewCountLabel: UILabel!
@@ -28,9 +27,6 @@ class ProductDetailVC: UIViewController {
     @IBOutlet weak var inStockLabel: UILabel!
     @IBOutlet weak var shortDescription: UITextView!
     @IBOutlet weak var longDescription: UITextView!
-    
-    
-    
     
     // MARK: - Functions
     override func viewDidLoad() {
