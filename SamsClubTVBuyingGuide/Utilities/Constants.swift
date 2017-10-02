@@ -41,6 +41,12 @@ let STARTING_PAGE_NUMBER = 0
 let MOCK_DATA_CELL_COUNT = 5
 let APPLE_MERCHENT_ID = "merchant.com.dave.samsclub"
 
+/// Scene Constants for ARKit related work
+let MAIN_SCENE = "art.scnassets/main.scn"
+let TV_SCENE_SCN = "art.scnassets/tvsScene.scn"
+let BLACK_TV_DAE = "art.scnassets/smallBlackTV2.dae"
+let BLACK_MODEL_NAME = "newTelevision"
+
 /// Errors
 let MISSING_JSON_VALUE = "Value not available"
 

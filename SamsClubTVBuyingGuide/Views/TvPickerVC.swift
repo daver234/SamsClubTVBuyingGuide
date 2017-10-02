@@ -37,8 +37,9 @@ class TvPickerVC: UIViewController {
         
         /// now add the sceneView
         view.insertSubview(sceneView, at: 0)
+        preferredContentSize = size
         
-        let scene = SCNScene(named: "art.scnassets/tvsScene.scn")!
+        let scene = SCNScene(named: TV_SCENE_SCN)!
         sceneView.scene = scene
         
         let camera = SCNCamera()

@@ -37,7 +37,7 @@ class ShowTVinRoomVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentation
         // sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/television.dae")!
+        let scene = SCNScene(named: MAIN_SCENE)!
         sceneView.automaticallyUpdatesLighting = true
         
         // Set the scene to the view
@@ -120,7 +120,7 @@ class ShowTVinRoomVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentation
             let tv = TV.getTVForName(tvName: tvName)
             selectedTV = tv
             tv.position = position
-            tv.scale = SCNVector3Make(0.07, 0.07, 0.07)
+            tv.scale = SCNVector3Make(0.9, 0.9, 0.9)
             sceneView.scene.rootNode.addChildNode(tv)
         }
     }

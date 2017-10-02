@@ -19,7 +19,7 @@ class TV {
     /// Set to add more TVs to popover as options to place in view
     class func getTVForName(tvName: String) -> SCNNode {
         switch tvName{
-        case "television":
+        case "newTelevision":
             return TV.getTV()
         default:
             return TV.getTV()
@@ -28,10 +28,10 @@ class TV {
     
     /// Get one of the Tvs.  Create more classes as more TVs are added.
     class func getTV() -> SCNNode {
-        let obj = SCNScene(named: "art.scnassets/smallBlackTV2.dae")
-        let node = obj?.rootNode.childNode(withName: "newTelevision", recursively: true)!
+        let obj = SCNScene(named: BLACK_TV_DAE)
+        let node = obj?.rootNode.childNode(withName: BLACK_MODEL_NAME, recursively: true)!
         node?.scale = SCNVector3Make(2.0, 2.0, 2.0)
-        node?.position = SCNVector3Make(-0.95, -0.95, -1)
+        node?.position = SCNVector3Make(-0.75, -1, -1)
         return node!
     }
     
