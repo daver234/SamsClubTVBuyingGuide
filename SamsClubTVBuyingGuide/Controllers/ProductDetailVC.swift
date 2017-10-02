@@ -37,11 +37,15 @@ class ProductDetailVC: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = ColorPalette.White.Medium
         print("variables", pageWithTV, productNumberInPage)
+        let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(recognizer:)))
+        recognizer.direction = .left
+        self.view .addGestureRecognizer(recognizer)
         setUpView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = .lightContent
+        print("in here again")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -81,7 +85,22 @@ class ProductDetailVC: UIViewController {
     }
     
     @IBAction func buyBtnPressed(_ sender: Any) {
-        
+        print("Add to cart button pressed")
+    }
+    
+    @objc func handleSwipe(recognizer : UISwipeGestureRecognizer) {
+        /// A quick implementation. Not the best. Takes more memory
+        /// Only works for current page.
+        /// To improve, at a minumum, need to check for how many items in NetworkManager
+        /// to see if more pages are there and if not load more.
+        /// For now, just swiping for products on current page (30 products per page).
+        print("swipe left...I heard you")
+        guard productNumberInPage != 29 else {
+            print("Sorry out of products on this page. Go back to list view")
+            return
+        }
+        productNumberInPage += 1
+        self.viewDidLoad()
     }
 }
 
