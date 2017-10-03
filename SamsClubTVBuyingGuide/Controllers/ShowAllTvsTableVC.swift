@@ -29,6 +29,7 @@ class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 150
         UIApplication.shared.statusBarStyle = .lightContent
@@ -39,6 +40,7 @@ class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         /// Set status bar back to default because inital view is white so we need a dark color (default)
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }

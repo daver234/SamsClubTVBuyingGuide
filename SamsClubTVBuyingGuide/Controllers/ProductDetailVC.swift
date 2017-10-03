@@ -11,7 +11,7 @@ import Cosmos
 import WebKit
 
 /// Show the details of one product
-class ProductDetailVC: UIViewController {
+class ProductDetailVC: UIViewController, UINavigationControllerDelegate {
 
     // MARK: - Variables
     var pageWithTV = 0
@@ -35,16 +35,19 @@ class ProductDetailVC: UIViewController {
         print("variables", pageWithTV, productNumberInPage)
         let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(recognizer:)))
         recognizer.direction = .left
-        self.view .addGestureRecognizer(recognizer)
+        self.view.addGestureRecognizer(recognizer)
+        self.navigationController?.delegate = self
         setUpView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         UIApplication.shared.statusBarStyle = .lightContent
         print("in here again")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         /// Set status bar back to default because inital view is white so we need a dark color (default)
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
@@ -85,7 +88,7 @@ class ProductDetailVC: UIViewController {
     }
     
     @objc func handleSwipe(recognizer : UISwipeGestureRecognizer) {
-        /// A quick implementation. Not the best. Takes more memory
+        /// A quick implementation. Not the best. Need to implement a pageviewcontrolller
         /// Only works for current page.
         /// To improve, at a minumum, need to check for how many items in NetworkManager
         /// to see if more pages are there and if not load more.
