@@ -21,6 +21,8 @@ class TV {
         switch tvName{
         case "newTelevision":
             return TV.getTV()
+        case "retro":
+            return TV.getRetroTV()
         default:
             return TV.getTV()
         }
@@ -31,15 +33,15 @@ class TV {
         let obj = SCNScene(named: BLACK_TV_DAE)
         let node = obj?.rootNode.childNode(withName: BLACK_MODEL_NAME, recursively: true)!
         node?.scale = SCNVector3Make(2.0, 2.0, 2.0)
-        node?.position = SCNVector3Make(-0.75, -1, -1)
+        node?.position = SCNVector3Make(-0.75, -0.5, -1)
         return node!
     }
     
     class func getRetroTV() -> SCNNode {
         let obj = SCNScene(named: RETRO_TV_DAE)
-        let node = obj?.rootNode.childNode(withName: RETRO_NAME, recursively: false)
-        node?.scale = SCNVector3Make(1.0, 1.0, 1.0)
-        node?.position = SCNVector3Make(-0.75, -2, -1)
+        let node = obj?.rootNode.childNode(withName: RETRO_NAME, recursively: true)
+        node?.scale = SCNVector3Make(0.015, 0.015, 0.015)
+        node?.position = SCNVector3Make(-0.75, -1.9, -1)
         return node!
     }
     

@@ -56,9 +56,9 @@ class TvPickerVC: UIViewController {
         TV.startRotation(node: tv)
         scene.rootNode.addChildNode(tv)
         
-//        let retroTv = TV.getRetroTV()
-//        TV.startRotation(node: retroTv)
-//        scene.rootNode.addChildNode(retroTv)
+        let retroTv = TV.getRetroTV()
+        TV.startRotation(node: retroTv)
+        scene.rootNode.addChildNode(retroTv)
         
     }
     
@@ -70,8 +70,11 @@ class TvPickerVC: UIViewController {
         
         if hitResults.count > 0 {
             let node = hitResults[0].node
-            guard let name = node.name else { return }
-            print(name)
+            guard var name = node.name else { return }
+            if name.contains("nmodel") {
+                name = "retro"
+            }
+            print("tv name selected is:",name)
             showTVinRoomVC.onTvSelected(name)
             dismiss(animated: true, completion: nil)
         }

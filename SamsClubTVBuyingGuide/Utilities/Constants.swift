@@ -46,7 +46,7 @@ let TV_SCENE_SCN = "art.scnassets/tvsScene.scn"
 let BLACK_TV_DAE = "art.scnassets/smallBlackTV2.dae"
 let BLACK_MODEL_NAME = "newTelevision"
 let RETRO_NAME = "retro"
-let RETRO_TV_DAE = "retroB4.dae"
+let RETRO_TV_DAE = "art.scnassets/retroB4.dae"
 
 /// Errors
 let MISSING_JSON_VALUE = "Value not available"

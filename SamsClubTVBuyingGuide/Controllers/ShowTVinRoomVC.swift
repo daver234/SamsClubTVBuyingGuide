@@ -120,7 +120,13 @@ class ShowTVinRoomVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentation
             let tv = TV.getTVForName(tvName: tvName)
             selectedTV = tv
             tv.position = position
-            tv.scale = SCNVector3Make(0.9, 0.9, 0.9)
+            if tvName == "retro" {
+                /// Set size of TV in camera view
+                tv.scale = SCNVector3Make(0.0050, 0.0050, 0.0050)
+            } else {
+                tv.scale = SCNVector3Make(0.9, 0.9, 0.9)
+            }
+            
             sceneView.scene.rootNode.addChildNode(tv)
         }
     }
