@@ -71,8 +71,8 @@ class TvPickerVC: UIViewController {
         if hitResults.count > 0 {
             let node = hitResults[0].node
             guard var name = node.name else { return }
-            if name.contains("nmodel") {
-                name = "retro"
+            if name.contains(RETRO_ELEMENT) {
+                name = RETRO_NAME
             }
             print("tv name selected is:",name)
             showTVinRoomVC.onTvSelected(name)
