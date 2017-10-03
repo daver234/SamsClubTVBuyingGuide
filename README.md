@@ -1,5 +1,5 @@
 # Sam's Club TV Buying Guide
-
+![alt text](samsBuyerGuide3.jpg "First Screen")
 ## Overview
 
 The purpose of this app is to help someone buy a new TV.  It is a concept app, not shipping app.
@@ -21,7 +21,22 @@ A person probably has some questions like:
 As I stated above (and you can see in my blog: https://medium.com/@daverothschild), the frame is around what job the person is trying to get done.  When buying a new TV, these four buttons, while not exhaustive, better signal to the user that we are trying to help them find a solution to the job they are trying to get done.  As part of seeking a solution, these seems like four reasonable questions someone might have before buying.
 
 * **Tom's Guide**  The assumption is that you don't buy a TV very often.  It's on your list but you likely don't know what features are important and you don't really trust the Store to tell you the straight story.  So go to an external party, not affiliated with Sam's Club.  
-* **See New TV in Your Room**  ARKit in action.  The iOS 11 library seems like a huge win for retail as consumers can much more easily envision what the product looks like in their home setting.  You will see a small button in the lower right with a picture of a TV that says HD on it.  **Tap that HD button.  A popover will appear with a rotating tv.  Important: Tap to select it. the TV in the popover view**  Point your phone at a wall that is well lit but not too far away.  **Long tap and a TV should appear.**  You  know it's working when a set of 4 controls show up on the lower left that let you delete the tv, rotate it, or move and up or down. Tapping more than once will add another TV (a feature not a bug?). It's still flaky so you might try tapping the close button in the upper right and start again.  Make sure there is good lighting.  You might need to tap multiple times after selecting the TV in the popover. You will then see a TV in your room to get a vision of what a new one might look like.  Clearly more can be added here like a tracking rectangle so the user knows were to tap.  Better placement management.  It's a start into the world of making it easy for a consumer to envision what a new purchase will look like in their home before they buy.  It should increase the emotional desire to buy.
+* **See New TV in Your Room**  ARKit in action.  The iOS 11 library seems like a huge win for retail as consumers can much more easily envision what the product looks like in their home setting.  This should increase their emotional desire to buy.
+
+  **Suggestions for using this view:**
+  1. Make sure the room you are in has very good lighting.
+  2. Tap the See New TV in Your Room button.
+  3. When the camera/scene view appears move the phone around so that the ARKit can start to determine the size of the room and the items in it.  Ideally move slowly about 180 degrees from center.
+  4. Tap the button in the lower right that says "HD." A popover will appear with two tvs to choose from.
+  5. Tap on one of the TVs that you would like to place in the camera scene. There are two to choose from.
+  6. Long tap on the camera/scene to place the selected tv in the view.
+  7. If successful, you will see 4 controls appear on the bottom left to delete, rotate, move up or move down the tv.
+  8. If you tap again another tv will be placed in the view.  Hit the x to delete it.  
+  9. You can get in a state where there are many tvs in the view and the delete doesn't work.  (It's software!)
+  10. If you don't like the placements, hit the X in the upper right.  You will be back on the main screen.  Tap the Show TV in Your Room again. No need to restart the app.
+  11. Yep it needs a tracking rectangle and more stuff. Yes the sizing of the tvs after placement is out of wack on occasion. Just start over.
+    
+
 * **Show New All TVs**  This is the classic list of all the TVs.  The API can retrieve over 6,600 + TVs (not all are TVs as the data is not clean).  There is no search or sort.  The filter button does not work but the real app would surely have one.  The idea of this view is to show that all the data has arrived, is parsed correctly, displayed correctly and laid out correctly.  Tap any cell to see the detail for that item.
 * **See Top Rated TVs**  When shopping online, the user is presented with a huge list of choices.  Various properties are added to indicate preference in an effort to simplify choice.  This button goes a step further and just shows the top rated TVs.  The idea is that when I don't know what to buy, I'll just start with the top rated.  The user does not need to go to the list of everything and then run through some filter UI.  In general, the fewer taps, the better.  Note: the data that shows is not **actually** the top rated TVs.  There is no search API so I just take the first number of TVs from page 0 of the API call.  This allows the concept to be shown.  Tap on a cell and the cell unfolds with more data and a Apple Pay buy button. Tap again to close the fold.  Taping and going to another view controller just adds a slight amount of mental load.  The purpose the the Top Rated view is to simplify and make the choice mentally easier.  Somewhat like walking down the TV isle in a Sams's Club where there are just a few TVs on display with some bullet points of features and a bunch of TVs in boxes right in front.  It cries out: "Just pick one of these."  Also **Apple Pay** is implemented in this view to make it simpler than a cart check out process.
 

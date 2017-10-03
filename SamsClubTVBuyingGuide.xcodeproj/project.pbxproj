@@ -67,6 +67,7 @@
 		550BCFF21F7ECD6600908824 /* PaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
 		550BCFF41F7ECD9100908824 /* SamsClubTVBuyingGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SamsClubTVBuyingGuide.entitlements; sourceTree = "<group>"; };
 		550BD01E1F7F721100908824 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		551F40831F83473B00C6925F /* samsBuyerGuide3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = samsBuyerGuide3.jpg; sourceTree = "<group>"; };
 		5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsClubTVBuyingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5557CEC61F7AFF3000D943AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5557CEC81F7AFF3000D943AB /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -141,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				556787FF1F7B4E580005148A /* README.md */,
+				551F40831F83473B00C6925F /* samsBuyerGuide3.jpg */,
 				5557CEC51F7AFF3000D943AB /* SamsClubTVBuyingGuide */,
 				5557CEDA1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests */,
 				5557CEE51F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests */,
