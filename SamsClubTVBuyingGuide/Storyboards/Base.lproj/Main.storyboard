@@ -942,6 +942,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="contentView" destination="R0E-QG-kMc" id="9jU-ph-eML"/>
                         <outlet property="freeShippingLabel" destination="L8c-gq-3JW" id="zpy-rv-Gfm"/>
                         <outlet property="inStockLabel" destination="4I1-Jk-SRu" id="7LT-P5-zw0"/>
                         <outlet property="longDescription" destination="F1W-GS-aQB" id="a69-ig-Ciw"/>

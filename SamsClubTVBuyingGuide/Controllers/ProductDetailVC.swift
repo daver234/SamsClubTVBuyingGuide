@@ -27,6 +27,7 @@ class ProductDetailVC: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var inStockLabel: UILabel!
     @IBOutlet weak var shortDescription: UITextView!
     @IBOutlet weak var longDescription: UITextView!
+    @IBOutlet weak var contentView: UIView!
     
     // MARK: - Functions
     override func viewDidLoad() {
@@ -93,13 +94,13 @@ class ProductDetailVC: UIViewController, UINavigationControllerDelegate {
         /// To improve, at a minumum, need to check for how many items in NetworkManager
         /// to see if more pages are there and if not load more.
         /// For now, just swiping for products on current page (30 products per page).
-        print("swipe left...I heard you")
+        print("swipe left...I heard you", productNumberInPage)
         guard productNumberInPage != (PAGE_SIZE - 1) else {
             print("Sorry out of products on this page. Go back to list view")
             return
         }
         productNumberInPage += 1
-        self.viewDidLoad()
+        setUpView()
     }
 }
 
