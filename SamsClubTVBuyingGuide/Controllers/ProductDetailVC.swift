@@ -89,7 +89,7 @@ class ProductDetailVC: UIViewController, UINavigationControllerDelegate {
     }
     
     @objc func handleSwipe(recognizer : UISwipeGestureRecognizer) {
-        /// A quick implementation. Not the best. Need to implement a pageviewcontrolller
+        /// A quick implementation. Maybe implement a pageviewcontrolller
         /// Only works for current page.
         /// To improve, at a minumum, need to check for how many items in NetworkManager
         /// to see if more pages are there and if not load more.
@@ -99,8 +99,13 @@ class ProductDetailVC: UIViewController, UINavigationControllerDelegate {
             print("Sorry out of products on this page. Go back to list view")
             return
         }
+        
         productNumberInPage += 1
-        setUpView()
+        
+        /// Animate the data update so user gets a sense that the data changed.
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+            self.setUpView()
+        }, completion: nil)
     }
 }
 
