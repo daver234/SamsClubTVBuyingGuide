@@ -54,7 +54,7 @@ class ProductDetailVC: UIViewController, UINavigationControllerDelegate {
     }
 
     func setUpView() {
-        guard let products = NetworkManager.instance.allProducts[pageWithTV].products else { return }
+        guard let products = DataManager.instance.allProducts[pageWithTV].products else { return }
         productNameLabel.text = products[productNumberInPage].productName ?? "N/A"
         self.reviewRatingLabel.rating = products[productNumberInPage].reviewRating ?? 0
         reviewCountLabel.text = "\(products[productNumberInPage].reviewCount ?? 0)"
@@ -91,7 +91,7 @@ class ProductDetailVC: UIViewController, UINavigationControllerDelegate {
     @objc func handleSwipe(recognizer : UISwipeGestureRecognizer) {
         /// A quick implementation. Maybe implement a pageviewcontrolller
         /// Only works for current page.
-        /// To improve, at a minumum, need to check for how many items in NetworkManager
+        /// To improve, at a minumum, need to check for how many items in DataManager
         /// to see if more pages are there and if not load more.
         /// For now, just swiping for products on current page (30 products per page).
         print("swipe left...I heard you", productNumberInPage)

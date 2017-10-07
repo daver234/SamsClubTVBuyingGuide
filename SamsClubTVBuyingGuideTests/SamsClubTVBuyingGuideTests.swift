@@ -23,7 +23,7 @@ class SamsClubTVBuyingGuideTests: XCTestCase {
     
     func samsClubAPICallTest() {
         let expectationResult = expectation(description: "Call the Sams Club test API and get back 1 page with 30 products")
-        NetworkManager.instance.getProductsForPage(pageNumber: STARTING_PAGE_NUMBER, pageSize: PAGE_SIZE) { (response) in
+        APIManager().getProductsForPage(pageNumber: STARTING_PAGE_NUMBER, pageSize: PAGE_SIZE) { (response) in
             XCTAssertTrue(response)
             expectationResult.fulfill()
         }

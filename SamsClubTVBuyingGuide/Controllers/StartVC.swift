@@ -19,6 +19,8 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
     // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        /// Go get the data and load into DataManager singleton
+        callAPI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,8 +33,7 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
             print("could not start reachability notifier")
         }
         
-        /// Go get the data and load into NetworkManager singleton
-        callAPI()
+       
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -79,9 +80,9 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
     }
     
     func callAPI() {
-        NetworkManager.instance.getProductsForPage(pageNumber: STARTING_PAGE_NUMBER, pageSize: PAGE_SIZE) { [weak self] (response) in
+        APIManager().getProductsForPage(pageNumber: STARTING_PAGE_NUMBER, pageSize: PAGE_SIZE) { [weak self] (response) in
             guard response else {
-                print("Error in network manager response")
+                print("Error in APIManager response")
                 return
             }
             self?.isNetworkDone = true

@@ -16,7 +16,7 @@ class TopRatedTableVC: UITableViewController {
     let kCloseCellHeight: CGFloat = 130
     let kOpenCellHeight: CGFloat = 260
     fileprivate var cellHeights: [CGFloat] = []
-    fileprivate var data = NetworkManager.instance.allProducts[0]
+    fileprivate var data = DataManager.instance.allProducts[0]
 
     // MARK: - Functions
     override func viewDidLoad() {
@@ -52,7 +52,7 @@ extension TopRatedTableVC {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TOP_RATED_CELL, for: indexPath) as! TopRatedTableViewCell
-        guard let product = NetworkManager.instance.allProducts[0].products?[indexPath.row]  else {
+        guard let product = DataManager.instance.allProducts[0].products?[indexPath.row]  else {
             return UITableViewCell()
         }
         cell.configureCell(product: product)

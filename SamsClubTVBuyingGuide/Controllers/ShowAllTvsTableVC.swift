@@ -79,15 +79,15 @@ extension ShowAllTvsTableVC {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return NetworkManager.instance.totalProductsRetrieved
+        return DataManager.instance.totalProductsRetrieved
     }
     
     /// Here we prefetch the images for the tableview using Kingfisher.
     /// And, prefetch more data if the user is getting to the end of the tableview.
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         /// First get the images
-        let currentPage = NetworkManager.instance.numberOfPagesRetrieved - 1
-        guard let product = NetworkManager.instance.allProducts[currentPage].products  else {
+        let currentPage = DataManager.instance.numberOfPagesRetrieved - 1
+        guard let product = DataManager.instance.allProducts[currentPage].products  else {
             return
         }
         let urls = product.flatMap { $0.productImage }
@@ -122,7 +122,7 @@ extension ShowAllTvsTableVC {
             print("&&& here is maxIndex", maxIndex)
             print("done ShowAll -------------------")
             
-            NetworkManager.instance.getProductsForPage(pageNumber: nextPage, pageSize: PAGE_SIZE) { (response) in
+            APIManager().getProductsForPage(pageNumber: nextPage, pageSize: PAGE_SIZE) { (response) in
                 if response {
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
@@ -145,7 +145,7 @@ extension ShowAllTvsTableVC {
         
         /// To get the product number within a page, just need the modulus of row to page size
         let productToGet = indexPath.row % PAGE_SIZE
-        guard let product = NetworkManager.instance.allProducts[pageToGet].products?[productToGet]  else {
+        guard let product = DataManager.instance.allProducts[pageToGet].products?[productToGet]  else {
             return UITableViewCell()
         }
         
