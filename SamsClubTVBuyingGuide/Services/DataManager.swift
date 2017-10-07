@@ -49,12 +49,16 @@ class DataManager {
             print("Just got page 0")
             return false
         }
-        if self.totalPagesToGet == self.numberOfPagesRetrieved {
+        print("totalPaggesToGet, numberOfPagesRetrieved: ", self.totalPagesToGet, self.numberOfPagesRetrieved)
+        guard !isEndOfData else {
+            print("Got to end of data")
+            return true
+        }
+        guard self.totalPagesToGet != self.numberOfPagesRetrieved || numberOfPagesRetrieved < totalPagesToGet else {
             self.isEndOfData = true
             return true
-        } else {
-            return false
         }
+        return false
     }
     
     func updateNewProductsRetrieved(result: ProductPage) {
@@ -70,17 +74,17 @@ class DataManager {
         /// how many pages we might need to retrieve.
         /// This logic was done when I had the assumption that totalProducts was total products
         /// available from the server (e.g. TVs).  Turns out that totalProducts is really total pages, of which
-        /// each page has products on it.  Kept this logic after discussions.  Could remove to get all 224 pages. 
-        if self.isFirstLaunch {
-            if let setTotalProducts = self.allProducts[0].totalProducts {
-                self.totalProductsCountFromServer = setTotalProducts
-                
-                /// Calculate total number of pages that might need to be retrieved. Round up
-                self.totalPagesToGet = Int(ceil(Double(self.totalProductsCountFromServer) / Double(PAGE_SIZE)))
-                
-                /// Don't come throught this again so set isFirstLaunch to false
-                self.isFirstLaunch = false
-            }
-        }
+        /// each page has products on it.  Kept this logic after discussions.  Could remove to get all 224 pages.
+        guard isFirstLaunch else { return }
+        guard let setTotalProducts = self.allProducts[0].totalProducts else { return }
+        self.totalProductsCountFromServer = setTotalProducts
+        
+        /// Calculate total number of pages that might need to be retrieved. Round up
+        self.totalPagesToGet = Int(ceil(Double(self.totalProductsCountFromServer) / Double(PAGE_SIZE)))
+        print("totalPagesToGet", self.totalPagesToGet)
+        
+        /// Don't come throught this again so set isFirstLaunch to false
+        self.isFirstLaunch = false
+
     }
 }

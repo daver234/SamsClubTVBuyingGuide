@@ -122,6 +122,11 @@ extension ShowAllTvsTableVC {
             print("&&& here is maxIndex", maxIndex)
             print("done ShowAll -------------------")
             
+            guard !DataManager.instance.checkForEndOfDataIsTrue() else {
+                print("Got to end of data")
+                return
+            }
+            
             APIManager().getProductsForPage(pageNumber: nextPage, pageSize: PAGE_SIZE) { (response) in
                 if response {
                     DispatchQueue.main.async {
@@ -163,9 +168,6 @@ extension ShowAllTvsTableVC {
         }
     }
     
-    /// might try this for spinner and data loading.....https://stackoverflow.com/questions/32425466/load-more-after-coming-to-bottom-of-uitableview
-    // https://stackoverflow.com/questions/20269474/uitableview-load-more-when-scrolling-to-bottom-like-facebook-application
-
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         pageNumberForSegue = productNumberInPageForSegue
     }
