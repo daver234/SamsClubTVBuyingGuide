@@ -60,7 +60,4 @@ class SamsClubTVBuyingGuideUITests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-    
-    
-    
 }
