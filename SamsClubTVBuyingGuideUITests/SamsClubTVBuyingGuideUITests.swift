@@ -23,7 +23,6 @@ class SamsClubTVBuyingGuideUITests: XCTestCase {
         app = XCUIApplication()
       
         
-
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
         // Send a command line argument to our app,
         // to enable it to reset its state

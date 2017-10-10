@@ -13,51 +13,65 @@ class SamsClubTVBuyingGuideTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
-    }
-    
-    func testSamsClubAPICall() {
-        let expectationResult = expectation(description: "Call the Sams Club API and get back 1 page with 30 products")
-        APIManager().getProductsForPage(pageNumber: STARTING_PAGE_NUMBER, pageSize: PAGE_SIZE) { (response) in
-            XCTAssertTrue(response)
-            expectationResult.fulfill()
-        }
         
-        waitForExpectations(timeout: 2) { error in
-            if let error = error {
-                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
-            }
-        }
     }
     
-    func testCheckMockJsonData() {
-        let expectationResult = expectation(description: "Call the Sams Club API and get back 1 page with 30 products")
-        do {
-            guard let file = Bundle.main.url(forResource: "firstPage", withExtension: "json") else { return }
-            let data = try Data(contentsOf: file)
-            DataManager.instance.decodeData(data: data) { (response) in
-                guard response else {
-                    print("Error in APIManager response in checkMockJsonDataTest")
-                    return
-                }
+    func testFirstPageHasProducts() {
+        let expectationResult = expectation(description: "First page contains 30 products")
+        APIManager().getProductsForPage(pageNumber: STARTING_PAGE_NUMBER, pageSize: PAGE_SIZE) { (response) in
+            if DataManager.instance.allProducts.first?.products?.count == PAGE_SIZE {
                 XCTAssertTrue(response)
                 expectationResult.fulfill()
+            } else {
+                print("Error, first page does not have ")
             }
-        } catch let jsonError {
-            print("error in test case parsing mock json \(jsonError.localizedDescription)")
         }
         
-        waitForExpectations(timeout: 1) { error in
+        waitForExpectations(timeout: 5) { error in
             if let error = error {
                 XCTFail("waitForExpectationsWithTimeout errored: \(error)")
             }
         }
+    }
+    
+    func testContentFromFirstPage() {
+        let expectationResult = expectation(description: "No fields in first product are blank")
+        var testProduct = [ProductPage]()
+        var resultCounter = 0
         
+        testProduct = DataManager.instance.allProducts
+        
+        guard testProduct.first?.products?.first?.productId != "" else { return }
+        resultCounter += 1
+        
+        guard testProduct.first?.products?.first?.productName != "" else { return }
+        resultCounter += 1
+        
+        guard testProduct.first?.products?.first?.shortDescription?.html2String !=  "" else { return }
+        resultCounter += 1
+        
+        guard testProduct.first?.products?.first?.longDescription?.html2String !=  "" else { return }
+        resultCounter += 1
+        
+        guard let reviewRate = testProduct.first?.products?.first?.reviewRating, Int(reviewRate) >= 0 else { return }
+        resultCounter += 1
+        
+        guard let revCount = testProduct.first?.products?.first?.reviewCount, Int(revCount) >= 0 else { return }
+        resultCounter += 1
+        
+        XCTAssertTrue(resultCounter == 6)
+        expectationResult.fulfill()
+        
+        waitForExpectations(timeout: 10) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
+            }
+        }
     }
     
     func testPerformanceExample() {

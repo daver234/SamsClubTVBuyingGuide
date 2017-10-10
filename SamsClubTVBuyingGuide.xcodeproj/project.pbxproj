@@ -17,6 +17,7 @@
 		5551CD4D1F887A5000EA2B0E /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551CD4C1F887A5000EA2B0E /* ErrorManager.swift */; };
 		5551CD4F1F8880BB00EA2B0E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551CD4E1F8880BB00EA2B0E /* DataManager.swift */; };
 		5551CD511F88851500EA2B0E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551CD501F88851500EA2B0E /* Request.swift */; };
+		5551CD531F8C777800EA2B0E /* MockDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551CD521F8C777800EA2B0E /* MockDataTests.swift */; };
 		5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC61F7AFF3000D943AB /* AppDelegate.swift */; };
 		5557CEC91F7AFF3000D943AB /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC81F7AFF3000D943AB /* StartVC.swift */; };
 		5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECA1F7AFF3000D943AB /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		5551CD4C1F887A5000EA2B0E /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		5551CD4E1F8880BB00EA2B0E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5551CD501F88851500EA2B0E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		5551CD521F8C777800EA2B0E /* MockDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataTests.swift; sourceTree = "<group>"; };
 		5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsClubTVBuyingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5557CEC61F7AFF3000D943AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5557CEC81F7AFF3000D943AB /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -188,8 +190,9 @@
 		5557CEDA1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests */ = {
 			isa = PBXGroup;
 			children = (
-				5557CEDB1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.swift */,
 				5557CEDD1F7AFF3000D943AB /* Info.plist */,
+				5551CD521F8C777800EA2B0E /* MockDataTests.swift */,
+				5557CEDB1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.swift */,
 			);
 			path = SamsClubTVBuyingGuideTests;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5557CEDC1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests.swift in Sources */,
+				5551CD531F8C777800EA2B0E /* MockDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

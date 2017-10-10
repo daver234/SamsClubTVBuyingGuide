@@ -14,6 +14,7 @@ class DataManager {
     static let instance = DataManager()
     
     fileprivate(set) var allProducts = [ProductPage]()
+    fileprivate(set) var allTestProducts = [ProductPage]()
     fileprivate(set) var numberOfPagesRetrieved = 0
     fileprivate(set) var totalProductsCountFromServer = 0
     fileprivate(set) var totalPagesToGet = 0
@@ -38,7 +39,7 @@ class DataManager {
             self.checkForFirstLaunch()
             completion(true)
         } catch let jsonError {
-            print("Error serializing JSON", jsonError)
+            print("Error decoding JSON from server", jsonError)
             completion(false)
         }
     }
@@ -85,6 +86,17 @@ class DataManager {
         
         /// Don't come throught this again so set isFirstLaunch to false
         self.isFirstLaunch = false
-
+    }
+    
+    func decodeTestingData(data: Data, completion: @escaping CompletionHandler) {
+        do {
+            let result = try JSONDecoder().decode(ProductPage.self, from: data)
+            allTestProducts.append(result)
+            print("*** number in allProducts; numberOfPagesRetrieved: 1st 1 greater than 2nd", self.allProducts.count, self.numberOfPagesRetrieved)
+            completion(true)
+        } catch let jsonError {
+            print("Error decoding JSON from mock data for testing", jsonError)
+            completion(false)
+        }
     }
 }
