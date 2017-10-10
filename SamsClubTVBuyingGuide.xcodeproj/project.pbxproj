@@ -18,6 +18,8 @@
 		5551CD4F1F8880BB00EA2B0E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551CD4E1F8880BB00EA2B0E /* DataManager.swift */; };
 		5551CD511F88851500EA2B0E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551CD501F88851500EA2B0E /* Request.swift */; };
 		5551CD531F8C777800EA2B0E /* MockDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551CD521F8C777800EA2B0E /* MockDataTests.swift */; };
+		5551CD551F8C8F6700EA2B0E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551CD541F8C8F6600EA2B0E /* PageViewController.swift */; };
+		5551CD571F8C96A200EA2B0E /* DetailPageContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551CD561F8C96A200EA2B0E /* DetailPageContentVC.swift */; };
 		5557CEC71F7AFF3000D943AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC61F7AFF3000D943AB /* AppDelegate.swift */; };
 		5557CEC91F7AFF3000D943AB /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557CEC81F7AFF3000D943AB /* StartVC.swift */; };
 		5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557CECA1F7AFF3000D943AB /* Main.storyboard */; };
@@ -77,6 +79,8 @@
 		5551CD4E1F8880BB00EA2B0E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5551CD501F88851500EA2B0E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		5551CD521F8C777800EA2B0E /* MockDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataTests.swift; sourceTree = "<group>"; };
+		5551CD541F8C8F6600EA2B0E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		5551CD561F8C96A200EA2B0E /* DetailPageContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageContentVC.swift; sourceTree = "<group>"; };
 		5557CEC31F7AFF3000D943AB /* SamsClubTVBuyingGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsClubTVBuyingGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5557CEC61F7AFF3000D943AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5557CEC81F7AFF3000D943AB /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -217,13 +221,15 @@
 		5557CEF51F7AFF5A00D943AB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5551CD561F8C96A200EA2B0E /* DetailPageContentVC.swift */,
 				550BD01E1F7F721100908824 /* FilterVC.swift */,
 				5557CEFC1F7B035200D943AB /* NoConnectivityVC.swift */,
+				5551CD541F8C8F6600EA2B0E /* PageViewController.swift */,
 				556787FB1F7B2F260005148A /* ProductDetailVC.swift */,
 				5557CF101F7B0EE400D943AB /* ShowAllTvsTableVC.swift */,
+				55E182C91F80630C00D05685 /* ShowTVinRoomVC.swift */,
 				5557CEC81F7AFF3000D943AB /* StartVC.swift */,
 				550BCFEC1F7DE44100908824 /* TopRatedTableVC.swift */,
-				55E182C91F80630C00D05685 /* ShowTVinRoomVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -619,6 +625,8 @@
 				5557CEFE1F7B035200D943AB /* NoConnectivityVC.swift in Sources */,
 				5557CF011F7B03FE00D943AB /* RoundedButton.swift in Sources */,
 				55E182BE1F804F4600D05685 /* FilterTableViewCell.swift in Sources */,
+				5551CD571F8C96A200EA2B0E /* DetailPageContentVC.swift in Sources */,
+				5551CD551F8C8F6700EA2B0E /* PageViewController.swift in Sources */,
 				5551CD4D1F887A5000EA2B0E /* ErrorManager.swift in Sources */,
 				5551CD511F88851500EA2B0E /* Request.swift in Sources */,
 				550BD01F1F7F721100908824 /* FilterVC.swift in Sources */,

@@ -57,3 +57,8 @@ let FILTER_VC = "FilterVC"
 
 /// Data
 let filterType = ["Price: High","Price: Low","Screen Size", "4k", "Top Rated","Brands","Top Sellers" ]
+
+/// Storyboard IDs
+let PAGE_CONTROLLER = "PageViewController"
+let DETAIL_PAGEVC = "ManageDetailPageVC"
+let DETAIL_PAGE_CONTENT = "DetailPageContentVC"
