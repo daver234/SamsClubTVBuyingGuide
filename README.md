@@ -74,9 +74,7 @@ There is always more work to do on software.  For this project, some of those th
 * Check for brand guidelines conformance
 * Write more unit and UI tests
 * A lot more testing (performance, bad data, timing, etc)
-* More features.
 * More error checking
-* Better coding ideas
 * Would be nice to implement Stripe
 * Need a search API then can do filtering
 * Let user save some favorite TVs from the long list
@@ -88,10 +86,10 @@ There is always more work to do on software.  For this project, some of those th
 * Data should be cleaned up on the backend
 * Auto layout improvements (still a few warnings also)
 * Change Top Rated view to use Apple store type design rather than folding cell
-* A better implementation of swipe left to see next TV in ProductDetailVC.  Works for the page but needs more work.
+* A better implementation of swipe left to see next TV in ProductDetailVC.
 * More work on error cases when HTTP calls fail
-* More work on not getting stick in the SwiftSpinner in numerous edge cases
-* Always opportunities for more refactoring
+* More work on not getting stuck in the SwiftSpinner in numerous edge cases
+* Always opportunities for more refactoring for SOLID principals
 * Many improvements needed/possible on ShowTVinRoomVC and related to improve placement experience.
 * .....and more
 
