@@ -37,7 +37,7 @@ As I stated above (and you can see in my blog: https://medium.com/@daverothschil
   11. Yep it needs a tracking rectangle and more stuff. Yes the sizing of the tvs after placement is out of wack on occasion. Just start over.
 
 
-* **Show New All TVs**  This is the classic list of all the TVs.  The API can retrieve over 6,600 + TVs (not all are TVs as the data is not clean).  There is no search or sort.  The filter button does not work but the real app would surely have one.  The idea of this view is to show that all the data has arrived, is parsed correctly, displayed correctly and laid out correctly.  Tap any cell to see the detail for that item. Once in the detail, swipe left to page to the next item rather than going back to the tableview and tapping another cell.
+* **Show New All TVs**  This is the classic list of all the TVs.  The API can retrieve over 6,600 + TVs (not all are TVs as the data is not clean).  There is no search or sort.  The filter button does not work but the real app would surely have one.  The idea of this view is to show that all the data has arrived, is parsed correctly, displayed correctly and laid out correctly.  Tap any cell to see the detail for that item. Once in the detail, swipe left to page to the next item rather than going back to the tableview and tapping another cell. This design used a UIPageViewController for swipping left and right to see the next item in the detail view. 
 * **See Top Rated TVs**  When shopping online, the user is presented with a huge list of choices.  Various properties are added to indicate preference in an effort to simplify choice.  This button goes a step further and just shows the top rated TVs.  The idea is that when I don't know what to buy, I'll just start with the top rated.  The user does not need to go to the list of everything and then run through some filter UI.  In general, the fewer taps, the better.  Note: the data that shows is not **actually** the top rated TVs.  There is no search API so I just take the first number of TVs from page 0 of the API call.  This allows the concept to be shown.  Tap on a cell and the cell unfolds with more data and a Apple Pay buy button. Tap again to close the fold.  Taping and going to another view controller just adds a slight amount of mental load.  The purpose the the Top Rated view is to simplify and make the choice mentally easier.  Somewhat like walking down the TV isle in a Sams's Club where there are just a few TVs on display with some bullet points of features and a bunch of TVs in boxes right in front.  It cries out: "Just pick one of these."  Also **Apple Pay** is implemented in this view to make it simpler than a cart check out process.
 
 ## Other Comments
@@ -86,7 +86,6 @@ There is always more work to do on software.  For this project, some of those th
 * Data should be cleaned up on the backend
 * Auto layout improvements (still a few warnings also)
 * Change Top Rated view to use Apple store type design rather than folding cell
-* A better implementation of swipe left to see next TV in ProductDetailVC.
 * More work on error cases when HTTP calls fail
 * More work on not getting stuck in the SwiftSpinner in numerous edge cases
 * Always opportunities for more refactoring for SOLID principals
