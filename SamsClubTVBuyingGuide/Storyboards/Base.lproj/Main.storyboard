@@ -6,7 +6,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -645,17 +644,12 @@
                                 <action selector="backBtnPressed:" destination="fMa-zc-brs" id="bge-0w-Qny"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Filter" id="2Dg-Cy-wPt">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="filterBtnPressed:" destination="fMa-zc-brs" id="OM7-vw-AQs"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="New" id="XTb-Y3-qrD">
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="2Dg-Cy-wPt">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="filterBtnPressed:" destination="fMa-zc-brs" id="OM7-vw-AQs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="filterBtn" destination="2Dg-Cy-wPt" id="IC1-qu-7SL"/>
