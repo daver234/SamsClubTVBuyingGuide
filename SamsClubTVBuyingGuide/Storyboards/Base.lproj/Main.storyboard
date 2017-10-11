@@ -966,7 +966,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Js-po-XhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3038" y="1206"/>
+            <point key="canvasLocation" x="3250" y="1255"/>
         </scene>
         <!--Detail Page ContentVC-->
         <scene sceneID="Zrm-JB-1Yg">
@@ -1036,7 +1036,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fwi-ax-ipE">
                                                         <rect key="frame" x="120.5" y="320" width="94.5" height="14"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzP-BT-Zxp" customClass="CosmosView" customModule="Cosmos">
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dzP-BT-Zxp" customClass="CosmosView" customModule="Cosmos">
                                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="14"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -1069,7 +1069,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui2-lv-uB8">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui2-lv-uB8">
                                                                 <rect key="frame" x="79" y="0.0" width="15.5" height="14"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                 <nil key="textColor"/>
