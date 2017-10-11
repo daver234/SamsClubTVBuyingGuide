@@ -56,7 +56,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     func getViewControllerAtIndex(index: Int) -> DetailPageContentVC? {
         guard let storyboard = storyboard, let pageContentVC = storyboard.instantiateViewController(withIdentifier: DETAIL_PAGE_CONTENT) as? DetailPageContentVC else { return DetailPageContentVC() }
         guard let products = DataManager.instance.allProducts[pageWithTV].products else {
-            return UIViewController() as! DetailPageContentVC
+            return UIViewController() as? DetailPageContentVC
         }
 
         pageContentVC.productImageURL = products[index].productImage
