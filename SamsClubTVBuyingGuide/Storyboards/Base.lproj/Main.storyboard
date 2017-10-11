@@ -629,7 +629,7 @@
                                     <outlet property="reviewCountLabel" destination="RFp-D3-JaW" id="wXE-8O-Al1"/>
                                     <outlet property="shippingLabel" destination="jeI-it-tkK" id="VVU-IY-VEv"/>
                                     <outlet property="starView" destination="YOh-Kn-dym" id="xPk-PK-79f"/>
-                                    <segue destination="Hf3-sw-6Fs" kind="show" identifier="toProductDetail" id="Dif-5m-q1s"/>
+                                    <segue destination="p1k-YC-LNP" kind="show" identifier="toProductDetail" id="Fyo-S5-7yT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -655,7 +655,7 @@
                             <barButtonItem title="New" id="XTb-Y3-qrD">
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="p1k-YC-LNP" kind="show" id="ufY-GX-oOQ"/>
+                                    <segue destination="Hf3-sw-6Fs" kind="show" id="rS4-Cy-WN0"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -843,7 +843,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3x-0L-1Qx" customClass="RoundedButton" customModule="SamsClubTVBuyingGuide" customModuleProvider="target">
-                                                <rect key="frame" x="9" y="427" width="340" height="45"/>
+                                                <rect key="frame" x="9.5" y="427" width="340" height="45"/>
                                                 <color key="backgroundColor" red="0.35686274509999999" green="0.56078431370000004" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="6ZA-mZ-vjY"/>
@@ -1036,7 +1036,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fwi-ax-ipE">
                                                         <rect key="frame" x="120.5" y="320" width="94.5" height="14"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dzP-BT-Zxp" customClass="CosmosView" customModule="Cosmos">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzP-BT-Zxp" customClass="CosmosView" customModule="Cosmos">
                                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="14"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -1069,7 +1069,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui2-lv-uB8">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui2-lv-uB8">
                                                                 <rect key="frame" x="79" y="0.0" width="15.5" height="14"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                 <nil key="textColor"/>

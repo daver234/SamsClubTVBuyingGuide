@@ -11,8 +11,10 @@ import UIKit
 class PageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     // MARK: - Variables
-    var pageWithTV = 0
-    var productNumberInPage: Int!
+    var pageWithTV: Int?
+    var productNumberInPage: Int?
+    var cellNumber = 0
+    
 
     // MARK: - Functions
     override func viewDidLoad() {
@@ -37,6 +39,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         if let viewController = viewController as? DetailPageContentVC,
             let index = viewController.productInPage,
             index > 0 {
+            cellNumber -= 1
             return getViewControllerAtIndex(index: index - 1)
         }
         return nil
@@ -47,6 +50,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         if let viewController = viewController as? DetailPageContentVC,
             let index = viewController.productInPage,
             (index + 1) < DataManager.instance.totalProductsRetrieved {
+            cellNumber += 1
             return getViewControllerAtIndex(index: index + 1)
         }
         return nil
@@ -54,8 +58,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     
     /// Set up view controller that will load with correct content
     func getViewControllerAtIndex(index: Int) -> DetailPageContentVC? {
-        guard let storyboard = storyboard, let pageContentVC = storyboard.instantiateViewController(withIdentifier: DETAIL_PAGE_CONTENT) as? DetailPageContentVC else { return DetailPageContentVC() }
-        guard let products = DataManager.instance.allProducts[pageWithTV].products else {
+        guard let storyboard = storyboard, let pageContentVC = storyboard.instantiateViewController(withIdentifier: DETAIL_PAGE_CONTENT) as? DetailPageContentVC, var currentPage = pageWithTV else { return DetailPageContentVC() }
+        guard let products = DataManager.instance.allProducts[currentPage].products else {
             return UIViewController() as? DetailPageContentVC
         }
 
@@ -73,7 +77,17 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         } else {
             pageContentVC.inStock = OUT_OF_STOCK
         }
-        
+
+        /// If coming to the end of products on this page, need to make sure more data has been fetched
+        if index == 26 {
+            ShowAllTvsTableVC().fetchMoreData(maxIndex: cellNumber, currentPage: currentPage)
+        }
+        /// If at end of products on current page, increment the page
+        if index == 29 {
+            pageContentVC.productInPage = 0
+            currentPage += 1
+            return pageContentVC
+        }
         pageContentVC.productInPage = index
         return pageContentVC
     }

@@ -174,27 +174,14 @@ extension ShowAllTvsTableVC {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.destination {
-        case is ProductDetailVC:
-            guard let destination = segue.destination as? ProductDetailVC else { return }
-            guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
-            destination.pageWithTV = selectedRow / PAGE_SIZE
-            destination.productNumberInPage = selectedRow % PAGE_SIZE
         case is PageViewController:
             guard let destination = segue.destination as? PageViewController else { return }
-            // guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
-            print("destination" )
-            destination.pageWithTV = 0
-            destination.productNumberInPage = 0
-            
+            guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
+            destination.pageWithTV =  selectedRow / PAGE_SIZE
+            destination.productNumberInPage = selectedRow % PAGE_SIZE
+            destination.cellNumber = selectedRow
         default:
             break
         }
-        
-//        if let destination = segue.destination as? ProductDetailVC {
-//            // let cell = sender as? ProductViewTableViewCell
-//            guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
-//            destination.pageWithTV = selectedRow / PAGE_SIZE
-//            destination.productNumberInPage = selectedRow % PAGE_SIZE
-//        }
     }
 }
