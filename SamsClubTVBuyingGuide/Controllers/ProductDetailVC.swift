@@ -56,7 +56,7 @@ class ProductDetailVC: UIViewController, UINavigationControllerDelegate {
     func setUpView() {
         guard let products = DataManager.instance.allProducts[pageWithTV].products else { return }
         productNameLabel.text = products[productNumberInPage].productName ?? "N/A"
-        self.reviewRatingLabel.rating = products[productNumberInPage].reviewRating ?? 0
+        self.reviewRatingLabel.rating = products[productNumberInPage].reviewRating ?? 0.0
         reviewCountLabel.text = "\(products[productNumberInPage].reviewCount ?? 0)"
         priceLabel.text = products[productNumberInPage].price ?? "N/A"
         

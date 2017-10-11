@@ -39,6 +39,7 @@ let PAGE_SIZE = 30
 let STARTING_PAGE_NUMBER = 0
 let MOCK_DATA_CELL_COUNT = 5
 let APPLE_MERCHENT_ID = "merchant.com.dave.samsclub"  // create and enter your merchant ID.  Needed for Apple Pay.
+let FREE_SHIPPING = "Free shipping"
 
 /// Scene Constants for ARKit related work
 let MAIN_SCENE = "art.scnassets/main.scn"

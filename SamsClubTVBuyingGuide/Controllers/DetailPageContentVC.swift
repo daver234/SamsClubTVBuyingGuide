@@ -14,15 +14,29 @@ import WebKit
 class DetailPageContentVC: UIViewController {
     
     // MARK: - Variables
-    var pageWithTV = 0
-    var productNumberInPage = 0
-    var pageViewIndex = 0
+    var productInPage: Int!
     
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var reviewRatingLabel: CosmosView!
+    @IBOutlet weak var reviewCountLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var freeShippingLabel: UILabel!
+    
+    @IBOutlet weak var inStockLabel: UILabel!
+    @IBOutlet weak var shortDescription: UITextView!
+    @IBOutlet weak var longDescription: UITextView!
+    
     
     var productImageURL: URL!
     var productNameTitle: String!
+    var reviewRating: Double!
+    var reviewCount: String!
+    var price: String!
+    var freeShiping: String!
+    var inStock: String!
+    var shortDescribe: String!
+    var longDescribe: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,39 +48,19 @@ class DetailPageContentVC: UIViewController {
             self.productImage.kf.setImage(with: url, placeholder: image)
         }
         productName.text = productNameTitle
-        // setUpView()
+        reviewRatingLabel.rating = reviewRating
+        reviewCountLabel.text = reviewCount
+        priceLabel.text = price
+        freeShippingLabel.text = freeShiping
+        inStockLabel.text = inStock
+        shortDescription.text = shortDescribe
+        longDescription.text = longDescribe
         
-    }
-    
-    func setUpView() {
-        guard let products = DataManager.instance.allProducts[pageWithTV].products else { return }
-        productName.text = products[productNumberInPage].productName ?? "N/A"
-        //self.reviewRatingLabel.rating = products[productNumberInPage].reviewRating ?? 0
-        //reviewCountLabel.text = "\(products[productNumberInPage].reviewCount ?? 0)"
-        //priceLabel.text = products[productNumberInPage].price ?? "N/A"
-        
-        //shortDescription.text = (products[productNumberInPage].shortDescription ?? "Not available.").html2String
-        //longDescription.text = (products[productNumberInPage].longDescription ?? "Not available.").html2String
-        
-        /*
-        if let inStock = products[productNumberInPage].inStock, inStock {
-            inStockLabel.text = IN_STOCK
+        if freeShippingLabel.text == FREE_SHIPPING {
             inStockLabel.textColor = ColorPalette.Green.Medium
         } else {
-            inStockLabel.text = OUT_OF_STOCK
             inStockLabel.textColor = ColorPalette.Red.Medium
             freeShippingLabel.textColor = ColorPalette.White.Medium
-        }
- */
-        
-        /// Using Kingfisher Swift library to download and cache images
-        /// Find it here: https://github.com/onevcat/Kingfisher
-        ///
-        /// First get image out of assets as a placeholder while downloading the image from a URL
-        let image = UIImage(named: LOADING_IMAGE)
-        guard let url = products[productNumberInPage].productImage else { return }
-        DispatchQueue.main.async {
-            self.productImage.kf.setImage(with: url, placeholder: image)
         }
     }
 }

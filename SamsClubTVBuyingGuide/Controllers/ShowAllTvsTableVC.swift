@@ -181,9 +181,11 @@ extension ShowAllTvsTableVC {
             destination.productNumberInPage = selectedRow % PAGE_SIZE
         case is PageViewController:
             guard let destination = segue.destination as? PageViewController else { return }
-            guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
-            destination.pageWithTV = selectedRow / PAGE_SIZE
-            destination.productNumberInPage = selectedRow % PAGE_SIZE
+            // guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
+            print("destination" )
+            destination.pageWithTV = 0
+            destination.productNumberInPage = 0
+            
         default:
             break
         }
