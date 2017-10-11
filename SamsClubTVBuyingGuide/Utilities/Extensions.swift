@@ -40,3 +40,9 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+extension UINavigationController {
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return topViewController?.preferredStatusBarStyle ?? .default
+    }
+}

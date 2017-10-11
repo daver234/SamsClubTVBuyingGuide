@@ -25,6 +25,7 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
         /// Watch for connectivity being turned off
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
         do {
@@ -32,8 +33,6 @@ class StartVC: UIViewController, SFSafariViewControllerDelegate {
         } catch {
             print("could not start reachability notifier")
         }
-        
-       
     }
     
     override func viewWillDisappear(_ animated: Bool) {

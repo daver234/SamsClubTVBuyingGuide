@@ -24,6 +24,7 @@ let SHOW_ALL_TVS = "toShowAllTvs"
 let PRODUCT_DETAIL = "toProductDetail"
 let TOP_RATED = "toTopRated"
 let FILTER_POPOVER = "toFilterPopOver"
+let DETAIL_CONTENT = "toDetailContent"
 
 /// Cells
 let PRODUCT_CELL = "ProductCell"

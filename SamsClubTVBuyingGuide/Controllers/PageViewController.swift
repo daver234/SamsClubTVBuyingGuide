@@ -22,6 +22,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         self.dataSource = self
         self.delegate = self
         self.navigationController?.navigationBar.tintColor = ColorPalette.White.Medium
+        UIApplication.shared.statusBarStyle = .lightContent
         
         if let viewController = getViewControllerAtIndex(index: productNumberInPage ?? 0) {
             let viewControllers = [viewController]

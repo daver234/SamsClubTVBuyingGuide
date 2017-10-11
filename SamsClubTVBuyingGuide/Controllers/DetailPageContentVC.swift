@@ -40,7 +40,7 @@ class DetailPageContentVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.shared.statusBarStyle = .lightContent
 
         let image = UIImage(named: LOADING_IMAGE)
         let url = productImageURL

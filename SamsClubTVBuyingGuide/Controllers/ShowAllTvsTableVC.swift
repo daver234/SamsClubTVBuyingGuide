@@ -41,8 +41,6 @@ class ShowAllTvsTableVC: UITableViewController, UITableViewDataSourcePrefetching
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        /// Set status bar back to default because inital view is white so we need a dark color (default)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     /// Return to StartVC
