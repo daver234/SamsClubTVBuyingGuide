@@ -1,6 +1,6 @@
 # Sam's Club TV Buying Guide
 ![alt text](samsBuyerGuide3.jpg "First Screen")
-___
+
 ## Overview
 
 The purpose of this app is to help someone buy a new TV.  It is a concept app, not shipping app.
@@ -17,7 +17,7 @@ A person probably has some questions like:
 - Can I see a list of TVs sorted by the criterial important to me (once I figure out what I think is important)?
 - I don't want to be overwhelmed with too many choices.  What about seeing the ones most other people buy?  Something that is a good proxy for  "safe" choice.
 
-___
+
 ## Comments on the Main View
 
 As I stated above (and you can see in my blog: https://medium.com/@daverothschild), the frame is around what job the person is trying to get done.  When buying a new TV, these four buttons, while not exhaustive, better signal to the user that we are trying to help them find a solution to the job they are trying to get done.  As part of seeking a solution, these seems like four reasonable questions someone might have before buying.
@@ -42,7 +42,7 @@ As I stated above (and you can see in my blog: https://medium.com/@daverothschil
 * **Show New All TVs**  This is the classic list of all the TVs.  The API can retrieve over 6,600 + TVs (not all are TVs as the data is not clean).  There is no search or sort.  The filter button does not work but the real app would surely have one.  The idea of this view is to show that all the data has arrived, is parsed correctly, displayed correctly and laid out correctly.  Tap any cell to see the detail for that item. Once in the detail, swipe left to page to the next item rather than going back to the tableview and tapping another cell. This design used a UIPageViewController for swipping left and right to see the next item in the detail view.
 * **See Top Rated TVs**  When shopping online, the user is presented with a huge list of choices.  Various properties are added to indicate preference in an effort to simplify choice.  This button goes a step further and just shows the top rated TVs.  The idea is that when I don't know what to buy, I'll just start with the top rated.  The user does not need to go to the list of everything and then run through some filter UI.  In general, the fewer taps, the better.  Note: the data that shows is not **actually** the top rated TVs.  There is no search API so I just take the first number of TVs from page 0 of the API call.  This allows the concept to be shown.  Tap on a cell and the cell unfolds with more data and a Apple Pay buy button. Tap again to close the fold.  Taping and going to another view controller just adds a slight amount of mental load.  The purpose the the Top Rated view is to simplify and make the choice mentally easier.  Somewhat like walking down the TV isle in a Sams's Club where there are just a few TVs on display with some bullet points of features and a bunch of TVs in boxes right in front.  It cries out: "Just pick one of these."  Also **Apple Pay** is implemented in this view to make it simpler than a cart check out process.
 
-___
+
 ## Other Comments
 
 The app does not get all the data on start.  It lazy loads more items as you start to get towards the end of the Show All TVs view. Rather than waiting for the user to get to the end of the tableview and showing a spinner while a user waits, I implemented pre-fetching the data using the iOS APIs for this.  It also pre-fetches images.
@@ -51,7 +51,6 @@ In my read of the one page API documentation, it appeared that totalProducts was
 
 There are a variety of XCTestCases included in this project.  Take a look.
 
----
 ## Requriements
 
 * You need iOS 11.  This is Swift 4. You might need iPhone 6s or higher for ARkit features.
@@ -71,7 +70,7 @@ Please run the Podfile to install the required CocoaPods.  Use terminal to trave
 ```
  pod install
 ```
----
+
 ## Implementation Highlights:
 
 * Swift 4 Decodable Protocol for parsing JSON from the server.
