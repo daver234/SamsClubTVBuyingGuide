@@ -21,7 +21,9 @@ struct ColorPalette {
     
     struct Green {
         static let Medium = UIColor(netHex: 0x5B8F22)
-        let example = #colorLiteral(red: 0.3568627451, green: 0.5607843137, blue: 0.1333333333, alpha: 1)
+        let exampleMedium = #colorLiteral(red: 0.3568627451, green: 0.5607843137, blue: 0.1333333333, alpha: 1)
+        static let Light = UIColor(netHex: 0x95D26B)
+        let exampleLight = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
     }
     
     struct Orange {

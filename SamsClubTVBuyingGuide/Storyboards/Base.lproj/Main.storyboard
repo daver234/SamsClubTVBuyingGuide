@@ -752,7 +752,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="HA0-O3-YgW"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                         <state key="normal" title="Add to Cart">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -761,6 +761,9 @@
                                                                 <real key="value" value="3"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="addToCartBtnPressed:" destination="ZnB-9G-rDu" eventType="touchUpInside" id="2eM-j6-Yq4"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5O-oc-61C">
                                                         <rect key="frame" x="0.0" y="60" width="343" height="5"/>
@@ -962,6 +965,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="950"/>
                     <connections>
+                        <outlet property="addToCartBtn" destination="9Lr-rq-igK" id="jMI-9D-4vJ"/>
                         <outlet property="freeShippingLabel" destination="Dl8-ah-AgQ" id="NY2-rI-CRQ"/>
                         <outlet property="inStockLabel" destination="Tkb-Ha-3mX" id="YES-xz-dHw"/>
                         <outlet property="longDescription" destination="klM-6b-q9c" id="fbx-yf-wj5"/>

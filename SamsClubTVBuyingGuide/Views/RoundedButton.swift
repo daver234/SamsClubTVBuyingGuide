@@ -30,4 +30,14 @@ class RoundedButton: UIButton {
     func setupView() {
         self.layer.cornerRadius = cornerRadius
     }
+    
+    func setBackgroundColor(_ color: UIColor, for state: UIControlState) {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        color.setFill()
+        UIRectFill(rect)
+        let colorImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        setBackgroundImage(colorImage, for: state)
+    }
 }

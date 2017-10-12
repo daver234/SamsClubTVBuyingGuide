@@ -76,7 +76,7 @@ Please run the Podfile to install the required CocoaPods.  Use terminal to trave
 * Swift 4 Decodable Protocol for parsing JSON from the server.
 * Networking with URLSession broken down into single responsibility classes.
 * Singleton for the data model. Simple struct data model.
-* Unit and UI tests with live and mock data tests
+* Unit and UI tests with live and mock data tests.
 * Storyboard, XIB, auto layout, stack views, segues, scroll view, tableview, page view controller, and animations.
 * Whole variety of different assets to support various screen resolutions.  3D SceneKit assets with textures.
 * Consistency in navigation, UX, colors and assets.
@@ -94,9 +94,9 @@ Please run the Podfile to install the required CocoaPods.  Use terminal to trave
 ---
 
 Attributions
-* TV scene kit image was purchased from Turbosquid.com
-* None of the assets in here should be used in a commercial product
-* Icons from icons8.com
+* TV scene kit image was purchased from Turbosquid.com.
+* None of the assets in here should be used in a commercial product.
+* Icons from icons8.com.
 
 
 Copyright Dave Rothschild October 2017

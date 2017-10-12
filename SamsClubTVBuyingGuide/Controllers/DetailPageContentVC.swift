@@ -26,6 +26,8 @@ class DetailPageContentVC: UIViewController {
     @IBOutlet weak var inStockLabel: UILabel!
     @IBOutlet weak var shortDescription: UITextView!
     @IBOutlet weak var longDescription: UITextView!
+    @IBOutlet weak var addToCartBtn: RoundedButton!
+    
     
     
     var productImageURL: URL!
@@ -63,4 +65,10 @@ class DetailPageContentVC: UIViewController {
             freeShippingLabel.textColor = ColorPalette.White.Medium
         }
     }
+    
+    @IBAction func addToCartBtnPressed(_ sender: UIButton) {
+        print("Add to Cart button pressed")
+    }
+    
+    
 }
