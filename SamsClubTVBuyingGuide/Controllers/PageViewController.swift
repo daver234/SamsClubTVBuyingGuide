@@ -15,7 +15,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     var productNumberInPage: Int?
     var cellNumber = 0
     
-
     // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
