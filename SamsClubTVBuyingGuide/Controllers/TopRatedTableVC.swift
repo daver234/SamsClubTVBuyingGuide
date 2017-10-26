@@ -13,8 +13,8 @@ import PassKit
 class TopRatedTableVC: UITableViewController {
     
     // MARK: - Variables
-    let kCloseCellHeight: CGFloat = 130
-    let kOpenCellHeight: CGFloat = 260
+    let kCloseCellHeight: CGFloat = 110
+    let kOpenCellHeight: CGFloat = 350
     fileprivate var cellHeights: [CGFloat] = []
     fileprivate var data = DataManager.instance.allProducts[0]
 
@@ -55,6 +55,7 @@ extension TopRatedTableVC {
         guard let product = DataManager.instance.allProducts[0].products?[indexPath.row]  else {
             return UITableViewCell()
         }
+        
         cell.configureCell(product: product)
         return cell
     }
@@ -82,6 +83,7 @@ extension TopRatedTableVC {
         }, completion: nil)
     }
     
+    /// Control if cell is open or closed
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard case let cell as TopRatedTableViewCell = cell else { return }
         if cellHeights[indexPath.row] == kCloseCellHeight {

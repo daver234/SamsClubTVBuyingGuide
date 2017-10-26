@@ -57,6 +57,8 @@ class TopRatedTableViewCell: FoldingCell {
         self.longDescription.text = (product.longDescription ?? "Not available.").html2String
         self.topRatedLabel.layer.cornerRadius = 8
         self.productPriceUnFold.text = product.price ?? "N/A"
+        self.shortDescription.isEditable = false
+        self.longDescription.isEditable = false
         
         if let inStock = product.inStock, inStock {
             self.inStockLabel.text = IN_STOCK
@@ -87,7 +89,7 @@ class TopRatedTableViewCell: FoldingCell {
         if button != nil {
             guard let buttonWidth = button?.frame.width else { return }
             guard let buttonHeight = button?.frame.height else { return }
-            button?.frame = CGRect(x: 140, y: 80, width: buttonWidth, height: buttonHeight)
+            button?.frame = CGRect(x: 140, y: 75, width: buttonWidth, height: buttonHeight)
             firstContainerView.addSubview(button!)
         }
     }
