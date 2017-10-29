@@ -45,6 +45,11 @@ struct ColorPalette {
         static let Medium = UIColor(netHex: 0xBE2813)
         let example = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
     }
+    
+    struct Black {
+        static let Medium = UIColor(netHex: 0x000000)
+        let example = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    }
 }
 
 extension UIColor {

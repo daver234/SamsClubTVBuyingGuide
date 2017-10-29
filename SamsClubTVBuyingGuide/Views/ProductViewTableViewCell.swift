@@ -36,14 +36,10 @@ class ProductViewTableViewCell: UITableViewCell {
         self.starView.rating = product.reviewRating ?? 0
         self.reviewCountLabel.text = "\(product.reviewCount ?? 0)"
         
-        if let inStock = product.inStock, inStock {
-            self.inStockLabel.text = IN_STOCK
-            self.inStockLabel.textColor = ColorPalette.Green.Medium
-        } else {
-            self.inStockLabel.text = OUT_OF_STOCK
-            self.inStockLabel.textColor = ColorPalette.Red.Medium
-            self.shippingLabel.textColor = ColorPalette.White.Medium
-        }
+        guard let inStock = product.inStock else { return }
+        self.inStockLabel.text = inStock ? IN_STOCK : OUT_OF_STOCK
+        self.inStockLabel.textColor = inStock ? ColorPalette.Green.Medium : ColorPalette.Red.Medium
+        self.shippingLabel.textColor = inStock ? ColorPalette.Black.Medium : ColorPalette.White.Medium
         
         /// Using Kingfisher Swift library to download and cache images
         /// Find it here: https://github.com/onevcat/Kingfisher
