@@ -15,6 +15,7 @@ class APIManager {
         print("*** in APIManager: next pageNumber to get is:", pageNumber)
         let urlString = "\(BASE_URL)/\(API_KEY)/\(pageNumber)/\(pageSize)"
         guard let url = URL(string: urlString) else { return }
+        print("here is urlstring", urlString)
         getProductsForPageWithURL(url: url, pageNumber: pageNumber, pageSize: pageSize, completion: completion)
     }
     

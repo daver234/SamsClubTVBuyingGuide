@@ -44,6 +44,9 @@
 		55E182C01F805EC600D05685 /* TvPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E182BF1F805EC600D05685 /* TvPickerVC.swift */; };
 		55E182C21F80604A00D05685 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E182C11F80604A00D05685 /* art.scnassets */; };
 		55E182CA1F80630C00D05685 /* ShowTVinRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E182C91F80630C00D05685 /* ShowTVinRoomVC.swift */; };
+		55F99DC2202FDDAC006686BD /* tVBuyingGuide.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55F99DC1202FDDAB006686BD /* tVBuyingGuide.jpg */; };
+		55F99DC4202FDDE9006686BD /* tvTable.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55F99DC3202FDDE9006686BD /* tvTable.jpg */; };
+		55F99DC6202FDE4A006686BD /* ARKitTv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55F99DC5202FDE4A006686BD /* ARKitTv.jpg */; };
 		CE126A3D3E175D16B11CE3C9 /* Pods_SamsClubTVBuyingGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC30CD621634E7DEA242FF7C /* Pods_SamsClubTVBuyingGuideUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +114,9 @@
 		55E182BF1F805EC600D05685 /* TvPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvPickerVC.swift; sourceTree = "<group>"; };
 		55E182C11F80604A00D05685 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		55E182C91F80630C00D05685 /* ShowTVinRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTVinRoomVC.swift; sourceTree = "<group>"; };
+		55F99DC1202FDDAB006686BD /* tVBuyingGuide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tVBuyingGuide.jpg; sourceTree = "<group>"; };
+		55F99DC3202FDDE9006686BD /* tvTable.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tvTable.jpg; sourceTree = "<group>"; };
+		55F99DC5202FDE4A006686BD /* ARKitTv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ARKitTv.jpg; sourceTree = "<group>"; };
 		5FB7B9A5C6F441FCE27F3901 /* Pods-SamsClubTVBuyingGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuide/Pods-SamsClubTVBuyingGuide.debug.xcconfig"; sourceTree = "<group>"; };
 		860092C567E8B5A0D6539F72 /* Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideUITests/Pods-SamsClubTVBuyingGuideUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BDF81938B44B2BDAFC8C03B /* Pods-SamsClubTVBuyingGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SamsClubTVBuyingGuideTests/Pods-SamsClubTVBuyingGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +159,9 @@
 			children = (
 				556787FF1F7B4E580005148A /* README.md */,
 				551F40831F83473B00C6925F /* samsBuyerGuide3.jpg */,
+				55F99DC1202FDDAB006686BD /* tVBuyingGuide.jpg */,
+				55F99DC3202FDDE9006686BD /* tvTable.jpg */,
+				55F99DC5202FDE4A006686BD /* ARKitTv.jpg */,
 				5557CEC51F7AFF3000D943AB /* SamsClubTVBuyingGuide */,
 				5557CEDA1F7AFF3000D943AB /* SamsClubTVBuyingGuideTests */,
 				5557CEE51F7AFF3000D943AB /* SamsClubTVBuyingGuideUITests */,
@@ -444,8 +453,11 @@
 				55E182C21F80604A00D05685 /* art.scnassets in Resources */,
 				5557CED11F7AFF3000D943AB /* LaunchScreen.storyboard in Resources */,
 				5557CECE1F7AFF3000D943AB /* Assets.xcassets in Resources */,
+				55F99DC4202FDDE9006686BD /* tvTable.jpg in Resources */,
 				5557CEFF1F7B035200D943AB /* NoConnectivityVC.xib in Resources */,
+				55F99DC2202FDDAC006686BD /* tVBuyingGuide.jpg in Resources */,
 				5557CECC1F7AFF3000D943AB /* Main.storyboard in Resources */,
+				55F99DC6202FDE4A006686BD /* ARKitTv.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

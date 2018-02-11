@@ -15,7 +15,7 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 /// URL Constants
 let TOMS_GUIDE = "https://www.tomsguide.com/us/tv-buying-guide,review-1943.html"
 let BASE_URL = "https://walmartlabs-test.appspot.com/_ah/api/walmart/v1/walmartproducts"
-let API_KEY = "e62b524f-4a34-403b-a65c-50cfdd487f46" // get a API key and enter here.
+let API_KEY =  "dd9085cd-80dc-44b9-be08-e6f5bae99b14"  //"e62b524f-4a34-403b-a65c-50cfdd487f46" // get a API key and enter here.
 
 /// Segues
 let THINGS_TO_KNOW = "toThingsToKnowVC"
