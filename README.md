@@ -1,5 +1,5 @@
 # TV Buying Guide
-![alt text](tvBuyingGuide.jpg "First Screen") ![alt text](tvTable.jpg "TVs Screen") ![alt text](ARKitTv.jpg "TVs Screen")
+![alt text](tVBuyingGuide.jpg "First Screen") ![alt text](tvTable.jpg "TVs Screen") ![alt text](ARKitTv.jpg "Camera")
 
 ## Overview
 
