@@ -75,7 +75,6 @@
 		550BCFF21F7ECD6600908824 /* PaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
 		550BCFF41F7ECD9100908824 /* SamsClubTVBuyingGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SamsClubTVBuyingGuide.entitlements; sourceTree = "<group>"; };
 		550BD01E1F7F721100908824 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
-		551F40831F83473B00C6925F /* samsBuyerGuide3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = samsBuyerGuide3.jpg; sourceTree = "<group>"; };
 		5551CD481F88603E00EA2B0E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		5551CD4C1F887A5000EA2B0E /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		5551CD4E1F8880BB00EA2B0E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -158,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				556787FF1F7B4E580005148A /* README.md */,
-				551F40831F83473B00C6925F /* samsBuyerGuide3.jpg */,
 				55F99DC1202FDDAB006686BD /* tVBuyingGuide.jpg */,
 				55F99DC3202FDDE9006686BD /* tvTable.jpg */,
 				55F99DC5202FDE4A006686BD /* ARKitTv.jpg */,
